@@ -1,2 +1,1 @@
-Some training changes in file by RS06
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Changes for Ilya
