@@ -22,4 +22,4 @@
 6. User interface techonology: 📱
    - .NET MAUI
 
-Thank you for attention..... ☺️
+Thank you for attention... ☺️
