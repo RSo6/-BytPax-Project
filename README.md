@@ -22,7 +22,7 @@
 6. User interface techonology: 📱
    - .NET MAUI
 
-7. **_Team Membership:_**🦔 🦔 🦔
+7. Team Membership: 🦔 🦔 🦔
     - Oleksandra Butko 👩🏻‍✈️
     - Ilya  Bondarenko 👨‍✈️
     - Roman Shnep 👨‍✈️
