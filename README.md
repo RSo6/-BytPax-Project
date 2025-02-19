@@ -22,4 +22,9 @@
 6. User interface techonology: 📱
    - .NET MAUI
 
+    *** Team Membership **
+        Oleksandra Butko
+        Ilya  Bondarenko 
+        Roman Shnep
+    
 Thank you for attention... ☺️
