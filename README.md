@@ -20,7 +20,7 @@
    - Make it comfortable to read it information from the app;
    - Also the others not too major functionality...
 6. User interface techonology: 📱
-   - .NET MAUI
+   - ASP.NET
 
     *** Team Membership **
         Oleksandra Butko
