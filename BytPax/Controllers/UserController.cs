@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using BytPax.Controllers.instructions;
-using BytPax.Models;
+using BytPax.Models.core;
+
+namespace Controllers;
 
 public class UserController : Controller  {
     
@@ -21,7 +22,7 @@ public class UserController : Controller  {
         return Ok(user);
     }
 
-    public IActionResult RegisterUser(string fullName, string email, string password, UserRole role)
+    public IActionResult RegisterUser(string fullName, string email, string password, User.UserRole role)
     {
         _userService.RegisterUser(fullName, email, password, role);
         return CreatedAtAction(nameof(GetUser), new { email = email }, null);

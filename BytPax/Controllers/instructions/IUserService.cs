@@ -1,9 +1,9 @@
-using BytPax.Models;
+using BytPax.Models.core;
 
 namespace BytPax.Controllers.instructions;
 
 public interface IUserService  {
     User GetUserByEmail(string email);
-    void RegisterUser(string fullName, string email, string password, UserRole role);
+    void RegisterUser(string fullName, string email, string password, User.UserRole role);
     bool Authenticate(string email, string password);
 }
