@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BytPax")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+745c55c4526451b91403f41f0c6fb34c0f64539c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ae5ec028e1a16a363a2b53ab69204f3d60a719d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BytPax")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BytPax")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

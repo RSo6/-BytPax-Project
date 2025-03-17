@@ -6,4 +6,9 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Controllers\instructions\" />
+      <Folder Include="Controllers\production\" />
+    </ItemGroup>
+
 </Project>
