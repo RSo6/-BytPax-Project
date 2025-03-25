@@ -1,6 +1,6 @@
 using BytPax.Models.core;
 
-namespace BytPax.Controllers.instructions;
+namespace BytPax.Instructions;
 
 public interface IUserService  {
     User GetUserByEmail(string email);
