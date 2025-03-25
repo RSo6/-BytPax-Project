@@ -9,12 +9,12 @@ public class Article : BaseEntity {
     public Category Category { get; }
     public string  ImagePath {get; }
     
-    public Article(string topic, string text, int categoryId, string image, Category category)
-        : base() 
+    public Article(string topic, string text, int id, string image, Category category)
+        : base(id) 
     {
         Topic = topic;
         BodyText = text;
-        CategoryId = categoryId;
+        CategoryId = id;
         ImagePath = image;
         Category = category;
     }

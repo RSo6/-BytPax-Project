@@ -7,8 +7,8 @@ namespace BytPax.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly List<T> _entities = new();
-
+        protected List<T> _entities = new List<T>();
+    
         public IEnumerable<T> GetAll()
         {
             return _entities;
