@@ -10,4 +10,9 @@ public abstract class BaseEntity {
         CreatedAt = DateTime.UtcNow;
         UpdatedAt = DateTime.UtcNow;
     }
+
+    protected BaseEntity(int id)
+    {
+        Id = id;
+    }
 }

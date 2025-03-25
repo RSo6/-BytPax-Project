@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using BytPax.Controllers.instructions;
+using BytPax.Instructions;
 using BytPax.Models.core;
 
 namespace Controllers;
