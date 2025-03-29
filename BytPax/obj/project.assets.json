@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project /BytPax/BytPax.csproj",
+      "projectUniqueName": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj",
       "projectName": "BytPax",
-      "projectPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project /BytPax/BytPax.csproj",
+      "projectPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj",
       "packagesPath": "/Users/romanshnep/.nuget/packages/",
-      "outputPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project /BytPax/obj/",
+      "outputPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/romanshnep/.nuget/NuGet/NuGet.Config"
