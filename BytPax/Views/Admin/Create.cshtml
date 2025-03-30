@@ -1,0 +1,23 @@
+﻿@model BytPax.Models.Athlete
+
+<h2>Додати спортсмена</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        <label>Ім'я</label>
+        @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Країна</label>
+        @Html.TextBoxFor(m => m.Country, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        <label>Категорія</label>
+        @Html.TextBoxFor(m => m.CategoryId, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Зберегти</button>
+}
