@@ -7,11 +7,11 @@ namespace BytPax.Controllers
 {
     public class AdminController : Controller
     {
-        private readonly AthleteRepo<Athlete> _athleteRepo = new AthleteRepo<Athlete>();
+        private readonly AdminRepo<Athlete> _athleteRepo = new AdminRepo<Athlete>();
 
         public IActionResult Index()
         {
-            ViewData["SortedAthletesByAge"] = _athleteRepo.GetAthletesSortedByAge();
+            ViewData["SortedAthletesByAge"] = _athleteRepo.GetAll().OrderBy(a => a.Age).ToList();
             return View();
         }
 
