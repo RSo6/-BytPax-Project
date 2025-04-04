@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Admin/AdminManagement.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5NYW5hZ2VtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Admin/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
