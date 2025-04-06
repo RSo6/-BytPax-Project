@@ -18,16 +18,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Admin/AdminManagement.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5NYW5hZ2VtZW50LmNzaHRtbA==
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Admin/CreateArticle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQXJ0aWNsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Admin/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlLmNzaHRtbA==
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Admin/CreateAthlete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQXRobGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Admin/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdC5jc2h0bWw=
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Admin/EditArticle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFydGljbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Admin/EditAthlete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEF0aGxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Home/Index.cshtml]

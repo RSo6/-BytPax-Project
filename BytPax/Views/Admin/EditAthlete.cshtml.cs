@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BytPax.Views.Admin
 {
-    public class CreateModel : PageModel
+    public class EditAthleteModel : PageModel
     {
         public void OnGet()
         {

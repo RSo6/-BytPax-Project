@@ -1,13 +1,13 @@
 ﻿@model BytPax.Models.Athlete
 
-<h2>Редагувати спортсмена</h2>
+<h2>Редагувати атлета</h2>
 
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(m => m.Id)
 
     <div class="form-group">
-        <label>Ім'я</label>
+        <label>Ім’я</label>
         @Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })
     </div>
 
@@ -21,5 +21,5 @@
         @Html.TextBoxFor(m => m.CategoryId, new { @class = "form-control" })
     </div>
 
-    <button type="submit" class="btn btn-primary">Оновити</button>
+    <button type="submit" class="btn btn-primary mt-2">Оновити</button>
 }

@@ -2,7 +2,7 @@ using BytPax.Models;
 
 namespace BytPax.Repositories;
 
-public class ArticleRepo<T> : Repository<T> where T : Article
+public class ArticleRepository<T> : Repository<T> where T : Article
 {
     public IEnumerable<T> GetArticlesSortedById()
     {

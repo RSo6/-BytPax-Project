@@ -2,7 +2,7 @@
 
 namespace BytPax.Repositories
 {
-    public class AdminRepo<T> : Repository<T> where T : class
+    public class AdminRepository<T> : Repository<T> where T : class
     {
         private readonly List<T> _entities = new List<T>();
 

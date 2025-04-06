@@ -1,24 +1,36 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BytPax.Models;
-using BytPax.Repositories;
-using System.Linq;
+using BytPax.Instructions;
 
 namespace BytPax.Controllers
 {
     public class AdminController : Controller
     {
-        private readonly AdminRepo<Athlete> _athleteRepo = new AdminRepo<Athlete>();
+        private readonly IRepository<Athlete> _athleteRepo;
+        private readonly IRepository<Article> _articleRepo;
 
-        public IActionResult Index()
+        public AdminController(IRepository<Athlete> athleteRepo, IRepository<Article> articleRepo)
         {
-            ViewData["SortedAthletesByAge"] = _athleteRepo.GetAll().OrderBy(a => a.Age).ToList();
-            return View();
+            _athleteRepo = athleteRepo;
+            _articleRepo = articleRepo;
         }
 
-        public IActionResult Create() => View();
+        // --- Головна сторінка адмін-панелі ---
+        public IActionResult Index()
+        {
+            var model = new AdminManagementViewModel
+            {
+                Athletes = _athleteRepo.GetAll().ToList(),
+                Articles = _articleRepo.GetAll().ToList()
+            };
+            return View(model); // буде шукати Views/Admin/Index.cshtml
+        }
+
+        // ---------- ATHLETES ----------
+        public IActionResult CreateAthlete() => View();
 
         [HttpPost]
-        public IActionResult Create(Athlete model)
+        public IActionResult CreateAthlete(Athlete model)
         {
             if (ModelState.IsValid)
             {
@@ -28,7 +40,7 @@ namespace BytPax.Controllers
             return View(model);
         }
 
-        public IActionResult Edit(int id)
+        public IActionResult EditAthlete(int id)
         {
             var athlete = _athleteRepo.GetEntityById(id);
             if (athlete == null) return NotFound();
@@ -36,7 +48,7 @@ namespace BytPax.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Athlete model)
+        public IActionResult EditAthlete(Athlete model)
         {
             if (ModelState.IsValid)
             {
@@ -46,9 +58,47 @@ namespace BytPax.Controllers
             return View(model);
         }
 
-        public IActionResult Delete(int id)
+        public IActionResult DeleteAthlete(int id)
         {
             _athleteRepo.Delete(id);
+            return RedirectToAction("Index");
+        }
+
+        // ---------- ARTICLES ----------
+        public IActionResult CreateArticle() => View();
+
+        [HttpPost]
+        public IActionResult CreateArticle(Article model)
+        {
+            if (ModelState.IsValid)
+            {
+                _articleRepo.Add(model);
+                return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+
+        public IActionResult EditArticle(int id)
+        {
+            var article = _articleRepo.GetEntityById(id);
+            if (article == null) return NotFound();
+            return View(article);
+        }
+
+        [HttpPost]
+        public IActionResult EditArticle(Article model)
+        {
+            if (ModelState.IsValid)
+            {
+                _articleRepo.Update(model);
+                return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+
+        public IActionResult DeleteArticle(int id)
+        {
+            _articleRepo.Delete(id);
             return RedirectToAction("Index");
         }
     }

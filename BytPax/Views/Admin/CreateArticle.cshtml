@@ -1,0 +1,22 @@
+﻿@model BytPax.Models.Article
+
+<h2>Додати статтю</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <div class="form-group">
+        <label>Тема</label>
+        @Html.TextBoxFor(m => m.Topic, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Topic)
+    </div>
+
+    <div class="form-group">
+        <label>Зміст</label>
+        @Html.TextAreaFor(m => m.BodyText, new { @class = "form-control", rows = 5 })
+        @Html.ValidationMessageFor(m => m.BodyText)
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Зберегти</button>
+}
