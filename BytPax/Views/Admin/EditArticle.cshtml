@@ -9,11 +9,28 @@
     <div class="form-group">
         <label>Тема</label>
         @Html.TextBoxFor(m => m.Topic, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Topic)
     </div>
 
     <div class="form-group">
         <label>Зміст</label>
         @Html.TextAreaFor(m => m.BodyText, new { @class = "form-control", rows = 5 })
+        @Html.ValidationMessageFor(m => m.BodyText)
+    </div>
+
+    <div class="form-group">
+        <label>Категорія</label>
+        @Html.DropDownListFor(m => m.CategoryId,
+                new SelectList(ViewBag.Categories, "Id", "Name", Model.CategoryId),
+                "-- Оберіть категорію --",
+                new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CategoryId)
+    </div>
+
+    <div class="form-group">
+        <label>Шлях до зображення</label>
+        @Html.TextBoxFor(m => m.ImagePath, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ImagePath)
     </div>
 
     <button type="submit" class="btn btn-primary mt-2">Оновити</button>

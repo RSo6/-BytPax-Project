@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VuQdBwafEWzlHwiJIRz97WGkWwBPZo4taknXaa4QFm0=",
+  "Hash": "B1Jzy+rljMrF4onNKNE0T/Mep5BubpYPfrOgXURKQZk=",
   "Source": "BytPax",
   "BasePath": "_content/BytPax",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\Images\\Mohammed.jpg",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "Images/Mohammed.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Mohammed.jpg"
     },
     {
       "Identity": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\js\\site.js",

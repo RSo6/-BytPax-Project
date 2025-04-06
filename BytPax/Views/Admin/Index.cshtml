@@ -24,7 +24,7 @@
             <tr>
                 <td>@athlete.FullName</td>
                 <td>@athlete.Country</td>
-                <td>@athlete.CategoryId</td>
+                <td>@athlete.Category?.TypeOfSport</td>
                 <td>
                     <a class="btn btn-primary btn-sm" href="@Url.Action("EditAthlete", new { id = athlete.Id })">✏️</a>
                     <a class="btn btn-danger btn-sm" href="@Url.Action("DeleteAthlete", new { id = athlete.Id })" onclick="return confirm('Ви впевнені, що хочете видалити атлета?');">🗑️</a>
@@ -32,6 +32,7 @@
             </tr>
         }
     </tbody>
+
 </table>
 
 <hr />

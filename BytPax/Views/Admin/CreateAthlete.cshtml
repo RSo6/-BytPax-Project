@@ -26,8 +26,12 @@
 
     <div class="form-group">
         <label>Категорія</label>
-        @Html.TextBoxFor(m => m.CategoryId, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.CategoryId)
+        <select class="form-control" name="categoryId">
+            @foreach (var category in ViewBag.Categories as List<BytPax.Models.Category>)
+            {
+                <option value="@category.Id">@category.TypeOfSport</option>
+            }
+        </select>
     </div>
 
     <div class="form-group">

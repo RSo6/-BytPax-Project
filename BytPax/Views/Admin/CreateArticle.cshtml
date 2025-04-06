@@ -4,18 +4,30 @@
 
 @using (Html.BeginForm())
 {
-    @Html.ValidationSummary()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
     <div class="form-group">
         <label>Тема</label>
         @Html.TextBoxFor(m => m.Topic, new { @class = "form-control" })
-        @Html.ValidationMessageFor(m => m.Topic)
+        @Html.ValidationMessageFor(m => m.Topic, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
         <label>Зміст</label>
         @Html.TextAreaFor(m => m.BodyText, new { @class = "form-control", rows = 5 })
-        @Html.ValidationMessageFor(m => m.BodyText)
+        @Html.ValidationMessageFor(m => m.BodyText, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Категорія</label>
+        @Html.DropDownList("CategoryId", new SelectList(ViewBag.Categories, "Id", "TypeOfSport"), "Оберіть категорію", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.CategoryId, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label>Посилання на зображення</label>
+        @Html.TextBoxFor(m => m.ImagePath, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ImagePath, "", new { @class = "text-danger" })
     </div>
 
     <button type="submit" class="btn btn-primary mt-2">Зберегти</button>

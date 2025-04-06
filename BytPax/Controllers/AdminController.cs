@@ -9,6 +9,14 @@ namespace BytPax.Controllers
         private readonly IRepository<Athlete> _athleteRepo;
         private readonly IRepository<Article> _articleRepo;
 
+        // Локальний список категорій
+        private readonly List<Category> _categories = new List<Category>
+        {
+            new Category(1, "Football", "Football players"),
+            new Category(2, "Boxing", "Boxers"),
+            new Category(3, "Swimming", "Swimmers")
+        };
+
         public AdminController(IRepository<Athlete> athleteRepo, IRepository<Article> articleRepo)
         {
             _athleteRepo = athleteRepo;
@@ -18,25 +26,51 @@ namespace BytPax.Controllers
         // --- Головна сторінка адмін-панелі ---
         public IActionResult Index()
         {
+            var athletes = _athleteRepo.GetAll().ToList();
+            foreach (var athlete in athletes)
+            {
+                athlete.Category = _categories.FirstOrDefault(c => c.Id == athlete.CategoryId);
+            }
+
+            var articles = _articleRepo.GetAll().ToList();
+            foreach (var article in articles)
+            {
+                article.Category = _categories.FirstOrDefault(c => c.Id == article.CategoryId);
+            }
+
             var model = new AdminManagementViewModel
             {
-                Athletes = _athleteRepo.GetAll().ToList(),
-                Articles = _articleRepo.GetAll().ToList()
+                Athletes = athletes,
+                Articles = articles
             };
-            return View(model); // буде шукати Views/Admin/Index.cshtml
+
+            return View(model);
         }
 
         // ---------- ATHLETES ----------
-        public IActionResult CreateAthlete() => View();
+        public IActionResult CreateAthlete()
+        {
+            ViewBag.Categories = _categories;
+            return View();
+        }
 
         [HttpPost]
-        public IActionResult CreateAthlete(Athlete model)
+        public IActionResult CreateAthlete(Athlete model, int categoryId)
         {
+            var category = _categories.FirstOrDefault(c => c.Id == categoryId);
+            if (category != null)
+            {
+                model.Category = category;
+                model.CategoryId = category.Id;
+            }
+
             if (ModelState.IsValid)
             {
                 _athleteRepo.Add(model);
                 return RedirectToAction("Index");
             }
+
+            ViewBag.Categories = _categories;
             return View(model);
         }
 
@@ -44,17 +78,29 @@ namespace BytPax.Controllers
         {
             var athlete = _athleteRepo.GetEntityById(id);
             if (athlete == null) return NotFound();
+
+            athlete.Category = _categories.FirstOrDefault(c => c.Id == athlete.CategoryId);
+            ViewBag.Categories = _categories;
             return View(athlete);
         }
 
         [HttpPost]
-        public IActionResult EditAthlete(Athlete model)
+        public IActionResult EditAthlete(Athlete model, int categoryId)
         {
+            var category = _categories.FirstOrDefault(c => c.Id == categoryId);
+            if (category != null)
+            {
+                model.Category = category;
+                model.CategoryId = category.Id;
+            }
+
             if (ModelState.IsValid)
             {
                 _athleteRepo.Update(model);
                 return RedirectToAction("Index");
             }
+
+            ViewBag.Categories = _categories;
             return View(model);
         }
 
@@ -62,7 +108,7 @@ namespace BytPax.Controllers
         {
             var athlete = _athleteRepo.GetEntityById(id);
             if (athlete == null) return NotFound();
-            return View(athlete); // Показує DeleteAthlete.cshtml
+            return View(athlete);
         }
 
         [HttpPost]
@@ -74,16 +120,28 @@ namespace BytPax.Controllers
         }
 
         // ---------- ARTICLES ----------
-        public IActionResult CreateArticle() => View();
+        public IActionResult CreateArticle()
+        {
+            ViewBag.Categories = _categories;
+            return View();
+        }
 
         [HttpPost]
         public IActionResult CreateArticle(Article model)
         {
+            var category = _categories.FirstOrDefault(c => c.Id == model.CategoryId);
+            if (category != null)
+            {
+                model.Category = category;
+            }
+
             if (ModelState.IsValid)
             {
                 _articleRepo.Add(model);
                 return RedirectToAction("Index");
             }
+
+            ViewBag.Categories = _categories;
             return View(model);
         }
 
@@ -91,17 +149,28 @@ namespace BytPax.Controllers
         {
             var article = _articleRepo.GetEntityById(id);
             if (article == null) return NotFound();
+
+            article.Category = _categories.FirstOrDefault(c => c.Id == article.CategoryId);
+            ViewBag.Categories = _categories;
             return View(article);
         }
 
         [HttpPost]
         public IActionResult EditArticle(Article model)
         {
+            var category = _categories.FirstOrDefault(c => c.Id == model.CategoryId);
+            if (category != null)
+            {
+                model.Category = category;
+            }
+
             if (ModelState.IsValid)
             {
                 _articleRepo.Update(model);
                 return RedirectToAction("Index");
             }
+
+            ViewBag.Categories = _categories;
             return View(model);
         }
 
@@ -109,7 +178,7 @@ namespace BytPax.Controllers
         {
             var article = _articleRepo.GetEntityById(id);
             if (article == null) return NotFound();
-            return View(article); // Показує DeleteArticle.cshtml
+            return View(article);
         }
 
         [HttpPost]
