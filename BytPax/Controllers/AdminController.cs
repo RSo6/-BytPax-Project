@@ -60,6 +60,15 @@ namespace BytPax.Controllers
 
         public IActionResult DeleteAthlete(int id)
         {
+            var athlete = _athleteRepo.GetEntityById(id);
+            if (athlete == null) return NotFound();
+            return View(athlete); // Показує DeleteAthlete.cshtml
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteAthleteConfirmed(int id)
+        {
             _athleteRepo.Delete(id);
             return RedirectToAction("Index");
         }
@@ -97,6 +106,15 @@ namespace BytPax.Controllers
         }
 
         public IActionResult DeleteArticle(int id)
+        {
+            var article = _articleRepo.GetEntityById(id);
+            if (article == null) return NotFound();
+            return View(article); // Показує DeleteArticle.cshtml
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteArticleConfirmed(int id)
         {
             _articleRepo.Delete(id);
             return RedirectToAction("Index");
