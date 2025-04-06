@@ -1,19 +1,22 @@
 using BytPax.Instructions;
 using BytPax.Models;
 using BytPax.Repositories;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Додаємо підтримку MVC
 builder.Services.AddControllersWithViews();
 
-// Додано:
+// Реєструємо репозиторії
 builder.Services.AddScoped<IRepository<Article>, ArticleRepository<Article>>();
 builder.Services.AddScoped<IRepository<Athlete>, AthleteRepository<Athlete>>();
 
-
 var app = builder.Build();
 
+// Обробка помилок
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -27,8 +30,9 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+//  Встановлюємо маршрут за замовчуванням: Admin/Index
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Admin}/{action=Index}/{id?}"); // <<== ОЦЕ ГОЛОВНЕ
 
 app.Run();
