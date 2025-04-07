@@ -7,16 +7,16 @@ using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Додаємо підтримку MVC
+// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ MVC
 builder.Services.AddControllersWithViews();
 
-// Реєструємо репозиторії
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 builder.Services.AddScoped<IRepository<Article>, ArticleRepository<Article>>();
 builder.Services.AddScoped<IRepository<Athlete>, AthleteRepository<Athlete>>();
 
 var app = builder.Build();
 
-// Обробка помилок
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -30,9 +30,9 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-//  Встановлюємо маршрут за замовчуванням: Admin/Index
+//  пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ: Admin/Index
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Admin}/{action=Index}/{id?}"); // <<== ОЦЕ ГОЛОВНЕ
+    pattern: "{controller=Home}/{action=Index}/{id?}"); // <<== пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 app.Run();
