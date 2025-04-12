@@ -9,6 +9,82 @@
       "PackagePath": "staticwebassets/Images/Mohammed.jpg"
     },
     {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/401.html",
+      "PackagePath": "staticwebassets/admin/401.html"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/404.html",
+      "PackagePath": "staticwebassets/admin/404.html"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/500.html",
+      "PackagePath": "staticwebassets/admin/500.html"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/assets/demo/chart-area-demo.js",
+      "PackagePath": "staticwebassets/admin/assets/demo/chart-area-demo.js"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/assets/demo/chart-bar-demo.js",
+      "PackagePath": "staticwebassets/admin/assets/demo/chart-bar-demo.js"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/assets/demo/chart-pie-demo.js",
+      "PackagePath": "staticwebassets/admin/assets/demo/chart-pie-demo.js"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/assets/demo/datatables-demo.js",
+      "PackagePath": "staticwebassets/admin/assets/demo/datatables-demo.js"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/assets/img/error-404-monochrome.svg",
+      "PackagePath": "staticwebassets/admin/assets/img/error-404-monochrome.svg"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/charts.html",
+      "PackagePath": "staticwebassets/admin/charts.html"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/css/styles.css",
+      "PackagePath": "staticwebassets/admin/css/styles.css"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/index.html",
+      "PackagePath": "staticwebassets/admin/index.html"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/js/datatables-simple-demo.js",
+      "PackagePath": "staticwebassets/admin/js/datatables-simple-demo.js"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/js/scripts.js",
+      "PackagePath": "staticwebassets/admin/js/scripts.js"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/layout-sidenav-light.html",
+      "PackagePath": "staticwebassets/admin/layout-sidenav-light.html"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/layout-static.html",
+      "PackagePath": "staticwebassets/admin/layout-static.html"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/login.html",
+      "PackagePath": "staticwebassets/admin/login.html"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/password.html",
+      "PackagePath": "staticwebassets/admin/password.html"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/register.html",
+      "PackagePath": "staticwebassets/admin/register.html"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/tables.html",
+      "PackagePath": "staticwebassets/admin/tables.html"
+    },
+    {
       "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

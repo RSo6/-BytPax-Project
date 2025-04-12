@@ -7,7 +7,7 @@ namespace BytPax.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected static List<T> _entities = new List<T>(); // ? ќсь тут static
+        protected static List<T> _entities = new List<T>(); 
 
         public IEnumerable<T> GetAll() => _entities;
 
