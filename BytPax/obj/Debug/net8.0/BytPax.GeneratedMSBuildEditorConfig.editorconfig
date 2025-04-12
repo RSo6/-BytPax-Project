@@ -18,6 +18,34 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Admin/CreateArticle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQ3JlYXRlQXJ0aWNsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Admin/CreateAthlete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vQ3JlYXRlQXRobGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Admin/DeleteArticle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRGVsZXRlQXJ0aWNsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Admin/DeleteAthlete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRGVsZXRlQXRobGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Admin/EditArticle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRWRpdEFydGljbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Admin/EditAthlete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRWRpdEF0aGxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

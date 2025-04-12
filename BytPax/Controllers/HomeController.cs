@@ -7,14 +7,14 @@ namespace BytPax.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    private readonly AthleteRepo<Athlete> _athleteRepo;
-    private readonly ArticleRepo<Article> _articleRepo;
+    private readonly AthleteRepository<Athlete> _athleteRepo;
+    private readonly ArticleRepository<Article> _articleRepo;
 
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-        _athleteRepo = new AthleteRepo<Athlete>();
-        _articleRepo = new ArticleRepo<Article>();
+        _athleteRepo = new AthleteRepository<Athlete>();
+        _articleRepo = new ArticleRepository<Article>();
     }
 
     public IActionResult Index()

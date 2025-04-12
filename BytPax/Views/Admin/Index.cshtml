@@ -1,0 +1,63 @@
+﻿@model BytPax.Models.AdminManagementViewModel
+@{
+    Layout = "_Layout";
+}
+
+<h2>Адмін-панель</h2>
+
+<hr />
+<h3>Атлети</h3>
+<a class="btn btn-success mb-2" href="@Url.Action("CreateAthlete")">➕ Додати атлета</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Ім'я</th>
+            <th>Країна</th>
+            <th>Категорія</th>
+            <th>Дії</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var athlete in Model.Athletes)
+        {
+            <tr>
+                <td>@athlete.FullName</td>
+                <td>@athlete.Country</td>
+                <td>@athlete.Category?.TypeOfSport</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="@Url.Action("EditAthlete", new { id = athlete.Id })">✏️</a>
+                    <a class="btn btn-danger btn-sm" href="@Url.Action("DeleteAthlete", new { id = athlete.Id })" onclick="return confirm('Ви впевнені, що хочете видалити атлета?');">🗑️</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+<hr />
+<h3>Статті</h3>
+<a class="btn btn-success mb-2" href="@Url.Action("CreateArticle")">➕ Додати статтю</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Тема</th>
+            <th>Опис</th>
+            <th>Дії</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var article in Model.Articles)
+        {
+            <tr>
+                <td>@article.Topic</td>
+                <td>@article.BodyText</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="@Url.Action("EditArticle", new { id = article.Id })">✏️</a>
+                    <a class="btn btn-danger btn-sm" href="@Url.Action("DeleteArticle", new { id = article.Id })" onclick="return confirm('Ви впевнені, що хочете видалити статтю?');">🗑️</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

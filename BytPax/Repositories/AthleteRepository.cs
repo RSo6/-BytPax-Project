@@ -3,7 +3,7 @@ using BytPax.Models;
 
 namespace BytPax.Repositories;
 
-public class AthleteRepo<T> : Repository<T> where T : Athlete
+public class AthleteRepository<T> : Repository<T> where T : Athlete
 {
     public IEnumerable<T> GetAthletesSortedByAge()
     {

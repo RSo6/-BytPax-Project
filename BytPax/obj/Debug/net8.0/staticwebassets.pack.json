@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/BytPax.bundle.scp.css"
     },
     {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/Mohammed.jpg",
+      "PackagePath": "staticwebassets/Images/Mohammed.jpg"
+    },
+    {
       "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

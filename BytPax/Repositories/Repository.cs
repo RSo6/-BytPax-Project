@@ -7,12 +7,9 @@ namespace BytPax.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected List<T> _entities = new List<T>();
-    
-        public IEnumerable<T> GetAll()
-        {
-            return _entities;
-        }
+        protected static List<T> _entities = new List<T>(); // ? ќсь тут static
+
+        public IEnumerable<T> GetAll() => _entities;
 
         public T GetEntityById(long id)
         {
@@ -43,4 +40,5 @@ namespace BytPax.Repositories
             }
         }
     }
+
 }

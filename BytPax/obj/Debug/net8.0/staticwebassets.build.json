@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/anGeU0SSy4h8B1LZ7nm6CxHNCdbfIrzCmP/rySiCIY=",
+  "Hash": "B/2op1NOrrvsQ445TPAiNgsArI+NMw2piVFoDZ09VII=",
   "Source": "BytPax",
   "BasePath": "_content/BytPax",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/Mohammed.jpg",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "Images/Mohammed.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/Mohammed.jpg"
     },
     {
       "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/js/site.js",

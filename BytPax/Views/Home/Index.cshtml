@@ -5,29 +5,29 @@
 <div class="text-center">
     <h1 class="display-4">BytPax Project</h1>
     <h3>Version of program is 0.3</h3>
-   
 </div>
 
 <h2>Sorted Athletes by Age</h2>
-<ul>
-    @foreach (var athlete in ViewData["SortedAthletesByAge"] as IEnumerable<BytPax.Models.Athlete>)
-    {
-        <li>
-            <strong>@athlete.FullName</strong><br />
-            Age: @athlete.Age<br />
-            <em>@athlete.Description</em>
-        </li>
-    }
-</ul>
+@* <a href="@Url.Action("Create", "Admin")" class="btn btn-success">Add New Athlete</a> *@
 
-<h2>Sorted Articles by ID</h2>
-<ul>
-    @foreach (var article in ViewData["SortedArticlesById"] as IEnumerable<BytPax.Models.Article>)
-    {
-        <li>
-            <strong>@article.Topic</strong><br />
-            <em>@article.BodyText</em><br />
-            <span>ID: @article.Id</span>
-        </li>
-    }
-</ul>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Age</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var athlete in ViewData["SortedAthletesByAge"] as IEnumerable<BytPax.Models.Athlete>)
+        {
+            <tr>
+                <td>@athlete.FullName</td>
+                <td>@athlete.Age</td>
+                <td>@athlete.Description</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>

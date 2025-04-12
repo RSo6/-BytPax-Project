@@ -1,0 +1,30 @@
+﻿@model BytPax.Models.Athlete
+@{
+    ViewData["Title"] = "Видалити атлета";
+    Layout = "_Layout";
+}
+
+<h2>Видалити атлета</h2>
+
+<h4>Ви впевнені, що хочете видалити цього атлета?</h4>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-2">Ім’я</dt>
+    <dd class="col-sm-10">@Model.FullName</dd>
+
+    <dt class="col-sm-2">Країна</dt>
+    <dd class="col-sm-10">@Model.Country</dd>
+
+    <dt class="col-sm-2">Місто</dt>
+    <dd class="col-sm-10">@Model.City</dd>
+
+    <dt class="col-sm-2">Категорія</dt>
+    <dd class="col-sm-10">@Model.Category?.TypeOfSport</dd>
+</dl>
+
+<form asp-action="DeleteAthleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Так, видалити</button>
+    <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
+</form>

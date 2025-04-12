@@ -1,0 +1,24 @@
+﻿@model BytPax.Models.Article
+@{
+    ViewData["Title"] = "Видалити статтю";
+    Layout = "_Layout";
+}
+
+<h2>Видалити статтю</h2>
+
+<h4>Ви впевнені, що хочете видалити цю статтю?</h4>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-2">Тема</dt>
+    <dd class="col-sm-10">@Model.Topic</dd>
+
+    <dt class="col-sm-2">Опис</dt>
+    <dd class="col-sm-10">@Model.BodyText</dd>
+</dl>
+
+<form asp-action="DeleteArticleConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Так, видалити</button>
+    <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
+</form>
