@@ -1,11 +1,12 @@
-﻿@model BytPax.Models.Article
+﻿@model BytPax.Areas.Admin.Models.ArticleCreateViewModel
+
 @{
     ViewData["Title"] = "Видалити статтю";
-    Layout = "_Layout";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
+@* <title>Видалити статтю</title> *@
 
-<h2>Видалити статтю</h2>
-
+@* <h2>Видалити статтю</h2> *@
 <h4>Ви впевнені, що хочете видалити цю статтю?</h4>
 <hr />
 
@@ -17,8 +18,9 @@
     <dd class="col-sm-10">@Model.BodyText</dd>
 </dl>
 
-<form asp-action="DeleteArticleConfirmed" method="post">
-    <input type="hidden" asp-for="Id" />
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id"/>
     <button type="submit" class="btn btn-danger">Так, видалити</button>
     <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
 </form>

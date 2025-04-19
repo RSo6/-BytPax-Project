@@ -1,44 +1,44 @@
+using BytPax.Models.core;
 using BytPax.Instructions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace BytPax.Repositories
+namespace BytPax.Repositories;
+
+public class Repository<T> where T : BaseEntity
 {
-    public class Repository<T> : IRepository<T> where T : class
+    private readonly IDataStorage<T> _storage;
+
+    public Repository(IDataStorage<T> storage)
     {
-        protected static List<T> _entities = new List<T>(); 
-
-        public IEnumerable<T> GetAll() => _entities;
-
-        public T GetEntityById(long id)
-        {
-            return _entities.FirstOrDefault(e => (e as dynamic).Id == id);
-        }
-
-        public void Add(T entity)
-        {
-            _entities.Add(entity);
-        }
-
-        public void Update(T entity)
-        {
-            var existingEntity = _entities.FirstOrDefault(e => (e as dynamic).Id == (entity as dynamic).Id);
-            if (existingEntity != null)
-            {
-                int index = _entities.IndexOf(existingEntity);
-                _entities[index] = entity;
-            }
-        }
-
-        public void Delete(long id)
-        {
-            var entity = _entities.FirstOrDefault(e => (e as dynamic).Id == id);
-            if (entity != null)
-            {
-                _entities.Remove(entity);
-            }
-        }
+        _storage = storage;
     }
 
+    public List<T> GetAll()
+    {
+        return _storage.GetAll();
+    }
+
+    public T? GetById(int id)
+    {
+        return _storage.GetById(id);
+    }
+
+    public void Add(T entity)
+    {
+        _storage.Add(entity);
+        _storage.Save();
+    }
+
+    public void Update(T entity)
+    {
+        _storage.Update(entity);
+        _storage.Save();
+    }
+
+    public void Delete(int id)
+    {
+        _storage.Delete(id);
+        _storage.Save();
+    } 
 }
+
+    

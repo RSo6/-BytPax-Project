@@ -1,0 +1,24 @@
+[
+  {
+    "Id": 1,
+    "FullName": "Іван Петров",
+    "Country": "Україна",
+    "City": "Київ",
+    "Age": 25,
+    "CategoryId": 1,
+    "Description": "Майстер спорту з боксу",
+    "CreatedAt": "2025-04-18T19:00:00Z",
+    "UpdatedAt": "2025-04-18T19:00:00Z"
+  },
+  {
+    "Id": 2,
+    "FullName": "Олена Коваленко",
+    "Country": "Україна",
+    "City": "Львів",
+    "Age": 22,
+    "CategoryId": 2,
+    "Description": "Чемпіонка України з карате",
+    "CreatedAt": "2025-04-18T19:05:00Z",
+    "UpdatedAt": "2025-04-18T19:05:00Z"
+  }
+]

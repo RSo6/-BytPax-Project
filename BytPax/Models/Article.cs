@@ -1,4 +1,6 @@
+using System.Text.Json.Serialization;
 using BytPax.Models.core;
+using Microsoft.AspNetCore.Http;
 
 namespace BytPax.Models
 {
@@ -7,20 +9,19 @@ namespace BytPax.Models
         public string Topic { get; set; }
         public string BodyText { get; set; }
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
-        public string ImagePath { get; set; }
+        public string? ImagePath { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
-        
         public Article() { }
 
-        public Article(string topic, string text, int id, string image, Category category)
-            : base(id)
+        public Article(string topic, string bodyText, int categoryId, string imagePath)
+            : base(0) 
         {
             Topic = topic;
-            BodyText = text;
-            CategoryId = id;
-            ImagePath = image;
-            Category = category;
+            BodyText = bodyText;
+            CategoryId = categoryId;
+            ImagePath = imagePath;
         }
     }
 }

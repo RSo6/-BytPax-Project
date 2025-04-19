@@ -1,5 +1,5 @@
-using BytPax.Instructions;
 using BytPax.Models;
+using BytPax.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BytPax.Areas.Admin.Controllers
@@ -7,28 +7,39 @@ namespace BytPax.Areas.Admin.Controllers
     [Area("Admin")]
     public class HomeController : Controller
     {
-        private readonly IRepository<Article> _articleRepository;
-        private readonly IRepository<Athlete> _athleteRepository;
+        private readonly Repository<Article> _articleRepo;
+        private readonly Repository<Athlete> _athleteRepo;
 
-        public HomeController(IRepository<Article> articleRepository, IRepository<Athlete> athleteRepository)
+        public HomeController(Repository<Article> articleRepo, Repository<Athlete> athleteRepo)
         {
-            _articleRepository = articleRepository;
-            _athleteRepository = athleteRepository;
+            _articleRepo = articleRepo;
+            _athleteRepo = athleteRepo;
         }
 
-        // GET: Admin/Home
         public IActionResult Index()
         {
-            var articles = _articleRepository.GetAll();
-            var athletes = _athleteRepository.GetAll();
-            
-            var model = new AdminViewModel
-            {
-                Articles = articles,
-                Athletes = athletes
-            };
+            var athletes = _athleteRepo.GetAll();
+            return View(athletes);
+        }
 
-            return View(model);
+        public IActionResult AthleteDetails(int id)
+        {
+            var athlete = _athleteRepo.GetById(id);
+            if (athlete == null)
+            {
+                return NotFound();
+            }
+            return View(athlete);
+        }
+
+        public IActionResult ArticleDetails(int id)
+        {
+            var article = _articleRepo.GetById(id);
+            if (article == null)
+            {
+                return NotFound();
+            }
+            return View(article);
         }
     }
 }

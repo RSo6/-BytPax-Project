@@ -1,0 +1,52 @@
+@model IEnumerable<BytPax.Models.Article>
+
+@{
+    // ViewBag.Title = "Статті";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">📖 Статті</h2>
+    <a class="btn btn-success" href="@Url.Action("Create", "Article", new { area = "Admin" })">➕ Додати статтю</a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-striped table-bordered table-hover mb-0">
+            <thead class="table-dark">
+            <tr>
+                <th>Тема</th>
+                <th>Опис</th>
+                <th>Шлях</th>
+                <th class="text-center">Дії</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var article in Model)
+            {
+                <tr>
+                    <td>@article.Topic</td>
+                    <td>@article.BodyText</td>
+                    <td>@article.ImagePath</td>
+                    <td>
+                        <div class="d-flex justify-content-center gap-2">
+                            <!-- Кнопка редагування -->
+                            <a class="btn btn-primary btn-sm"
+                               href="@Url.Action("Edit", "Article", new { id = article.Id, area = "Admin" })">
+                                ✏️ Редагувати
+                            </a>
+
+                            <!-- Кнопка видалення -->
+                            <a class="btn btn-danger btn-sm"
+                               href="@Url.Action("Delete", "Article", new { id = article.Id, area = "Admin" })"
+                               onclick="return confirm('Ви впевнені, що хочете видалити цю статтю?');">
+                                🗑️ Видалити
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

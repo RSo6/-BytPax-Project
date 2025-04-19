@@ -5,28 +5,21 @@ namespace BytPax.Models
 {
     public class Athlete : BaseEntity
     {
-        [Required(ErrorMessage = "Вік обов'язковий")]
         public int Age { get; set; }
-
-        [Required(ErrorMessage = "Категорія обов'язкова")]
+        
         public int CategoryId { get; set; }
 
-        public Category? Category { get; set; } // nullable
-
-
-        [Required(ErrorMessage = "Ім'я обов'язкове")]
+        public Category Category { get; set; }
+        
         public string FullName { get; set; }
-
-        [Required(ErrorMessage = "Країна обов'язкова")]
+        
         public string Country { get; set; }
-
-        [Required(ErrorMessage = "Місто обов'язкове")]
+        
         public string City { get; set; }
-
-        [Required(ErrorMessage = "Опис обов'язковий")]
+        
         public string Description { get; set; }
 
-        // Конструктори
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         public Athlete() { }
 
         public Athlete(int age, string fullName, string country, int categoryId, Category category, string city, string description)

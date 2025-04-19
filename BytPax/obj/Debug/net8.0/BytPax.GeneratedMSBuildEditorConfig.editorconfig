@@ -26,20 +26,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Articles/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZXMvQ3JlYXRlLmNzaHRtbA==
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Article/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZS9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Articles/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZXMvRGVsZXRlLmNzaHRtbA==
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Article/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZS9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Articles/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZXMvRWRpdC5jc2h0bWw=
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Article/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZS9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Articles/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZXMvSW5kZXguY3NodG1s
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Article/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Athletes/Create.cshtml]

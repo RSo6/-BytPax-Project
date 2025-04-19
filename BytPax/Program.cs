@@ -1,22 +1,37 @@
+using BytPax.Data;
 using BytPax.Instructions;
 using BytPax.Models;
 using BytPax.Repositories;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ������ �������� MVC
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(); 
 
-// �������� ���������
-builder.Services.AddScoped<IRepository<Article>, ArticleRepository<Article>>();
-builder.Services.AddScoped<IRepository<Athlete>, AthleteRepository<Athlete>>();
+builder.Services.AddSingleton<IDataStorage<Article>>(sp =>
+{
+    var logger = sp.GetRequiredService<ILogger<JsonStorage<Article>>>();
+    return new JsonStorage<Article>("Data/articles.json", logger);
+});
+
+builder.Services.AddSingleton<IDataStorage<Athlete>>(sp =>
+{
+    var logger = sp.GetRequiredService<ILogger<JsonStorage<Athlete>>>();
+    return new JsonStorage<Athlete>("Data/athletes.json", logger);  
+});
+
+builder.Services.AddSingleton<IDataStorage<Category>>(sp =>
+{
+    var logger = sp.GetRequiredService<ILogger<JsonStorage<Category>>>();
+    return new JsonStorage<Category>("Data/categories.json", logger);  
+});
+
+builder.Services.AddScoped(typeof(Repository<>));
+builder.Services.AddScoped<Repository<Category>>();
+
 
 var app = builder.Build();
 
-// ������� �������
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
@@ -25,18 +40,23 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
-app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
-    name: "default",
+    name: "admin", 
+    pattern: "Admin/{controller=Home}/{action=Index}/{id?}",
+    defaults: new { area = "Admin" });
+
+app.MapControllerRoute(
+    name: "default", 
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-
 app.Run();
+
+
+
+

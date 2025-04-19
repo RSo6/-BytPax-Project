@@ -1,84 +1,89 @@
-using BytPax.Instructions;
+using Microsoft.AspNetCore.Mvc;
 using BytPax.Models;
 using BytPax.Repositories;
-using Microsoft.AspNetCore.Mvc;
 
 namespace BytPax.Areas.Admin.Controllers
-{ 
+{
     [Area("Admin")]
-    public class AthletesController : Controller
+    public class AthleteController : Controller
     {
-        private readonly IRepository<Athlete> _repository;
+        private readonly Repository<Athlete> _repository;
 
-        public AthletesController(IRepository<Athlete> repository)
+        public AthleteController(Repository<Athlete> repository)
         {
             _repository = repository;
         }
 
-        // GET: Admin/Athletes
-        public ActionResult Index()
+        // GET: /Admin/Athlete
+        public IActionResult Index()
         {
             var athletes = _repository.GetAll();
             return View(athletes);
         }
 
-        // GET: Admin/Athletes/Create
-        public ActionResult Create()
+        // GET: /Admin/Athlete/Create
+        public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Admin/Athletes/Create
+        // POST: /Admin/Athlete/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Athlete model)
+        public IActionResult Create(Athlete athlete)
         {
-            if (!ModelState.IsValid)
-                return View(model);
-
-            _repository.Add(model);
-            return RedirectToAction("Index");
-        }
-
-        // GET: Admin/Athletes/Edit/5
-        public ActionResult Edit(long id)
-        {
-            var athlete = _repository.GetEntityById(id);
-            if (athlete == null)
-                return NotFound();
-
+            if (ModelState.IsValid)
+            {
+                _repository.Add(athlete);
+                return RedirectToAction(nameof(Index));
+            }
             return View(athlete);
         }
 
-        // POST: Admin/Athletes/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Athlete model)
+        // GET: /Admin/Athlete/Edit/5
+        public IActionResult Edit(int id)
         {
-            if (!ModelState.IsValid)
-                return View(model);
-
-            _repository.Update(model);
-            return RedirectToAction("Index");
-        }
-
-        // GET: Admin/Athletes/Delete/5
-        public ActionResult Delete(long id)
-        {
-            var athlete = _repository.GetEntityById(id);
-            if (athlete == null)
-                return NotFound();
-
+            var athlete = _repository.GetById(id);
+            if (athlete == null) return NotFound();
             return View(athlete);
         }
 
-        // POST: Admin/Athletes/Delete/5
+        // POST: /Admin/Athlete/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Athlete athlete)
+        {
+            if (ModelState.IsValid)
+            {
+                _repository.Update(athlete);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(athlete);
+        }
+
+        // GET: /Admin/Athlete/Delete/5
+        public IActionResult Delete(int id)
+        {
+            var athlete = _repository.GetById(id);
+            if (athlete == null) return NotFound();
+            return View(athlete);
+        }
+
+        // POST: /Admin/Athlete/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(long id)
+        public IActionResult DeleteConfirmed(int id)
         {
             _repository.Delete(id);
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
+        }
+
+        // GET: /Admin/Athlete/Details/5
+        public IActionResult Details(int id)
+        {
+            var athlete = _repository.GetById(id);
+            if (athlete == null) return NotFound();
+            return View(athlete);
         }
     }
 }

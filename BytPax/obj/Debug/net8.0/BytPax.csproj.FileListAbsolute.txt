@@ -291,3 +291,6 @@ C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/obj/Debug/net8.0/ref/BytPax.d
 /Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Security.Cryptography.ProtectedData.dll
 /Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll
 /Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/obj/Debug/net8.0/BytPax.csproj.Up2Date
+/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/bin/Debug/net8.0/Data/articles.json
+/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/bin/Debug/net8.0/Data/athletes.json
+/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/bin/Debug/net8.0/Data/categories.json
