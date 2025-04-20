@@ -1,0 +1,60 @@
+﻿@model BytPax.Areas.Admin.Models.AthleteCreateViewModel
+
+@{
+    ViewData["Title"] = "Редагування спортсмена";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    @* <h2>@ViewData["Title"]</h2> *@
+
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="FullName"  class="form-label">ПІБ</label>
+            <input asp-for="FullName" name="FullName" class="form-control" value="@Model.FullName"/>
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Country"  class="form-label">Країна</label>
+            <input asp-for="Country" name="Country" class="form-control" value="@Model.Country" />
+            <span asp-validation-for="Country" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="City" class="form-label">Місто</label>
+            <input asp-for="City" name="City" class="form-control" value="@Model.City" />
+            <span asp-validation-for="City" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Age" class="form-label">Вік</label>
+            <input asp-for="Age" name="Age" type="number" class="form-control" value="@Model.Age" />
+            <span asp-validation-for="Age" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">Опис</label>
+            <textarea asp-for="Description" name="Description" class="form-control" rows="4">@Model.Description</textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="CategoryId" class="form-label">Категорія</label>
+            <select asp-for="CategoryId" class="form-select">
+                <option value="">Виберіть категорію</option>
+                @foreach (var category in ViewBag.Categories)
+                {
+                    <option value="@category.Id" @(category.Id == Model.CategoryId ? "selected" : "")>@category.Name</option>
+                }
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Зберегти</button>
+        <a asp-action="Index" href="/Admin/Athlete" class="btn btn-secondary ms-2">Назад</a>
+    </form>
+</div>

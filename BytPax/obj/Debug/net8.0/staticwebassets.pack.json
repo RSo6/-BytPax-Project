@@ -9,10 +9,6 @@
       "PackagePath": "staticwebassets/Images/Mohammed.jpg"
     },
     {
-      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/articles/happy.png",
-      "PackagePath": "staticwebassets/Images/articles/happy.png"
-    },
-    {
       "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/401.html",
       "PackagePath": "staticwebassets/admin/401.html"
     },
@@ -349,16 +345,16 @@
       "PackagePath": "staticwebassets/uploads/enqueue_linked.png"
     },
     {
-      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/happy.png",
-      "PackagePath": "staticwebassets/uploads/happy.png"
-    },
-    {
       "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-04-19 о 01.25.53.png",
       "PackagePath": "staticwebassets/uploads/Знімок екрана 2025-04-19 о 01.25.53.png"
     },
     {
       "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-04-19 о 18.20.01.png",
       "PackagePath": "staticwebassets/uploads/Знімок екрана 2025-04-19 о 18.20.01.png"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-04-19 о 18.51.10.png",
+      "PackagePath": "staticwebassets/uploads/Знімок екрана 2025-04-19 о 18.51.10.png"
     },
     {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BytPax.Microsoft.AspNetCore.StaticWebAssets.props",

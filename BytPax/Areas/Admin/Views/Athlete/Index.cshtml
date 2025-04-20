@@ -1,0 +1,65 @@
+@model IEnumerable<BytPax.Models.Athlete>
+
+@{
+    ViewBag.Title = "Атлети \ud83c\udfc3 ";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="mb-0"> Список атлетів 🏅</h2>
+    <a class="btn btn-success" href="@Url.Action("Create", "Athlete", new { area = "Admin" })">➕ Додати атлета</a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-striped table-bordered table-hover mb-0">
+            <thead class="table-dark">
+            <tr>
+                <th>Ім'я, Прізвище</th>
+                <th>Вік</th>
+                <th>Країна</th>
+                <th>Місто</th>
+                <th>Опис</th>
+                @* <th>Зображення</th> *@
+                <th class="text-center">Дії</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var athlete in Model)
+            {
+                <tr>
+                    <td>@athlete.FullName</td>
+                    <td>@athlete.Age</td>
+                    <td>@athlete.Country</td>
+                    <td>@athlete.City</td>
+                    <td>@athlete.Description</td>
+                    @* <td> *@
+                    @*     @if (!string.IsNullOrEmpty(athlete.ImagePath)) *@
+                    @*     { *@
+                    @*         <img src="~/uploads/@athlete.ImagePath" alt="Athlete Image" style="height: 60px;" /> *@
+                    @*     } *@
+                    @*     else *@
+                    @*     { *@
+                    @*         <span class="text-muted">Немає</span> *@
+                    @*     } *@
+                    @* </td> *@
+                    <td>
+                        <div class="d-flex justify-content-center gap-2">
+                            <a class="btn btn-primary btn-sm"
+                               href="@Url.Action("Edit", "Athlete", new { id = athlete.Id, area = "Admin" })">
+                                ✏️ Редагувати
+                            </a>
+
+                            <a class="btn btn-danger btn-sm"
+                               href="@Url.Action("Delete", "Athlete", new { id = athlete.Id, area = "Admin" })"
+                               onclick="return confirm('Ви впевнені, що хочете видалити спортсмена?');">
+                                🗑️ Видалити
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

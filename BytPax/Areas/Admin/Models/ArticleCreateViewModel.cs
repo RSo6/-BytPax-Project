@@ -5,13 +5,13 @@ namespace BytPax.Areas.Admin.Models;
     public class ArticleCreateViewModel
     {
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Поле Теми обов’язкове")]
         public string Topic { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Поле Тексу обов’язкове")]
         public string BodyText { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Вибір категорії обов’язкове")]
         public int CategoryId { get; set; }
 
         public IFormFile? ImageFile { get; set; }

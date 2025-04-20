@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FABEg0nkxN5m010LfBZnKqDMbeM8RXSChfhfL5FcYSI=",
+  "Hash": "qOSFAGif6WgjFqk6hGlC3Vacdkr4WNhoLxgvl3Pfk7g=",
   "Source": "BytPax",
   "BasePath": "_content/BytPax",
   "Mode": "Default",
@@ -471,25 +471,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/happy.png"
-    },
-    {
-      "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/articles/happy.png",
-      "SourceId": "BytPax",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/",
-      "BasePath": "_content/BytPax",
-      "RelativePath": "Images/articles/happy.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/Images/articles/happy.png"
     },
     {
       "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/Mohammed.jpg",
@@ -1651,6 +1632,25 @@
       "OriginalItemSpec": "wwwroot/uploads/Знімок екрана 2025-04-19 о 18.20.01.png"
     },
     {
+      "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-04-19 о 18.51.10.png",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "uploads/Знімок екрана 2025-04-19 о 18.51.10.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/Знімок екрана 2025-04-19 о 18.51.10.png"
+    },
+    {
       "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/dequeue_array.png",
       "SourceId": "BytPax",
       "SourceType": "Discovered",
@@ -1725,25 +1725,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/uploads/enqueue_linked.png"
-    },
-    {
-      "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/happy.png",
-      "SourceId": "BytPax",
-      "SourceType": "Discovered",
-      "ContentRoot": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/",
-      "BasePath": "_content/BytPax",
-      "RelativePath": "uploads/happy.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/uploads/happy.png"
     }
   ]
 }

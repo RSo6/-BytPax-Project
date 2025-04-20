@@ -59,8 +59,7 @@ public class ArticleController : Controller
 
             return View(model);
         }
-
-        // Обробка зображення
+        
         string? imagePath = null;
         if (model.ImageFile != null && model.ImageFile.Length > 0)
         {

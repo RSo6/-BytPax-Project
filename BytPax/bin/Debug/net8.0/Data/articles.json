@@ -25,14 +25,5 @@
     "CreatedAt": "2025-04-18T18:45:17.706311Z",
     "UpdatedAt": "2025-04-18T18:45:17.706311Z",
     "Id": 3
-  },
-  {
-    "Topic": "fdsafsdfsdaf",
-    "BodyText": "asfdasfdsafsafsa",
-    "CategoryId": 2,
-    "ImagePath": "happy.png",
-    "CreatedAt": "2025-04-18T19:04:41.717513Z",
-    "UpdatedAt": "2025-04-18T19:04:41.717514Z",
-    "Id": 4
   }
 ]
