@@ -1,6 +1,7 @@
 using System.Text.Json;
 using BytPax.Instructions;
 using BytPax.Models.core;
+using BytPax.Services;
 
 namespace BytPax.Data;
     public class JsonStorage<T> : IDataStorage<T> where T : BaseEntity
@@ -22,9 +23,15 @@ namespace BytPax.Data;
             {
                 return new List<T>();
             }
-            
             var json = File.ReadAllText(_filePath);
-            return JsonSerializer.Deserialize<List<T>>(json) ?? new List<T>();
+            
+            var options = new JsonSerializerOptions
+            {
+                Converters = { new UserJsonConverter() } 
+            };
+            
+            
+            return JsonSerializer.Deserialize<List<T>>(json, options) ?? new List<T>();
         }
         
         public List<T> GetAll()

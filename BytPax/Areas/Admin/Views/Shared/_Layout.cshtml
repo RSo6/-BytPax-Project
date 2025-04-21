@@ -9,12 +9,42 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     @RenderSection("Styles", required: false)
     @RenderSection("Scripts", required: false)
-    
+
+    @{
+        var successMessage = TempData["SuccessMessage"] as string;
+        var errorMessage = TempData["ErrorMessage"] as string;
+    }
+
+    @if (!string.IsNullOrEmpty(successMessage))
+    {
+        <div class="alert alert-success">
+            @successMessage  <!-- Просто вивести текст -->
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <div class="alert alert-danger">
+            @errorMessage  <!-- Просто вивести текст -->
+        </div>
+    }
+
 </head>
 <body class="sb-nav-fixed">
 <!-- Навігація згори -->
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <a class="navbar-brand ps-3" href="/Admin/Home/Index">Admin Panel</a>
+
+    <ul class="navbar-nav ms-auto">
+        <!-- Кнопка Log Out -->
+        <li class="nav-item">
+            <form action="/Auth/Logout" method="post" class="d-inline">
+                <button type="submit" class="btn btn-link text-white">
+                    <i class="fas fa-sign-out-alt"></i> Log Out
+                </button>
+            </form>
+        </li>
+    </ul>
 </nav>
 
 <div id="layoutSidenav">

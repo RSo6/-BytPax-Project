@@ -1,23 +1,23 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Services\" />
       <Folder Include="wwwroot\Images\" />
       <Folder Include="wwwroot\uploads\" />
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+      <_ContentIncludedByDefault Remove="wwwroot\Images\articles\happy.png" />
     </ItemGroup>
 
     <ItemGroup>
-      <_ContentIncludedByDefault Remove="wwwroot\Images\articles\happy.png" />
+      <PackageReference Include="BCrypt.Net-Next" Version="4.0.2" />
+      <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.5" />
     </ItemGroup>
 
 </Project>
