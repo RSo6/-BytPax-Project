@@ -10,5 +10,17 @@
     "Id": 1,
     "CreatedAt": "2025-04-28T18:34:46.832421Z",
     "UpdatedAt": "2025-04-28T18:34:46.832421Z"
+  },
+  {
+    "Title": "\u0430\u0456\u0432\u0444\u0430\u0456\u0444\u0432\u0430",
+    "Description": "\u0432\u0430\u0456\u0444\u0430\u0432\u0456\u0444\u0430",
+    "EventDate": "2025-04-18T00:00:00",
+    "SportId": 0,
+    "ImportanceLevel": 2,
+    "ImagePath": "The last day news.png",
+    "CategoryId": 2,
+    "Id": 2,
+    "CreatedAt": "2025-04-28T22:15:51.785068Z",
+    "UpdatedAt": "2025-04-28T22:15:51.785068Z"
   }
 ]

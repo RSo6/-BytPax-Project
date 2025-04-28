@@ -1,83 +1,45 @@
+// Controllers/HomeController.cs
 using Microsoft.AspNetCore.Mvc;
-using BytPax.Models;
-using BytPax.Repositories;
-using System.Linq;
+using BytPax.Services;
 
 namespace BytPax.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly Repository<Athlete> _athleteRepo;
-        private readonly Repository<Article> _articleRepo;
-        private readonly Repository<RecordHistory> _recordRepo;
-        private readonly Repository<HistoricalEvent> _eventRepo;
+        private readonly SearchService _searchService;
 
-        public HomeController(Repository<Athlete> athleteRepo, 
-                              Repository<Article> articleRepo,
-                              Repository<RecordHistory> recordRepo,
-                              Repository<HistoricalEvent> eventRepo)
+        public HomeController(SearchService homeService)
         {
-            _athleteRepo = athleteRepo;
-            _articleRepo = articleRepo;
-            _recordRepo = recordRepo;
-            _eventRepo = eventRepo;
+            _searchService = homeService;
         }
 
         public IActionResult Index()
         {
-            var athletes = _athleteRepo.GetAll();
-            var articles = _articleRepo.GetAll();
-            var records = _recordRepo.GetAll();
-            var events = _eventRepo.GetAll();
-
-            var model = new
-            {
-                AthletesCount = athletes.Count(),
-                ArticlesCount = articles.Count(),
-                RecordsCount = records.Count(),
-                EventsCount = events.Count(),
-                Athletes = athletes,
-                Articles = articles,
-                Records = records,
-                Events = events
-            };
-
+            var model = _searchService.GetDashboardData();
             return View(model);
         }
 
-        // Пошук спортсменів
         public IActionResult SearchAthletes(string searchTerm)
         {
-            var athletes = _athleteRepo.GetAll()
-                .Where(a => string.IsNullOrEmpty(searchTerm) || a.FullName.Contains(searchTerm))
-                .ToList();
-            return Json(athletes); 
+            var athletes = _searchService.SearchAthletes(searchTerm);
+            return Json(athletes);
         }
 
-        // Пошук подій
         public IActionResult SearchEvents(string searchTerm)
         {
-            var events = _eventRepo.GetAll()
-                .Where(e => string.IsNullOrEmpty(searchTerm) || e.Title.Contains(searchTerm))
-                .ToList();
-            return Json(events); 
+            var events = _searchService.SearchEvents(searchTerm);
+            return Json(events);
         }
 
-        // Пошук рекордів
         public IActionResult SearchRecords(string searchTerm)
         {
-            var records = _recordRepo.GetAll()
-                .Where(r => string.IsNullOrEmpty(searchTerm) || r.AthleteName.Contains(searchTerm))
-                .ToList();
-            return Json(records);  
+            var records = _searchService.SearchRecords(searchTerm);
+            return Json(records);
         }
-        
-        // Пошук статей
+
         public IActionResult SearchArticles(string searchTerm)
         {
-            var articles = _articleRepo.GetAll()
-                .Where(a => string.IsNullOrEmpty(searchTerm) || a.Topic.Contains(searchTerm))
-                .ToList();
+            var articles = _searchService.SearchArticles(searchTerm);
             return Json(articles);
         }
     }
