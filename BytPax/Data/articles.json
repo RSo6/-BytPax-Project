@@ -34,5 +34,41 @@
     "CreatedAt": "2025-04-28T21:04:03.392597Z",
     "UpdatedAt": "2025-04-28T21:04:03.392597Z",
     "Id": 4
+  },
+  {
+    "Topic": "\u0430\u0456\u0432\u0430\u0456\u0444\u0432",
+    "BodyText": "\u0430\u0456\u0432\u0444\u0430\u0432\u0456\u0444",
+    "CategoryId": 2,
+    "ImagePath": "The last day news.png",
+    "CreatedAt": "2025-04-28T21:38:30.165069Z",
+    "UpdatedAt": "2025-04-28T21:38:30.165069Z",
+    "Id": 5
+  },
+  {
+    "Topic": "\u0430\u0432\u0456\u0444\u0430\u0432\u0444\u0456",
+    "BodyText": "\u0432\u0430\u0456\u0444\u0456\u0432\u0430\u0444\u0432\u0456",
+    "CategoryId": 1,
+    "ImagePath": "The last day news.png",
+    "CreatedAt": "2025-04-28T21:39:09.728269Z",
+    "UpdatedAt": "2025-04-28T21:39:09.728269Z",
+    "Id": 6
+  },
+  {
+    "Topic": "\u0410\u043B\u0430\u0430\u0432\u0456\u0444\u0430\u0444\u0432\u0430",
+    "BodyText": "\u0430\u0432\u0456\u0444\u0430\u0432",
+    "CategoryId": 1,
+    "ImagePath": "Sport Archive.png",
+    "CreatedAt": "2025-04-28T21:43:04.885127Z",
+    "UpdatedAt": "2025-04-28T21:43:04.885127Z",
+    "Id": 7
+  },
+  {
+    "Topic": "\u0430\u0432\u0456\u0444\u0430\u0432\u0456\u0444",
+    "BodyText": "\u0430\u0444\u0456\u0432\u0430\u0444\u0456\u0432",
+    "CategoryId": 1,
+    "ImagePath": "Tournaments resultt#2.png",
+    "CreatedAt": "2025-04-28T21:53:10.038426Z",
+    "UpdatedAt": "2025-04-28T21:53:10.038426Z",
+    "Id": 8
   }
 ]

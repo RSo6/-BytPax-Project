@@ -50,7 +50,9 @@ namespace BytPax.Areas.Admin.Controllers
 
             if (!ModelState.IsValid)
             {
-                return View(model);
+                _logger.LogWarning("Create Record: Model is not valid. Errors: {Errors}",
+                    string.Join(", ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage)));
+                return View(model); 
             }
 
             var newRecord = new RecordHistory
@@ -70,6 +72,7 @@ namespace BytPax.Areas.Admin.Controllers
             TempData["SuccessMessage"] = "Рекорд успішно додано!";
             return RedirectToAction("Index");
         }
+
 
         private int GetNextId()
         {

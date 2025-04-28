@@ -1,63 +1,98 @@
 ﻿@model BytPax.Areas.Admin.Models.ArticleCreateViewModel
 
-
 @{
     ViewData["Title"] = "Створення статті";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 <div class="container mt-4">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-@* <h2>@ViewData["Title"]</h2> *@
-<form asp-action="Create" method="post" enctype="multipart/form-data">
-    <div class="mb-3">
-        <label asp-for="Topic" class="form-label">Тема</label>
-        <input asp-for="Topic" class="form-control" name="Topic"/>
-        <span asp-validation-for="Topic" class="text-danger"></span>
-    </div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <div class="mb-3">
-        <label asp-for="BodyText" class="form-label">Текст</label>
-        <textarea asp-for="BodyText" class="form-control" rows="5" name="BodyText"></textarea>
-        <span asp-validation-for="BodyText" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3">
-        <label asp-for="ImageFile" class="form-label">Зображення</label>
-        <input asp-for="ImageFile" type="file" class="form-control" name="ImageFile"/>
-        <span asp-validation-for="ImageFile" class="text-danger"></span>
-    </div>
-
-    <div class="mb-3">
-        <label asp-for="CategoryId" class="form-label">Категорія</label>
-        <select asp-for="CategoryId" class="form-select" name="CategoryId">
-            <option value="0">Виберіть категорію</option>
-            @if (ViewBag.Categories is List<BytPax.Models.Category> categories && categories.Any())
+    <form id="createArticleForm" asp-action="Create" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Topic" class="form-label">Тема</label>
+            <input asp-for="Topic" class="form-control" name="Topic" />
+            <span asp-validation-for="Topic" class="text-danger"></span>
+            <!-- Виведення помилок під полем Topic -->
+            @if (ViewData.ModelState["Topic"]?.Errors.Any() == true)
             {
-                @foreach (var category in categories)
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["Topic"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="BodyText" class="form-label">Текст</label>
+            <textarea asp-for="BodyText" class="form-control" rows="5" name="BodyText"></textarea>
+            <span asp-validation-for="BodyText" class="text-danger"></span>
+            <!-- Виведення помилок під полем BodyText -->
+            @if (ViewData.ModelState["BodyText"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["BodyText"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ImageFile" class="form-label">Зображення</label>
+            <input asp-for="ImageFile" type="file" class="form-control" name="ImageFile" />
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+            <!-- Виведення помилок під полем ImageFile -->
+            @if (ViewData.ModelState["ImageFile"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["ImageFile"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="CategoryId" class="form-label">Категорія</label>
+            <select asp-for="CategoryId" class="form-select" name="CategoryId">
+                <option value="0">Виберіть категорію</option>
+                @if (ViewBag.Categories is List<BytPax.Models.Category> categories && categories.Any())
                 {
-                    <option value="@category.Id">@category.Name</option>
+                    @foreach (var category in categories)
+                    {
+                        <option value="@category.Id">@category.Name</option>
+                    }
                 }
-            }
-            else
+                else
+                {
+                    <option value="">Немає доступних категорій</option>
+                }
+            </select>
+            <span asp-validation-for="CategoryId" class="text-danger"></span>
+            <!-- Виведення помилок під полем CategoryId -->
+            @if (ViewData.ModelState["CategoryId"]?.Errors.Any() == true)
             {
-                <option value="">Немає доступних категорій</option>
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["CategoryId"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
             }
-        </select>
-        <span asp-validation-for="CategoryId" class="text-danger"></span>
-    </div>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Зберегти</button>
-</form>
+        <button type="submit" class="btn btn-primary">Зберегти</button>
+    </form>
 
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success mt-3">
-        @TempData["SuccessMessage"]
-    </div>
-}
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success mt-3">
+            @TempData["SuccessMessage"]
+        </div>
+    }
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.13/jquery.validate.unobtrusive.min.js"></script>

@@ -18,5 +18,15 @@
     "Id": 2,
     "CreatedAt": "2025-04-28T19:46:50.023556Z",
     "UpdatedAt": "2025-04-28T19:46:50.023556Z"
+  },
+  {
+    "SportId": 1,
+    "AthleteName": "\u0420\u043E\u043C\u0430\u043D",
+    "RecordDescription": "\u0430\u0432\u0456\u0444\u0430\u0432\u0456\u0444",
+    "RecordValue": 1234,
+    "DateAchieved": "2025-04-03T00:00:00",
+    "Id": 3,
+    "CreatedAt": "2025-04-28T22:15:37.168874Z",
+    "UpdatedAt": "2025-04-28T22:15:37.168874Z"
   }
 ]

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "a9t0ETc47MYrHxbUnYYOOUkNG37yXO5BVp7Zd3+smiI=",
+  "Hash": "JSuYV+oZ2oqkqg1q+6U4E3F0/n/d+5AjGsRiAUl6L7k=",
   "Source": "BytPax",
   "BasePath": "_content/BytPax",
   "Mode": "Default",
@@ -1698,6 +1698,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/uploads/The last day news.png"
+    },
+    {
+      "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Tournaments resultt#2.png",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "uploads/Tournaments resultt#2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/Tournaments resultt#2.png"
     }
   ]
 }
