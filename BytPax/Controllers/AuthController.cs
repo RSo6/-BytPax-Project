@@ -48,7 +48,7 @@ public class AuthController : Controller
         }
         else
         {
-            TempData["ErrorMessage"] = "Email already exists."; // Повідомлення про помилку
+            TempData["ErrorMessage"] = "Email already exists."; 
             return View(model);
         }
     }
@@ -80,7 +80,7 @@ public class AuthController : Controller
             
             await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
 
-            TempData["SuccessMessage"] = $"Welcome back, {user.FullName}!"; // Привітання після входу
+            TempData["SuccessMessage"] = $"Welcome back, {user.FullName}!"; 
             if (user.Role == Models.core.User.UserRole.Admin)
             {
                 return RedirectToAction("Index", "Admin");
@@ -91,14 +91,14 @@ public class AuthController : Controller
             }
         }
 
-        TempData["ErrorMessage"] = "Invalid login credentials."; // Повідомлення про помилку
+        TempData["ErrorMessage"] = "Invalid login credentials.";
         return View(model);
     }
 
     public async Task<IActionResult> Logout()
     {
         await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        TempData["SuccessMessage"] = "You have successfully logged out."; // Повідомлення про успішний вихід
+        TempData["SuccessMessage"] = "You have successfully logged out."; 
         return RedirectToAction("Index", "Home");
     }
 }

@@ -1,0 +1,14 @@
+[
+  {
+    "Title": "Sth",
+    "Description": "ffdsafsdafsdaf",
+    "EventDate": "0001-01-01T00:00:00",
+    "SportId": 0,
+    "ImportanceLevel": 3,
+    "ImagePath": "The last day news.png",
+    "CategoryId": 1,
+    "Id": 1,
+    "CreatedAt": "2025-04-28T18:34:46.832421Z",
+    "UpdatedAt": "2025-04-28T18:34:46.832421Z"
+  }
+]

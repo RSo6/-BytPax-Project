@@ -1,0 +1,24 @@
+@model BytPax.Areas.Admin.Models.HistoricalEventCreateViewModel
+
+@{
+    ViewData["Title"] = "Видалити історичну подію";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Ви впевнені, що хочете видалити цю історичну подію?</h4>
+<hr />
+
+<dl class="row">
+    <dt class="col-sm-3">Назва події</dt>
+    <dd class="col-sm-9">@Model.Title</dd>
+
+    <dt class="col-sm-3">Опис</dt>
+    <dd class="col-sm-9">@Model.Description</dd>
+</dl>
+
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id"/>
+    <button type="submit" class="btn btn-danger">Так, видалити</button>
+    <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
+</form>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nfLIcJKa3rc=",
+  "dgSpecHash": "LLgYKuQjFLI=",
   "success": true,
   "projectFilePath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj",
   "expectedPackageFiles": [
@@ -149,10 +149,7 @@
     "/Users/romanshnep/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
     "/Users/romanshnep/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
     "/Users/romanshnep/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "/Users/romanshnep/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
-    "/Users/romanshnep/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "/Users/romanshnep/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
-    "/Users/romanshnep/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.20/microsoft.netcore.app.host.osx-arm64.7.0.20.nupkg.sha512"
+    "/Users/romanshnep/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -11,8 +11,7 @@ public class UserJsonConverter : JsonConverter<User>
     {
         using var jsonDoc = JsonDocument.ParseValue(ref reader);
         var root = jsonDoc.RootElement;
-
-        // Отримуємо роль з JSON
+        
         if (!root.TryGetProperty("Role", out var roleProp))
         {
             throw new JsonException("Відсутня роль користувача 'Role'");

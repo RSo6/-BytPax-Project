@@ -249,3 +249,6 @@
 /Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/obj/Debug/net7.0/ref/BytPax.dll
 /Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/bin/Debug/net7.0/BCrypt.Net-Next.dll
 /Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/bin/Debug/net7.0/Data/users.json
+/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/bin/Debug/net7.0/Data/sports.json
+/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/bin/Debug/net7.0/Data/historicalEvents.json
+/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/bin/Debug/net7.0/Data/recordsHistory.json

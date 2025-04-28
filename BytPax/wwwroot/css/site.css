@@ -12,6 +12,15 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
+#mainCarousel .carousel-item img {
+  object-fit: cover;
+  width: auto;
+}
+.carousel-item img {
+  height: 800px;
+  object-fit: cover;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -19,4 +28,84 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+/* Фіксований sidebar */
+#sidebar {
+  position: fixed;
+  width: 250px;
+  height: 80%;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  background-color: #f8f9fa;
+  margin-top: 60px;
+}
+
+/* Основний контент */
+#mainContent {
+  margin-left: 250px; /* рівно відступ на ширину sidebar */
+  padding: 20px;
+  flex-grow: 1;
+  margin-top: 0;
+  text-align: center; /* центруємо текст */
+}
+
+/* Заголовок основного контенту */
+#mainContent h1, #mainContent h2, #mainContent h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Вивід результатів */
+.results-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* центруємо результати */
+}
+
+/* Блок одного результату */
+.athlete-result, .event-result, .record-result {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  width: 100%;
+  max-width: 600px; /* обмежуємо ширину, щоб не було дуже широких блоків */
+  text-align: left; /* всередині карточки текст вирівнюємо вліво */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Заголовки і текст всередині блоків */
+.athlete-result h5, .event-result h5, .record-result h5 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.athlete-result p, .event-result p, .record-result p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Адаптивність */
+@media screen and (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  #mainContent {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+.event-result img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }

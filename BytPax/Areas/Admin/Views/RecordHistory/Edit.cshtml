@@ -1,0 +1,34 @@
+@model BytPax.Areas.Admin.Models.RecordHistoryCreateViewModel
+
+@{
+    ViewData["Title"] = "Редагування рекорду";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <form asp-action="Edit" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id"/>
+        <div class="mb-3">
+            <label asp-for="SportId" class="form-label">Вид спорту</label>
+            <select asp-for="SportId" class="form-select">
+                @foreach (var sport in ViewBag.Sports)
+                {
+                    <option value="@sport.Id" @(sport.Id == Model.SportId ? "selected" : "")>@sport.Name</option>
+                }
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="RecordValue" class="form-label">Рекорд</label>
+            <input asp-for="RecordValue" class="form-control"/>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="RecordDate" class="form-label">Дата</label>
+            <input asp-for="RecordDate" type="date" class="form-control"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Зберегти</button>
+    </form>
+</div>

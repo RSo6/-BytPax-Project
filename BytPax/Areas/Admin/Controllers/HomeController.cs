@@ -1,4 +1,5 @@
 using BytPax.Models;
+using BytPax.Models.core;
 using BytPax.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,37 +10,43 @@ namespace BytPax.Areas.Admin.Controllers
     {
         private readonly Repository<Article> _articleRepo;
         private readonly Repository<Athlete> _athleteRepo;
+        private readonly Repository<RecordHistory> _recordHistoryRepo;
+        private readonly Repository<HistoricalEvent> _historicalEventRepo; // Додаємо репозиторій для історичних подій
+        private readonly Repository<User> _userRepo;
 
-        public HomeController(Repository<Article> articleRepo, Repository<Athlete> athleteRepo)
+        public HomeController(
+            Repository<Article> articleRepo,
+            Repository<Athlete> athleteRepo,
+            Repository<RecordHistory> recordHistoryRepo,
+            Repository<HistoricalEvent> historicalEventRepo, // Історичні події
+            Repository<User> userRepo)
         {
             _articleRepo = articleRepo;
             _athleteRepo = athleteRepo;
+            _recordHistoryRepo = recordHistoryRepo;
+            _historicalEventRepo = historicalEventRepo; // Історичні події
+            _userRepo = userRepo;
         }
 
         public IActionResult Index()
         {
-            var athletes = _athleteRepo.GetAll();
-            return View(athletes);
-        }
+            // Отримуємо всі дані для моніторингу
+            var athletesCount = _athleteRepo.GetAll().Count();
+            var articlesCount = _articleRepo.GetAll().Count();
+            var recordHistoriesCount = _recordHistoryRepo.GetAll().Count();
+            var historicalEventsCount = _historicalEventRepo.GetAll().Count(); // Кількість історичних подій
+            var usersCount = _userRepo.GetAll().Count();
+            var adminCount = _userRepo.GetAll().Count(u => u.Role.ToString() == "Admin");
 
-        public IActionResult AthleteDetails(int id)
-        {
-            var athlete = _athleteRepo.GetById(id);
-            if (athlete == null)
-            {
-                return NotFound();
-            }
-            return View(athlete);
-        }
+            // Передаємо ці дані в представлення
+            ViewBag.AthletesCount = athletesCount;
+            ViewBag.ArticlesCount = articlesCount;
+            ViewBag.RecordHistoriesCount = recordHistoriesCount;
+            ViewBag.HistoricalEventsCount = historicalEventsCount; // Кількість історичних подій
+            ViewBag.UsersCount = usersCount;
+            ViewBag.AdminCount = adminCount;
 
-        public IActionResult ArticleDetails(int id)
-        {
-            var article = _articleRepo.GetById(id);
-            if (article == null)
-            {
-                return NotFound();
-            }
-            return View(article);
+            return View();
         }
     }
 }

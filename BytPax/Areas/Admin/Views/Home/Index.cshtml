@@ -1,6 +1,55 @@
 ﻿@{
-    ViewBag.Title = "Адмін панель";
+    ViewData["Title"] = "Адмін панель";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Ласкаво просимо в адмін панель</h1>
+<div class="container mt-4">
+    <h1>Ласкаво просимо в адмін панель</h1>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Користувачі</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.UsersCount</h5>
+                    <p class="card-text">Кількість користувачів</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-header">Адміністратори</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.AdminCount</h5>
+                    <p class="card-text">Кількість адміністраторів</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-warning mb-3">
+                <div class="card-header">Статті</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.ArticlesCount</h5>
+                    <p class="card-text">Кількість статей</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-header">Рекорди</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.RecordHistoriesCount</h5>
+                    <p class="card-text">Кількість рекордів</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-info mb-3">
+                <div class="card-header">Історичні події</div>
+                <div class="card-body">
+                    <h5 class="card-title">@ViewBag.HistoricalEventsCount</h5>
+                    <p class="card-text">Кількість історичних подій</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

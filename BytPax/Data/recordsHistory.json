@@ -1,0 +1,22 @@
+[
+  {
+    "SportId": 0,
+    "AthleteName": "\u0430\u0432\u0456\u0430\u0444\u0430\u0432\u0456\u0444",
+    "RecordDescription": "\u0430\u0430\u0432\u0456\u0430\u0456\u0444\u0430",
+    "RecordValue": 1234,
+    "DateAchieved": "2025-04-04T00:00:00",
+    "Id": 1,
+    "CreatedAt": "2025-04-28T19:33:43.724605Z",
+    "UpdatedAt": "2025-04-28T19:33:43.724605Z"
+  },
+  {
+    "SportId": 0,
+    "AthleteName": "fdsfsad",
+    "RecordDescription": "fdsafsa",
+    "RecordValue": 123,
+    "DateAchieved": "2025-04-17T00:00:00",
+    "Id": 2,
+    "CreatedAt": "2025-04-28T19:46:50.023556Z",
+    "UpdatedAt": "2025-04-28T19:46:50.023556Z"
+  }
+]

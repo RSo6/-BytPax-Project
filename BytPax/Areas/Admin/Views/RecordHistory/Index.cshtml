@@ -1,0 +1,51 @@
+@model IEnumerable<BytPax.Models.RecordHistory>
+
+@{
+    ViewData["Title"] = "Історія рекордів";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">🏆 Історія рекордів</h2>
+    <a class="btn btn-success" href="@Url.Action("Create", "RecordHistory", new { area = "Admin" })">➕ Додати рекорд</a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-striped table-bordered table-hover mb-0">
+            <thead class="table-dark">
+            <tr>
+                <th>Імʼя спортсмена</th>
+                <th>Вид спорту</th>
+                <th>Рекорд</th>
+                <th>Дата</th> 
+                <th class="text-center">Дії</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var record in Model)
+            {
+                <tr>
+                    <td>@record.AthleteName</td>
+                    <td>@record.SportId</td>
+                    <td>@record.RecordValue</td>
+                    <td>@record.DateAchieved.ToShortDateString()</td>
+                    <td class="text-center">
+                        <div class="d-flex justify-content-center gap-2">
+                            <a class="btn btn-primary btn-sm"
+                               href="@Url.Action("Edit", "RecordHistory", new { id = record.Id, area = "Admin" })">
+                                ✏️ Редагувати
+                            </a>
+                            <a class="btn btn-danger btn-sm"
+                               href="@Url.Action("Delete", "RecordHistory", new { id = record.Id, area = "Admin" })"
+                               onclick="return confirm('Ви впевнені, що хочете видалити цей рекорд?');">
+                                🗑️ Видалити
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

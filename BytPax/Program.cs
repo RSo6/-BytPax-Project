@@ -30,6 +30,12 @@ builder.Services.AddSingleton<IDataStorage<Article>>(sp =>
     return new JsonStorage<Article>("Data/articles.json", logger);
 });
 
+builder.Services.AddSingleton<IDataStorage<HistoricalEvent>>(sp =>
+{
+    var logger = sp.GetRequiredService<ILogger<JsonStorage<HistoricalEvent>>>();
+    return new JsonStorage<HistoricalEvent>("Data/historicalEvents.json", logger);
+});
+
 builder.Services.AddSingleton<IDataStorage<Athlete>>(sp =>
 {
     var logger = sp.GetRequiredService<ILogger<JsonStorage<Athlete>>>();
@@ -46,6 +52,18 @@ builder.Services.AddSingleton<IDataStorage<User>>(sp =>
 {
     var logger = sp.GetRequiredService<ILogger<JsonStorage<User>>>();
     return new JsonStorage<User>("Data/users.json", logger);
+});
+
+builder.Services.AddSingleton<IDataStorage<Sport>>(sp =>
+{
+    var logger = sp.GetRequiredService<ILogger<JsonStorage<Sport>>>();
+    return new JsonStorage<Sport>("Data/sports.json", logger);
+});
+
+builder.Services.AddSingleton<IDataStorage<RecordHistory>>(sp =>
+{
+    var logger = sp.GetRequiredService<ILogger<JsonStorage<RecordHistory>>>();
+    return new JsonStorage<RecordHistory>("Data/recordsHistory.json", logger);
 });
 
 builder.Services.AddScoped(typeof(Repository<>));

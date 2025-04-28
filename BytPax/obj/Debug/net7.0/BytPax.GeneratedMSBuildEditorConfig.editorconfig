@@ -48,8 +48,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXRobGV0ZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSGlzdG9yaWNhbEV2ZW50L0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSGlzdG9yaWNhbEV2ZW50L0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSGlzdG9yaWNhbEV2ZW50L0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSGlzdG9yaWNhbEV2ZW50L0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUmVjb3JkSGlzdG9yeS9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUmVjb3JkSGlzdG9yeS9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUmVjb3JkSGlzdG9yeS9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUmVjb3JkSGlzdG9yeS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Shared/_Layout.cshtml]
