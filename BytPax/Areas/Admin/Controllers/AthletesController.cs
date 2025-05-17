@@ -5,7 +5,6 @@ using BytPax.Models;
 using BytPax.Repositories;
 
 namespace BytPax.Areas.Admin.Controllers;
-
 [Area("Admin")]
 public class AthleteController : Controller
 {
@@ -46,6 +45,11 @@ public class AthleteController : Controller
     {
         _logger.LogInformation("Create Athlete POST викликаний!");
         ViewBag.Categories = _categoryRepository.GetAll();
+
+        // Логування отриманих даних
+        _logger.LogInformation(
+            "Form data received: FullName = {FullName}, Country = {Country}, City = {City}, Age = {Age}, Description = {Description}, CategoryId = {CategoryId}",
+            model.FullName, model.Country, model.City, model.Age, model.Description, model.CategoryId);
 
         if (!ModelState.IsValid)
         {
@@ -101,6 +105,11 @@ public class AthleteController : Controller
     {
         ViewBag.Categories = _categoryRepository.GetAll();
 
+        // Логування отриманих даних
+        _logger.LogInformation(
+            "Form data received: FullName = {FullName}, Country = {Country}, City = {City}, Age = {Age}, Description = {Description}, CategoryId = {CategoryId}",
+            model.FullName, model.Country, model.City, model.Age, model.Description, model.CategoryId);
+
         if (!ModelState.IsValid)
         {
             _logger.LogWarning("Edit Athlete: Модель не валідна. Errors: {Errors}",
@@ -121,7 +130,6 @@ public class AthleteController : Controller
         athlete.Age = model.Age;
         athlete.Description = model.Description;
         athlete.CategoryId = model.CategoryId;
-        
 
         _repository.Update(athlete);
         TempData["SuccessMessage"] = "Дані спортсмена оновлено!";

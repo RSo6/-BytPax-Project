@@ -1,0 +1,28 @@
+@model BytPax.Areas.Admin.Models.RecordHistoryCreateViewModel
+
+@{
+    ViewData["Title"] = "Видалення рекорду";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h4>Ви впевнені, що хочете видалити рекорд?</h4>
+    <hr/>
+    <dl class="row">
+        <dt class="col-sm-3">Вид спорту:</dt>
+        <dd class="col-sm-9">@Model.SportId</dd>
+
+        <dt class="col-sm-3">Рекорд:</dt>
+        <dd class="col-sm-9">@Model.RecordValue</dd>
+
+        <dt class="col-sm-3">Дата:</dt>
+        <dd class="col-sm-9">@Model.DateAchieved.ToShortDateString()</dd>
+    </dl>
+
+    <form asp-action="Delete" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id"/>
+        <button type="submit" class="btn btn-danger">Так, видалити</button>
+        <a asp-action="Index" class="btn btn-secondary">Скасувати</a>
+    </form>
+</div>

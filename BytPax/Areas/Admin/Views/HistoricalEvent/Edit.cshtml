@@ -1,0 +1,67 @@
+@model BytPax.Areas.Admin.Models.HistoricalEventCreateViewModel
+
+@{
+    ViewData["Title"] = "Редагування історичної події";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id"/>
+
+        <div class="mb-3">
+            <label asp-for="Title" class="form-label">Назва події</label>
+            <input asp-for="Title" class="form-control" name="Title" value="@Model.Title"/>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">Опис</label>
+            <textarea asp-for="Description" class="form-control" rows="5" name="Description">@Model.Description</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="EventDate" class="form-label">Дата події</label>
+            <input asp-for="EventDate" type="date" class="form-control" name="EventData" value="@Model.EventDate"/>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Категорія</label>
+            <select asp-for="CategoryId" class="form-select">
+                <option value="">Виберіть категорію</option>
+                @if (ViewBag.Categories != null)
+                {
+                    foreach (var category in ViewBag.Categories)
+                    {
+                        <option value="@category.Id" @(category.Id == Model.CategoryId ? "selected" : "")>@category.Name</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ImportanceLevel" class="form-label">Рівень важливості</label>
+            <input asp-for="ImportanceLevel" type="number" class="form-control" name="ImportanceLevel" value="@Model.ImportanceLevel" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Зображення</label>
+            <input asp-for="ImageFile" type="file" class="form-control" name="ImageFile" value="@Model.ImageFile" />
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.ImagePath))
+        {
+            <div class="mb-3">
+                <label class="form-label">Поточне зображення:</label><br/>
+                <img src="~/uploads/@Model.ImagePath" alt="Image" style="max-width: 200px;" />
+            </div>
+        }
+
+        <button type="submit" class="btn btn-primary">Зберегти</button>
+    </form>
+</div>

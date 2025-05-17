@@ -1,8 +1,204 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пошук</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-<div class="text-center">
-    <h1 class="display-4">BytPax Project</h1>
+<div class="container-fluid d-flex">
+    <!-- Sidebar -->
+    <div id="sidebar" class="bg-light p-3">
+        <h4>Пошук</h4>
 
+        <!-- Спортсмени -->
+        <div class="mb-3">
+            <h5>Спортсмени</h5>
+            <input type="text" id="athleteSearch" class="form-control" placeholder="Пошук за іменем" />
+            <div class="invalid-feedback" id="athleteSearchError">Будь ласка, введіть ім'я для пошуку.</div>
+            <button class="btn btn-primary mt-2" id="athleteSearchBtn">Почати пошук</button>
+        </div>
+
+        <!-- Історичні події -->
+        <div class="mb-3">
+            <h5>Історичні події</h5>
+            <input type="text" id="eventSearch" class="form-control" placeholder="Пошук за назвою події" />
+            <div class="invalid-feedback" id="eventSearchError">Будь ласка, введіть назву події для пошуку.</div>
+            <button class="btn btn-primary mt-2" id="eventSearchBtn">Почати пошук</button>
+        </div>
+
+        <!-- Рекорди -->
+        <div class="mb-3">
+            <h5>Рекорди</h5>
+            <input type="text" id="recordSearch" class="form-control" placeholder="Пошук за спортсменом рекорду" />
+            <div class="invalid-feedback" id="recordSearchError">Будь ласка, введіть спортсмена для пошуку.</div>
+            <button class="btn btn-primary mt-2" id="recordSearchBtn">Почати пошук</button>
+        </div>
+
+        <!-- Статті -->
+        <div class="mb-3">
+            <h5>Статті</h5>
+            <input type="text" id="articleSearch" class="form-control" placeholder="Пошук за темою статті" />
+            <div class="invalid-feedback" id="articleSearchError">Будь ласка, введіть тему для пошуку.</div>
+            <button class="btn btn-primary mt-2" id="articleSearchBtn">Почати пошук</button>
+        </div>
+    </div>
+
+    <!-- Main Content (Body) -->
+    <div id="mainContent" class="flex-grow-1 p-3">
+        <h4>Результати пошуку</h4>
+        <div id="athletesList" class="results-list"></div>
+        <div id="eventsList" class="results-list"></div>
+        <div id="recordsList" class="results-list"></div>
+        <div id="articlesList" class="results-list"></div>
+    </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="scripts.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        // Валідація інпуту
+        function validateInput(inputId, errorId) {
+            var value = $('#' + inputId).val().trim();
+            if (!value) {
+                $('#' + inputId).addClass('is-invalid');
+                $('#' + errorId).show();
+                return false;
+            } else {
+                $('#' + inputId).removeClass('is-invalid');
+                $('#' + errorId).hide();
+                return true;
+            }
+        }
+
+        // Пошук статей
+        $('#articleSearchBtn').click(function () {
+            if (!validateInput('articleSearch', 'articleSearchError')) return;
+            var searchTerm = $('#articleSearch').val();
+            $.ajax({
+                url: '@Url.Action("SearchArticles", "Home")',
+                type: 'GET',
+                data: { searchTerm: searchTerm },
+                success: function (data) {
+                    var resultHtml = '';
+                    if (data.length === 0) {
+                        resultHtml = '<div class="alert alert-warning">Нічого не знайдено за вашим запитом.</div>';
+                    } else {
+                        data.forEach(function (article) {
+                            resultHtml += '<div class="article-result mb-3 p-2 border rounded">';
+                            resultHtml += '<h5>' + article.topic + '</h5>';
+                            if (article.imagePath) {
+                                resultHtml += '<div class="article-image mb-2">';
+                                resultHtml += '<img src="/images/' + article.imagePath + '" alt="Зображення статті" class="img-fluid rounded">';
+                                resultHtml += '</div>';
+                            }
+                            resultHtml += '<p>' + article.bodyText + '</p>';
+                            resultHtml += '</div>';
+                        });
+                    }
+                    $('#articlesList').html(resultHtml);
+                }
+            });
+        });
+
+        // Пошук спортсменів
+        $('#athleteSearchBtn').click(function () {
+            if (!validateInput('athleteSearch', 'athleteSearchError')) return;
+            var searchTerm = $('#athleteSearch').val();
+            $.ajax({
+                url: '@Url.Action("SearchAthletes", "Home")',
+                type: 'GET',
+                data: { searchTerm: searchTerm },
+                success: function (data) {
+                    var resultHtml = '';
+                    if (data.length === 0) {
+                        resultHtml = '<div class="alert alert-warning">Нічого не знайдено за вашим запитом.</div>';
+                    } else {
+                        data.forEach(function (athlete) {
+                            resultHtml += '<div class="athlete-result mb-3 p-2 border rounded">';
+                            resultHtml += '<h5>' + athlete.fullName + ' (' + athlete.age + ' років)</h5>';
+                            resultHtml += '<p><strong>Країна:</strong> ' + athlete.country + '</p>';
+                            resultHtml += '<p><strong>Місто:</strong> ' + athlete.city + '</p>';
+                            resultHtml += '<p><strong>Опис:</strong> ' + athlete.description + '</p>';
+                            resultHtml += '</div>';
+                        });
+                    }
+                    $('#athletesList').html(resultHtml);
+                }
+            });
+        });
+
+        // Пошук подій
+        $('#eventSearchBtn').click(function () {
+            if (!validateInput('eventSearch', 'eventSearchError')) return;
+            var searchTerm = $('#eventSearch').val();
+            $.ajax({
+                url: '@Url.Action("SearchEvents", "Home")',
+                type: 'GET',
+                data: { searchTerm: searchTerm },
+                success: function (data) {
+                    var resultHtml = '';
+                    if (data.length === 0) {
+                        resultHtml = '<div class="alert alert-warning">Нічого не знайдено за вашим запитом.</div>';
+                    } else {
+                        data.forEach(function (event) {
+                            resultHtml += '<div class="event-result mb-3 p-2 border rounded">';
+                            resultHtml += '<h5>' + event.title + '</h5>';
+                            if (event.imagePath) {
+                                resultHtml += '<div class="event-image mb-2">';
+                                resultHtml += '<img src="/images/' + event.imagePath + '" alt="Зображення події" class="img-fluid rounded">';
+                                resultHtml += '</div>';
+                            }
+                            resultHtml += '<p><strong>Опис:</strong> ' + event.description + '</p>';
+                            resultHtml += '<p><strong>Дата події:</strong> ' + (event.eventDate && event.eventDate !== "0001-01-01T00:00:00" ? new Date(event.eventDate).toLocaleDateString() : 'Не вказано') + '</p>';
+                            resultHtml += '<p><strong>Рівень важливості:</strong> ' + (event.importanceLevel ?? '-') + '</p>';
+                            resultHtml += '</div>';
+                        });
+                    }
+                    $('#eventsList').html(resultHtml);
+                }
+            });
+        });
+
+        // Пошук рекордів
+        $('#recordSearchBtn').click(function () {
+            if (!validateInput('recordSearch', 'recordSearchError')) return;
+            var searchTerm = $('#recordSearch').val();
+            $.ajax({
+                url: '@Url.Action("SearchRecords", "Home")',
+                type: 'GET',
+                data: { searchTerm: searchTerm },
+                success: function (data) {
+                    var resultHtml = '';
+                    if (data.length === 0) {
+                        resultHtml = '<div class="alert alert-warning">Нічого не знайдено за вашим запитом.</div>';
+                    } else {
+                        data.forEach(function (record) {
+                            resultHtml += '<div class="record-result mb-3 p-2 border rounded">';
+                            resultHtml += '<h5>' + record.athleteName + '</h5>';
+                            resultHtml += '<p><strong>Опис рекорду:</strong> ' + record.recordDescription + '</p>';
+                            resultHtml += '<p><strong>Значення рекорду:</strong> ' + record.recordValue + '</p>';
+                            resultHtml += '<p><strong>Дата досягнення:</strong> ' + (record.dateAchieved ? new Date(record.dateAchieved).toLocaleDateString() : 'Не вказано') + '</p>';
+                            resultHtml += '</div>';
+                        });
+                    }
+                    $('#recordsList').html(resultHtml);
+                }
+            });
+        });
+
+    });
+</script>
+
+</body>
+</html>

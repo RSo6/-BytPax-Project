@@ -4,43 +4,97 @@
     ViewData["Title"] = "Створення спортсмена";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
+
 <div class="container mt-4">
-    <form asp-area="Admin" asp-controller="Athlete" asp-action="Create" method="post">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <form id="createAthleteForm" asp-area="Admin" asp-controller="Athlete" asp-action="Create" method="post">
         @Html.AntiForgeryToken()
+
         <div class="mb-3">
-            <label asp-for="FullName"  class="form-label">ПІБ</label>
-            <input asp-for="FullName" name="FullName" class="form-control"/>
+            <label asp-for="FullName" class="form-label">ПІБ</label>
+            <input asp-for="FullName" class="form-control" name="FullName" />
             <span asp-validation-for="FullName" class="text-danger"></span>
+            <!-- Виведення помилок під полем FullName -->
+            @if (ViewData.ModelState["FullName"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["FullName"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
         </div>
 
         <div class="mb-3">
             <label asp-for="Country" class="form-label">Країна</label>
-            <input asp-for="Country" name="Country" class="form-control"/>
+            <input asp-for="Country" class="form-control" name="Country" />
             <span asp-validation-for="Country" class="text-danger"></span>
+            <!-- Виведення помилок під полем Country -->
+            @if (ViewData.ModelState["Country"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["Country"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
         </div>
 
         <div class="mb-3">
             <label asp-for="City" class="form-label">Місто</label>
-            <input asp-for="City" name="City" class="form-control"/>
+            <input asp-for="City" class="form-control" name="City" />
             <span asp-validation-for="City" class="text-danger"></span>
+            <!-- Виведення помилок під полем City -->
+            @if (ViewData.ModelState["City"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["City"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
         </div>
 
         <div class="mb-3">
             <label asp-for="Age" class="form-label">Вік</label>
-            <input asp-for="Age" name="Age" type="number" min="0" class="form-control"/>
+            <input asp-for="Age" class="form-control" name="Age" type="number" min="0" />
             <span asp-validation-for="Age" class="text-danger"></span>
+            <!-- Виведення помилок під полем Age -->
+            @if (ViewData.ModelState["Age"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["Age"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
         </div>
 
         <div class="mb-3">
             <label asp-for="Description" class="form-label">Опис</label>
-            <textarea asp-for="Description" name="Description" class="form-control" rows="4"></textarea>
+            <textarea asp-for="Description" class="form-control" name="Description" rows="4"></textarea>
             <span asp-validation-for="Description" class="text-danger"></span>
+            <!-- Виведення помилок під полем Description -->
+            @if (ViewData.ModelState["Description"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["Description"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
         </div>
 
         <div class="mb-3">
             <label asp-for="CategoryId" class="form-label">Категорія</label>
-            <select asp-for="CategoryId" class="form-select">
-                <option value="">Виберіть категорію</option>
+            <select asp-for="CategoryId" class="form-select" name="CategoryId">
+                <option value="0">Виберіть категорію</option>
                 @if (ViewBag.Categories is List<BytPax.Models.Category> categories && categories.Any())
                 {
                     @foreach (var category in categories)
@@ -54,6 +108,16 @@
                 }
             </select>
             <span asp-validation-for="CategoryId" class="text-danger"></span>
+            <!-- Виведення помилок під полем CategoryId -->
+            @if (ViewData.ModelState["CategoryId"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["CategoryId"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
         </div>
 
         <button type="submit" class="btn btn-primary">Зберегти</button>
@@ -67,10 +131,3 @@
         </div>
     }
 </div>
-
-@section Scripts {
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.13/jquery.validate.unobtrusive.min.js"></script>
-}

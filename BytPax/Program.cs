@@ -1,17 +1,39 @@
 using BytPax.Data;
 using BytPax.Instructions;
 using BytPax.Models;
+using BytPax.Models.core;
 using BytPax.Repositories;
+using BytPax.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews(); 
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/Auth/Login";
+        options.LogoutPath = "/Auth/Logout";
+    });
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.Converters.Add(new UserJsonConverter());
+});
+
 builder.Services.AddSingleton<IDataStorage<Article>>(sp =>
 {
     var logger = sp.GetRequiredService<ILogger<JsonStorage<Article>>>();
     return new JsonStorage<Article>("Data/articles.json", logger);
+});
+
+builder.Services.AddSingleton<IDataStorage<HistoricalEvent>>(sp =>
+{
+    var logger = sp.GetRequiredService<ILogger<JsonStorage<HistoricalEvent>>>();
+    return new JsonStorage<HistoricalEvent>("Data/historicalEvents.json", logger);
 });
 
 builder.Services.AddSingleton<IDataStorage<Athlete>>(sp =>
@@ -26,11 +48,33 @@ builder.Services.AddSingleton<IDataStorage<Category>>(sp =>
     return new JsonStorage<Category>("Data/categories.json", logger);  
 });
 
+builder.Services.AddSingleton<IDataStorage<User>>(sp =>
+{
+    var logger = sp.GetRequiredService<ILogger<JsonStorage<User>>>();
+    return new JsonStorage<User>("Data/users.json", logger);
+});
+
+builder.Services.AddSingleton<IDataStorage<Sport>>(sp =>
+{
+    var logger = sp.GetRequiredService<ILogger<JsonStorage<Sport>>>();
+    return new JsonStorage<Sport>("Data/sports.json", logger);
+});
+
+builder.Services.AddSingleton<IDataStorage<RecordHistory>>(sp =>
+{
+    var logger = sp.GetRequiredService<ILogger<JsonStorage<RecordHistory>>>();
+    return new JsonStorage<RecordHistory>("Data/recordsHistory.json", logger);
+});
+
 builder.Services.AddScoped(typeof(Repository<>));
 builder.Services.AddScoped<Repository<Category>>();
+builder.Services.AddScoped<SearchService>();
 
 
 var app = builder.Build();
+
+app.UseAuthentication(); 
+app.UseAuthorization();  
 
 if (!app.Environment.IsDevelopment())
 {
@@ -47,13 +91,9 @@ app.MapControllerRoute(
     pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
-    name: "admin", 
-    pattern: "Admin/{controller=Home}/{action=Index}/{id?}",
-    defaults: new { area = "Admin" });
-
-app.MapControllerRoute(
-    name: "default", 
+    name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
 
 app.Run();
 

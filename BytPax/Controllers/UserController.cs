@@ -1,30 +1,28 @@
 using Microsoft.AspNetCore.Mvc;
-using BytPax.Instructions;
+using BytPax.Models;
 using BytPax.Models.core;
+using System.Collections.Generic;
 
-namespace Controllers;
-
-public class UserController : Controller  {
-    
-    private readonly IUserService _userService;
-
-    public UserController(IUserService userService)
+namespace BytPax.Controllers
+{
+    public class UserController : Controller
     {
-        _userService = userService;
-    }
+        // GET: User/Cabinet
+        public IActionResult Cabinet()
+        {
+            // Створюємо фіктивні дані для профілю користувача
+            var userProfile = new UserProfileViewModel
+            {
+                Username = "ExampleUser",  // Назва користувача
+                AvatarUrl = "/images/avatars/default.png",  
+                SavedArticles = new List<Article>  
+                {
+                    new Article { Topic = "Article 1", BodyText = "Content of article 1" },
+                    new Article { Topic = "Article 2", BodyText = "Content of article 2" }
+                }
+            };
 
-    public IActionResult GetUser(string email)
-    {
-        var user = _userService.GetUserByEmail(email);
-        if (user == null)
-            return NotFound("User not found");
-
-        return Ok(user);
-    }
-
-    public IActionResult RegisterUser(string fullName, string email, string password, User.UserRole role)
-    {
-        _userService.RegisterUser(fullName, email, password, role);
-        return CreatedAtAction(nameof(GetUser), new { email = email }, null);
+            return View(userProfile);
+        }
     }
 }

@@ -1,0 +1,108 @@
+@model BytPax.Areas.Admin.Models.RecordHistoryCreateViewModel
+
+@{
+    ViewData["Title"] = "Створення рекорду";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            <label asp-for="SportId" class="form-label">Вид спорту</label>
+            <select asp-for="SportId" class="form-select" name="SportId">
+                <option value="">Виберіть спорт</option>
+                @if (ViewBag.Categories is List<BytPax.Models.Category> categories && categories.Any())
+                {
+                    @foreach (var category in categories)
+                    {
+                        <option value="@category.Id">@category.Name</option>
+                    }
+                }
+                else
+                {
+                    <option value="">Немає доступних категорій</option>
+                }
+            </select>
+            <span asp-validation-for="SportId" class="text-danger"></span>
+            @if (ViewData.ModelState["SportId"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["SportId"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="AthleteName" class="form-label">Ім'я спортсмена</label>
+            <input asp-for="AthleteName" class="form-control" name="AthleteName" />
+            <span asp-validation-for="AthleteName" class="text-danger"></span>
+            @if (ViewData.ModelState["AthleteName"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["AthleteName"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="RecordDescription" class="form-label">Опис рекорду</label>
+            <textarea asp-for="RecordDescription" class="form-control" name="RecordDescription"></textarea>
+            <span asp-validation-for="RecordDescription" class="text-danger"></span>
+            @if (ViewData.ModelState["RecordDescription"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["RecordDescription"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="RecordValue" class="form-label">Рекорд</label>
+            <input asp-for="RecordValue" class="form-control" name="RecordValue" />
+            <span asp-validation-for="RecordValue" class="text-danger"></span>
+            @if (ViewData.ModelState["RecordValue"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["RecordValue"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DateAchieved" class="form-label">Дата досягнення</label>
+            <input asp-for="DateAchieved" type="date" class="form-control" name="DateAchieved" />
+            <span asp-validation-for="DateAchieved" class="text-danger"></span>
+            @if (ViewData.ModelState["DateAchieved"]?.Errors.Any() == true)
+            {
+                <div class="text-danger">
+                    @foreach (var error in ViewData.ModelState["DateAchieved"].Errors)
+                    {
+                        <p>@error.ErrorMessage</p>
+                    }
+                </div>
+            }
+        </div>
+
+        <button type="submit" class="btn btn-primary">Зберегти</button>
+    </form>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success mt-3">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+</div>
+
