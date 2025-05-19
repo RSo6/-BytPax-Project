@@ -1,15 +1,21 @@
 using BytPax.Data;
+using BytPax.Data.Database;
 using BytPax.Instructions;
 using BytPax.Models;
 using BytPax.Models.core;
 using BytPax.Repositories;
 using BytPax.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews(); 
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -17,8 +23,8 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LoginPath = "/Auth/Login";
         options.LogoutPath = "/Auth/Logout";
     });
-builder.Services.AddControllersWithViews();
 
+/*
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.Converters.Add(new UserJsonConverter());
@@ -65,7 +71,14 @@ builder.Services.AddSingleton<IDataStorage<RecordHistory>>(sp =>
     var logger = sp.GetRequiredService<ILogger<JsonStorage<RecordHistory>>>();
     return new JsonStorage<RecordHistory>("Data/recordsHistory.json", logger);
 });
+*/
 
+// Json 
+// builder.Services.AddSingleton(typeof(IDataStorage<>), typeof(JsonStorage<>));
+
+// EF
+builder.Services.AddScoped(typeof(IDataStorage<>), typeof(EfStorage<>));
+    
 builder.Services.AddScoped(typeof(Repository<>));
 builder.Services.AddScoped<Repository<Category>>();
 builder.Services.AddScoped<SearchService>();
@@ -73,6 +86,11 @@ builder.Services.AddScoped<SearchService>();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    db.Database.Migrate();  
+}
 app.UseAuthentication(); 
 app.UseAuthorization();  
 
