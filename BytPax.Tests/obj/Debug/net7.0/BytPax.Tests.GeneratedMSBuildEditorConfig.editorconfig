@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BytPax.Tests
-build_property.ProjectDir = C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax.Tests\
+build_property.ProjectDir = /Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax.Tests/
