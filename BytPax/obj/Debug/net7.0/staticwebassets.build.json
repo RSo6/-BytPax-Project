@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JSuYV+oZ2oqkqg1q+6U4E3F0/n/d+5AjGsRiAUl6L7k=",
+  "Hash": "GKjZ2gAL4Jfr/5L56vs3ldLhSnwefizPKKV1s4mk7l4=",
   "Source": "BytPax",
   "BasePath": "_content/BytPax",
   "Mode": "Default",
@@ -1579,6 +1579,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/uploads/Знімок екрана 2025-04-19 о 18.51.10.png"
+    },
+    {
+      "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-05-04 о 17.34.07.png",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "uploads/Знімок екрана 2025-05-04 о 17.34.07.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/Знімок екрана 2025-05-04 о 17.34.07.png"
     },
     {
       "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/dequeue_array.png",

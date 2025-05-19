@@ -397,6 +397,10 @@
       "PackagePath": "staticwebassets/uploads/Знімок екрана 2025-04-19 о 18.51.10.png"
     },
     {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-05-04 о 17.34.07.png",
+      "PackagePath": "staticwebassets/uploads/Знімок екрана 2025-05-04 о 17.34.07.png"
+    },
+    {
       "Id": "obj/Debug/net7.0/staticwebassets/msbuild.BytPax.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
