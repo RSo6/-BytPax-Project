@@ -1,4 +1,5 @@
 using BCrypt.Net;
+using BytPax.Instructions;
 using BytPax.Models;
 using BytPax.Models.core;
 using BytPax.Repositories;
@@ -7,9 +8,9 @@ namespace BytPax.Services;
 
 public class AuthService
 {
-    private readonly Repository<User> _userRepository;
+    private readonly IDataStorage<User> _userRepository;
 
-    public AuthService(Repository<User> userRepository)
+    public AuthService(IDataStorage<User> userRepository)
     {
         _userRepository = userRepository;
     }
@@ -32,25 +33,26 @@ public class AuthService
         };
 
         _userRepository.Add(newUser);
+        _userRepository.Save();
         Console.WriteLine("User registered successfully.");
         return true;
     }
 
     public User? Login(string email, string password)
     {
+        
         var user = _userRepository.GetAll().FirstOrDefault(u => u.Email == email);
         if (user == null)
         {
             Console.WriteLine("User not found.");
             return null;
         }
-
         if (!BCrypt.Net.BCrypt.Verify(password, user.PasswordHash))
         {
             Console.WriteLine("Invalid password.");
             return null;
         }
-
+        Console.WriteLine($"Stored hash: {user.PasswordHash}");
         Console.WriteLine($"Welcome, {user.FullName}!");
         user.PerformRoleSpecificAction();
         return user;

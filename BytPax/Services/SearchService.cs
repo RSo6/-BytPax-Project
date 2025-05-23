@@ -2,20 +2,22 @@ using BytPax.Models;
 using BytPax.Repositories;
 using System.Collections.Generic;
 using System.Linq;
+using BytPax.Instructions;
+using BytPax.Services.Extra;
 
 namespace BytPax.Services
 {
     public class SearchService
     {
-        private readonly Repository<Athlete> _athleteRepo;
-        private readonly Repository<Article> _articleRepo;
-        private readonly Repository<RecordHistory> _recordRepo;
-        private readonly Repository<HistoricalEvent> _eventRepo;
+        private readonly IDataStorage<Athlete> _athleteRepo;
+        private readonly IDataStorage<Article> _articleRepo;
+        private readonly IDataStorage<RecordHistory> _recordRepo;
+        private readonly IDataStorage<HistoricalEvent> _eventRepo;
 
-        public SearchService(Repository<Athlete> athleteRepo, 
-                           Repository<Article> articleRepo,
-                           Repository<RecordHistory> recordRepo,
-                           Repository<HistoricalEvent> eventRepo)
+        public SearchService(IDataStorage<Athlete> athleteRepo, 
+            IDataStorage<Article> articleRepo,
+            IDataStorage<RecordHistory> recordRepo,
+            IDataStorage<HistoricalEvent> eventRepo)
         {
             _athleteRepo = athleteRepo;
             _articleRepo = articleRepo;
@@ -23,14 +25,14 @@ namespace BytPax.Services
             _eventRepo = eventRepo;
         }
 
-        public dynamic GetDashboardData()
+        public DashboardData GetDashboardData()
         {
             var athletes = _athleteRepo.GetAll();
             var articles = _articleRepo.GetAll();
             var records = _recordRepo.GetAll();
             var events = _eventRepo.GetAll();
 
-            return new
+            return new DashboardData
             {
                 AthletesCount = athletes.Count(),
                 ArticlesCount = articles.Count(),

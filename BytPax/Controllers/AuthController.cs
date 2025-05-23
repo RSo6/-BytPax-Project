@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using Microsoft.Extensions.Logging;
 using BytPax.Data;
+using BytPax.Instructions;
 using BytPax.Models;
 using BytPax.Models.core;
 using BytPax.Services;
@@ -16,7 +17,7 @@ public class AuthController : Controller
     private readonly AuthService _authService;
     private readonly ILogger<AuthController> _logger;
 
-    public AuthController(Repository<User> userRepository, ILogger<AuthController> logger)
+    public AuthController(IDataStorage<User> userRepository, ILogger<AuthController> logger)
     {
         _authService = new AuthService(userRepository);
         _logger = logger;

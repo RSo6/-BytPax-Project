@@ -79,8 +79,8 @@ builder.Services.AddSingleton<IDataStorage<RecordHistory>>(sp =>
 // EF
 builder.Services.AddScoped(typeof(IDataStorage<>), typeof(EfStorage<>));
     
-builder.Services.AddScoped(typeof(Repository<>));
-builder.Services.AddScoped<Repository<Category>>();
+builder.Services.AddScoped(typeof(Repository<>), typeof(Repository<>));
+
 builder.Services.AddScoped<SearchService>();
 
 var app = builder.Build();

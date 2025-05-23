@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BytPax", "BytPax\BytPax.csproj", "{26821888-4D1C-4B44-A5F8-68E442EED948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BytPax.Tests", "BytPax.Tests\BytPax.Tests.csproj", "{766E738F-88C9-4629-A9C3-5A9B171D4741}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26821888-4D1C-4B44-A5F8-68E442EED948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26821888-4D1C-4B44-A5F8-68E442EED948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26821888-4D1C-4B44-A5F8-68E442EED948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26821888-4D1C-4B44-A5F8-68E442EED948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766E738F-88C9-4629-A9C3-5A9B171D4741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766E738F-88C9-4629-A9C3-5A9B171D4741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766E738F-88C9-4629-A9C3-5A9B171D4741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766E738F-88C9-4629-A9C3-5A9B171D4741}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

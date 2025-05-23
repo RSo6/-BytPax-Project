@@ -1,39 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax.Tests\\BytPax.Tests.csproj": {}
+    "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax.Tests/BytPax.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax.Tests\\BytPax.Tests.csproj": {
+    "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax.Tests/BytPax.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax.Tests\\BytPax.Tests.csproj",
+        "projectUniqueName": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax.Tests/BytPax.Tests.csproj",
         "projectName": "BytPax.Tests",
-        "projectPath": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax.Tests\\BytPax.Tests.csproj",
-        "packagesPath": "C:\\Users\\bonda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax.Tests\\obj\\",
+        "projectPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax.Tests/BytPax.Tests.csproj",
+        "packagesPath": "/Users/romanshnep/.nuget/packages/",
+        "outputPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax.Tests/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\bonda\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/romanshnep/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj": {
-                "projectPath": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj"
+              "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj": {
+                "projectPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj"
               }
             }
           }
@@ -42,32 +37,43 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Azure.Core": {
+              "target": "Package",
+              "version": "[1.37.0, )"
+            },
+            "Microsoft.CodeAnalysis.Analyzers": {
+              "target": "Package",
+              "version": "[3.3.3, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[17.13.0, )"
+              "version": "[17.10.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.6.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
             },
             "coverlet.collector": {
               "target": "Package",
               "version": "[3.2.0, )"
-            },
-            "xunit": {
-              "target": "Package",
-              "version": "[2.9.3, )"
-            },
-            "xunit.runner.visualstudio": {
-              "target": "Package",
-              "version": "[2.4.5, )"
             }
           },
           "imports": [
@@ -86,33 +92,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.317\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj": {
+    "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj",
+        "projectUniqueName": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj",
         "projectName": "BytPax",
-        "projectPath": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj",
-        "packagesPath": "C:\\Users\\bonda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\obj\\",
+        "projectPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj",
+        "packagesPath": "/Users/romanshnep/.nuget/packages/",
+        "outputPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\bonda\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/romanshnep/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.317\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "/usr/local/share/dotnet/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.317/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -125,28 +126,33 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Azure.Core": {
+              "target": "Package",
+              "version": "[1.37.0, )"
+            },
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.2, )"
             },
-            "Microsoft.AspNetCore.Mvc": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[2.3.0, )"
+              "version": "[7.0.17, )"
             },
-            "Microsoft.NET.Test.Sdk": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[17.13.0, )"
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.17, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -154,17 +160,11 @@
             },
             "Moq": {
               "target": "Package",
-              "version": "[4.20.72, )"
+              "version": "[4.18.4, )"
             },
-            "xunit": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[2.9.3, )"
-            },
-            "xunit.runner.visualstudio": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[7.0.11, )"
             }
           },
           "imports": [
@@ -186,7 +186,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.317\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
         }
       }
     }

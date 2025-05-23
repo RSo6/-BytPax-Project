@@ -40,5 +40,4 @@ public class Repository<T> where T : BaseEntity
         _storage.Save();
     } 
 }
-
-    
+   

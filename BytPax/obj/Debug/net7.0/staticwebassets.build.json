@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GKjZ2gAL4Jfr/5L56vs3ldLhSnwefizPKKV1s4mk7l4=",
+  "Hash": "Fj6hMlQ21+nFHMPPImoqzz0ng5KQ8IrSIAvv01Co51Q=",
   "Source": "BytPax",
   "BasePath": "_content/BytPax",
   "Mode": "Default",
@@ -1581,6 +1581,23 @@
       "OriginalItemSpec": "wwwroot/uploads/Знімок екрана 2025-04-19 о 18.51.10.png"
     },
     {
+      "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-05-02 о 15.14.52.png",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "uploads/Знімок екрана 2025-05-02 о 15.14.52.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/Знімок екрана 2025-05-02 о 15.14.52.png"
+    },
+    {
       "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-05-04 о 17.34.07.png",
       "SourceId": "BytPax",
       "SourceType": "Discovered",
@@ -1681,6 +1698,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/uploads/happy.png"
+    },
+    {
+      "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/insert_time.png",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "uploads/insert_time.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/uploads/insert_time.png"
     },
     {
       "Identity": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Sport Archive.png",
