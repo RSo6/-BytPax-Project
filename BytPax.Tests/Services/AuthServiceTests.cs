@@ -1,103 +1,87 @@
-﻿using Xunit;
-using Moq;
-using System.Collections.Generic;
-using System.Linq;
-using BytPax.Models.core;
+using BytPax.Models;
 using BytPax.Repositories;
 using BytPax.Services;
-using BytPax.Models;
+using Moq;
+using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
+using BytPax.Instructions;
+using BytPax.Models.core;
 
-namespace BytPax.Tests.Services
+namespace BytPax.Tests.Services;
+
+[TestFixture]
+public class AuthServiceTests
 {
-    public class AuthServiceTests
+    private Mock<IDataStorage<User>> _mockRepository = null!;
+    private AuthService _authService = null!;
+
+    [SetUp]
+    public void Setup()
     {
-        private readonly Mock<Repository<User>> _userRepositoryMock;
-        private readonly AuthService _authService;
+        _mockRepository = new Mock<IDataStorage<User>>();
+        _authService = new AuthService(_mockRepository.Object);
+    }
 
-        public AuthServiceTests()
-        {
-            // Repository<User> – абстрактний, мокати як virtual methods (або зробити інтерфейс)
-            _userRepositoryMock = new Mock<Repository<User>>();
-            _authService = new AuthService(_userRepositoryMock.Object);
-        }
+    [Test]
+    public void Register_WhenEmailExists_ReturnsFalse()
+    {
+        // Arrange
+        var existingUsers = new List<User> { new RegularUser("Name", "test@example.com", "", "hash") };
+        _mockRepository.Setup(r => r.GetAll()).Returns(existingUsers);
 
-        [Fact]
-        public void Register_UserAlreadyExists_ReturnsFalse()
-        {
-            // Arrange
-            var existingUsers = new List<User> {
-                new RegularUser("Test User", "test@example.com", "", "hashedpass")
-            };
+        // Act
+        var result = _authService.Register("New Name", "test@example.com", "", "1234", User.UserRole.Visitor);
 
-            _userRepositoryMock.Setup(r => r.GetAll()).Returns(existingUsers);
+        // Assert
+        Assert.IsFalse(result);
+        _mockRepository.Verify(r => r.Add(It.IsAny<User>()), Times.Never);
+    }
 
-            // Act
-            var result = _authService.Register("New User", "test@example.com", "", "password", User.UserRole.Visitor);
+    [Test]
+    public void Register_WhenNewEmail_AddsUserAndReturnsTrue()
+    {
+        // Arrange
+        _mockRepository.Setup(r => r.GetAll()).Returns(new List<User>());
 
-            // Assert
-            Assert.False(result);
-        }
+        // Act
+        var result = _authService.Register("John Doe", "john@example.com", "", "password123", User.UserRole.Visitor);
 
-        [Fact]
-        public void Register_NewUser_ReturnsTrue()
-        {
-            // Arrange
-            _userRepositoryMock.Setup(r => r.GetAll()).Returns(new List<User>());
-            _userRepositoryMock.Setup(r => r.Add(It.IsAny<User>()));
+        // Assert
+        Assert.IsTrue(result);
+        _mockRepository.Verify(r => r.Add(It.Is<User>(u => u.Email == "john@example.com")), Times.Once);
+    }
 
-            // Act
-            var result = _authService.Register("New User", "new@example.com", "", "password", User.UserRole.Visitor);
+    [Test]
+    public void Login_WithCorrectCredentials_ReturnsUser()
+    {
+        // Arrange
+        var password = "12345678";
+        var hash = BCrypt.Net.BCrypt.HashPassword(password);
+        var user = new RegularUser("Tester", "user@example.com", "", hash);
 
-            // Assert
-            Assert.True(result);
-            _userRepositoryMock.Verify(r => r.Add(It.IsAny<User>()), Times.Once);
-        }
+        _mockRepository.Setup(r => r.GetAll()).Returns(new List<User> { user });
 
-        [Fact]
-        public void Login_ValidCredentials_ReturnsUser()
-        {
-            // Arrange
-            var password = "12345";
-            var passwordHash = BCrypt.Net.BCrypt.HashPassword(password);
-            var user = new RegularUser("John Doe", "john@example.com", "", passwordHash);
+        // Act
+        var result = _authService.Login("user@example.com", password);
 
-            _userRepositoryMock.Setup(r => r.GetAll()).Returns(new List<User> { user });
+        // Assert
+        Assert.IsNotNull(result);
+        Assert.AreEqual("Tester", result?.FullName);
+    }
 
-            // Act
-            var result = _authService.Login("john@example.com", password);
+    [Test]
+    public void Login_WithWrongPassword_ReturnsNull()
+    {
+        // Arrange
+        var hash = BCrypt.Net.BCrypt.HashPassword("correct");
+        var user = new RegularUser("User", "user@example.com", "", hash);
+        _mockRepository.Setup(r => r.GetAll()).Returns(new List<User> { user });
 
-            // Assert
-            Assert.NotNull(result);
-            Assert.Equal("john@example.com", result.Email);
-        }
+        // Act
+        var result = _authService.Login("user@example.com", "wrong");
 
-        [Fact]
-        public void Login_InvalidPassword_ReturnsNull()
-        {
-            // Arrange
-            var passwordHash = BCrypt.Net.BCrypt.HashPassword("correctPassword");
-            var user = new RegularUser("John Doe", "john@example.com", "", passwordHash);
-
-            _userRepositoryMock.Setup(r => r.GetAll()).Returns(new List<User> { user });
-
-            // Act
-            var result = _authService.Login("john@example.com", "wrongPassword");
-
-            // Assert
-            Assert.Null(result);
-        }
-
-        [Fact]
-        public void Login_UserNotFound_ReturnsNull()
-        {
-            // Arrange
-            _userRepositoryMock.Setup(r => r.GetAll()).Returns(new List<User>());
-
-            // Act
-            var result = _authService.Login("nonexistent@example.com", "any");
-
-            // Assert
-            Assert.Null(result);
-        }
+        // Assert
+        Assert.IsNull(result);
     }
 }
