@@ -1,51 +1,66 @@
 @model IEnumerable<BytPax.Models.HistoricalEvent>
 
 @{
+    ViewData["Title"] = "Історичні події";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2 class="mb-0">📜 Історичні події</h2>
-    <a class="btn btn-success" href="@Url.Action("Create", "HistoricalEvent", new { area = "Admin" })">➕ Додати подію</a>
+    <a class="btn btn-success shadow-sm" href="@Url.Action("Create", "HistoricalEvent", new { area = "Admin" })">
+        <i class="fas fa-plus-circle"></i> Додати подію
+    </a>
 </div>
 
-<div class="card shadow-sm">
+<div class="card shadow animate__animated animate__fadeIn">
     <div class="card-body p-0">
-        <table class="table table-striped table-bordered table-hover mb-0">
-            <thead class="table-dark">
-            <tr>
-                <th>Назва події</th>
-                <th>Опис</th>
-                <th>Дата</th>
-                <th>Зображення</th>
-                <th class="text-center">Дії</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach (var ev in Model)
-            {
-                <tr>
-                    <td>@ev.Title</td>
-                    <td>@ev.Description</td>
-                    <td>@ev.EventDate.ToShortDateString()</td>
-                    <td>@ev.ImagePath</td>
-                    <td>
-                        <div class="d-flex justify-content-center gap-2">
-                            <a class="btn btn-primary btn-sm"
-                               href="@Url.Action("Edit", "HistoricalEvent", new { id = ev.Id, area = "Admin" })">
-                                ✏️ Редагувати
-                            </a>
-
-                            <a class="btn btn-danger btn-sm"
-                               href="@Url.Action("Delete", "HistoricalEvent", new { id = ev.Id, area = "Admin" })"
-                               onclick="return confirm('Ви впевнені, що хочете видалити цю подію?');">
-                                🗑️ Видалити
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-            }
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th>Назва події</th>
+                        <th>Опис</th>
+                        <th>Дата</th>
+                        <th>Зображення</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ev in Model)
+                    {
+                        <tr>
+                            <td>@ev.Title</td>
+                            <td class="text-truncate" style="max-width: 300px;">@ev.Description</td>
+                            <td>@ev.EventDate.ToString("dd.MM.yyyy")</td>
+                            <td class="text-center">
+                                @if (!string.IsNullOrEmpty(ev.ImagePath))
+                                {
+                                    <img src="~/uploads/@ev.ImagePath" alt="Зображення" class="img-thumbnail" style="height: 60px; width: auto;" />
+                                }
+                                else
+                                {
+                                    <span class="text-muted">Немає</span>
+                                }
+                            </td>
+                            <td class="text-center">
+                                <div class="btn-group" role="group">
+                                    <a class="btn btn-sm btn-outline-primary"
+                                       href="@Url.Action("Edit", "HistoricalEvent", new { id = ev.Id, area = "Admin" })"
+                                       title="Редагувати">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a class="btn btn-sm btn-outline-danger"
+                                       href="@Url.Action("Delete", "HistoricalEvent", new { id = ev.Id, area = "Admin" })"
+                                       onclick="return confirm('Ви впевнені, що хочете видалити цю подію?');"
+                                       title="Видалити">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

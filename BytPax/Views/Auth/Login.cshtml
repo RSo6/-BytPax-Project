@@ -4,21 +4,101 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container mt-5">
-    <h2>Login</h2>
-    <form asp-action="Login" method="post">
+<style>
+    .login-container {
+        max-width: 400px;
+        margin: 5rem auto;
+        padding: 2.5rem 3rem;
+        background: #1e1e1e;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(10, 170, 255, 0.6);
+        color: #eee;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+        .login-container h2 {
+            color: #0af;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            letter-spacing: 1.2px;
+        }
+
+    label {
+        color: #59a6ff;
+        font-weight: 600;
+    }
+
+    input.form-control {
+        background-color: #2a2a2a;
+        border: 1px solid #444;
+        color: #eee;
+        transition: border-color 0.3s ease;
+        border-radius: 6px;
+    }
+
+        input.form-control:focus {
+            border-color: #0af;
+            box-shadow: 0 0 8px #0af;
+            background-color: #222;
+            color: #fff;
+        }
+
+    .text-danger {
+        font-size: 0.9rem;
+        margin-top: 0.25rem;
+    }
+
+    button.btn-success {
+        background: linear-gradient(135deg, #0af, #06c);
+        border: none;
+        width: 100%;
+        font-weight: 700;
+        padding: 0.6rem 0;
+        border-radius: 8px;
+        margin-top: 1.5rem;
+        cursor: pointer;
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+        color: white;
+        letter-spacing: 0.8px;
+    }
+
+        button.btn-success:hover {
+            background: linear-gradient(135deg, #06c, #0af);
+            box-shadow: 0 0 15px #0af;
+        }
+
+    a.btn-link {
+        display: block;
+        text-align: center;
+        margin-top: 1rem;
+        color: #59a6ff;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        a.btn-link:hover {
+            color: #0af;
+            text-decoration: underline;
+        }
+</style>
+
+<div class="login-container" role="main" aria-labelledby="loginTitle">
+    <h2 id="loginTitle">Увійти в акаунт</h2>
+    <form asp-action="Login" method="post" novalidate>
         <div class="mb-3">
-            <label asp-for="Email" class="form-label"></label>
-            <input asp-for="Email" class="form-control" />
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control" autocomplete="username" />
             <span asp-validation-for="Email" class="text-danger"></span>
         </div>
         <div class="mb-3">
-            <label asp-for="Password" class="form-label"></label>
-            <input asp-for="Password" class="form-control" type="password" />
+            <label asp-for="Password"></label>
+            <input asp-for="Password" type="password" class="form-control" autocomplete="current-password" />
             <span asp-validation-for="Password" class="text-danger"></span>
         </div>
-        <button type="submit" class="btn btn-success">Login</button>
-        <a href="@Url.Action("Register", "Auth")" class="btn btn-link">Create an account</a>
+        <button type="submit" class="btn btn-success">Увійти</button>
+        <a href="@Url.Action("Register", "Auth")" class="btn-link">Створити акаунт</a>
     </form>
 </div>
 

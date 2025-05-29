@@ -9,121 +9,125 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BytPax
 build_property.RootNamespace = BytPax
-build_property.ProjectDir = /Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/
+build_property.ProjectDir = C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax
+build_property.MSBuildProjectDirectory = C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 7.0
+build_property.EnableCodeStyleSeverity = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Article/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZS9DcmVhdGUuY3NodG1s
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/Article/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXJ0aWNsZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Article/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZS9EZWxldGUuY3NodG1s
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/Article/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXJ0aWNsZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Article/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZS9FZGl0LmNzaHRtbA==
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/Article/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXJ0aWNsZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Article/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXJ0aWNsZS9JbmRleC5jc2h0bWw=
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/Article/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXJ0aWNsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Athlete/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXRobGV0ZS9DcmVhdGUuY3NodG1s
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/Athlete/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXRobGV0ZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Athlete/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXRobGV0ZS9EZWxldGUuY3NodG1s
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/Athlete/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXRobGV0ZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Athlete/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXRobGV0ZS9FZGl0LmNzaHRtbA==
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/Athlete/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXRobGV0ZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Athlete/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvQXRobGV0ZS9JbmRleC5jc2h0bWw=
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/Athlete/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXRobGV0ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSGlzdG9yaWNhbEV2ZW50L0NyZWF0ZS5jc2h0bWw=
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGlzdG9yaWNhbEV2ZW50XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSGlzdG9yaWNhbEV2ZW50L0RlbGV0ZS5jc2h0bWw=
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGlzdG9yaWNhbEV2ZW50XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSGlzdG9yaWNhbEV2ZW50L0VkaXQuY3NodG1s
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGlzdG9yaWNhbEV2ZW50XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSGlzdG9yaWNhbEV2ZW50L0luZGV4LmNzaHRtbA==
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/HistoricalEvent/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSGlzdG9yaWNhbEV2ZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUmVjb3JkSGlzdG9yeS9DcmVhdGUuY3NodG1s
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVjb3JkSGlzdG9yeVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUmVjb3JkSGlzdG9yeS9EZWxldGUuY3NodG1s
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVjb3JkSGlzdG9yeVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUmVjb3JkSGlzdG9yeS9FZGl0LmNzaHRtbA==
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVjb3JkSGlzdG9yeVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvUmVjb3JkSGlzdG9yeS9JbmRleC5jc2h0bWw=
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/RecordHistory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUmVjb3JkSGlzdG9yeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Areas/Admin/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXMvQWRtaW4vVmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Areas/Admin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Auth/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9Mb2dpbi5jc2h0bWw=
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Auth/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aC9SZWdpc3Rlci5jc2h0bWw=
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/User/Cabinet.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9DYWJpbmV0LmNzaHRtbA==
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/User/Cabinet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDYWJpbmV0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-m10gpz0qlf
+[C:/Users/bonda/Documents/GitHub/GUI-Project/BytPax/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-xjb7lm3biu

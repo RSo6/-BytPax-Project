@@ -1,102 +1,84 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using Microsoft.AspNetCore.Mvc.TagHelpers
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BytPax</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
-    <link rel="stylesheet" href="~/BytPax.styles.css" asp-append-version="true"/>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BytPax.styles.css" asp-append-version="true" />
     <link rel="icon" type="image/x-icon" href="happy.png" />
-    
+
+    @RenderSection("Styles", required: false)
 </head>
 <body>
 
-<header>
-    @{
-        var successMessage = TempData["SuccessMessage"] as string;
-        var errorMessage = TempData["ErrorMessage"] as string;
-        var userName = User.Identity.IsAuthenticated ? User.Identity.Name : null;
-    }
+    <header>
+        @{
+            var successMessage = TempData["SuccessMessage"] as string;
+            var errorMessage = TempData["ErrorMessage"] as string;
+            var userName = User.Identity.IsAuthenticated ? User.Identity.Name : null;
+        }
 
-    @if (!string.IsNullOrEmpty(successMessage))
-    {
-        <div class="alert alert-success">
-            @successMessage
-        </div>
-    }
+        @if (!string.IsNullOrEmpty(successMessage))
+        {
+            <div class="alert alert-success text-center m-0">
+                @successMessage
+            </div>
+        }
 
-    @if (!string.IsNullOrEmpty(errorMessage))
-    {
-        <div class="alert alert-danger">
-            @errorMessage
-        </div>
-    }
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div class="alert alert-danger text-center m-0">
+                @errorMessage
+            </div>
+        }
 
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BytPax</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">BytPax</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <!-- Якщо користувач залогінений, відображаємо ім'я, інакше кнопки для входу та реєстрації -->
-                <div class="d-flex">
-                    @if (userName != null)
-                    {
-                        if (User.IsInRole("Admin"))
-                        {
-                            <a class="navbar-text me-3" href="@Url.Action("Index", "Admin")">Welcome, @userName</a>
-                        }
-                        else
-                        {
-                            <a class="navbar-text me-3" href="@Url.Action("Cabinet", "User")">Welcome, @userName</a>
-                        }
-                           
-                       
-                        <a class="btn btn-outline-danger" href="@Url.Action("Logout", "Auth")">Log Out</a>
-                    }
-                    else
-                    {
-                        <a class="btn btn-outline-primary me-2" asp-controller="Auth" asp-action="Login">Log In</a>
-                        <a class="btn btn-primary" asp-controller="Auth" asp-action="Register">Sign Up</a>
-                    }
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Головна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Політика конфіденційності</a>
+                        </li>
+                    </ul>
+
+                    
                 </div>
             </div>
-        </div>
-    </nav>
-</header>
-<div class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
+        </nav>
+    </header>
 
-<footer class="border-top footer text-muted">
     <div class="container">
-        &copy; 2025 - BytPax - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
     </div>
-</footer>
 
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.12/dist/jquery.validate.unobtrusive.min.js"></script>
-@await RenderSectionAsync("Scripts", required: false)
+    <footer class="border-top footer text-muted mt-auto py-3">
+        <div class="container text-center">
+            &copy; 2025 - BytPax - <a asp-area="" asp-controller="Home" asp-action="Privacy">Політика конфіденційності</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.12/dist/jquery.validate.unobtrusive.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>

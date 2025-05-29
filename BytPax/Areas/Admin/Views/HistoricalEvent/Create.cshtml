@@ -5,125 +5,79 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container mt-4">
-    <form asp-action="Create" method="post" enctype="multipart/form-data">
-        <div class="mb-3">
-            <label asp-for="Title" class="form-label">Назва події</label>
-            <input asp-for="Title" class="form-control" name="Title"/>
-            <span asp-validation-for="Title" class="text-danger"></span>
-            <!-- Виведення помилок під полем Title -->
-            @if (ViewData.ModelState["Title"]?.Errors.Any() == true)
-            {
-                <div class="text-danger">
-                    @foreach (var error in ViewData.ModelState["Title"].Errors)
-                    {
-                        <p>@error.ErrorMessage</p>
-                    }
-                </div>
-            }
-        </div>
+<div class="card bg-dark text-light shadow-lg animate__animated animate__fadeIn">
+    <div class="card-header border-bottom border-secondary">
+        <h4 class="mb-0"><i class="fas fa-history me-2"></i>@ViewData["Title"]</h4>
+    </div>
 
-        <div class="mb-3">
-            <label asp-for="Description" class="form-label">Опис</label>
-            <textarea asp-for="Description" class="form-control" rows="5" name="Description"></textarea>
-            <span asp-validation-for="Description" class="text-danger"></span>
-            <!-- Виведення помилок під полем Description -->
-            @if (ViewData.ModelState["Description"]?.Errors.Any() == true)
-            {
-                <div class="text-danger">
-                    @foreach (var error in ViewData.ModelState["Description"].Errors)
-                    {
-                        <p>@error.ErrorMessage</p>
-                    }
-                </div>
-            }
-        </div>
+    <div class="card-body">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
 
-        <div class="mb-3">
-            <label asp-for="EventDate" class="form-label">Дата події</label>
-            <input asp-for="EventDate" type="date" class="form-control" name="EventDate" />
-            <span asp-validation-for="EventDate" class="text-danger"></span>
-            <!-- Виведення помилок під полем EventDate -->
-            @if (ViewData.ModelState["EventDate"]?.Errors.Any() == true)
-            {
-                <div class="text-danger">
-                    @foreach (var error in ViewData.ModelState["EventDate"].Errors)
-                    {
-                        <p>@error.ErrorMessage</p>
-                    }
-                </div>
-            }
-        </div>
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label">Назва події</label>
+                <input asp-for="Title" class="form-control bg-dark text-light border-secondary" />
+                <span asp-validation-for="Title" class="text-danger small"></span>
+            </div>
 
-        <div class="mb-3">
-            <label asp-for="CategoryId" class="form-label">Категорія</label>
-            <select asp-for="CategoryId" class="form-select" name="CategoryId">
-                @if (ViewBag.Categories is List<BytPax.Models.Category> categories && categories.Any())
-                {
-                    @foreach (var category in categories)
-                    {
-                        <option value="@category.Id">@category.Name</option>
-                    }
-                }
-                else
-                {
-                    <option value="">Немає доступних категорій</option>
-                }
-            </select>
-            <span asp-validation-for="CategoryId" class="text-danger"></span>
-            <!-- Виведення помилок під полем CategoryId -->
-            @if (ViewData.ModelState["CategoryId"]?.Errors.Any() == true)
-            {
-                <div class="text-danger">
-                    @foreach (var error in ViewData.ModelState["CategoryId"].Errors)
-                    {
-                        <p>@error.ErrorMessage</p>
-                    }
-                </div>
-            }
-        </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Опис</label>
+                <textarea asp-for="Description" class="form-control bg-dark text-light border-secondary" rows="5"></textarea>
+                <span asp-validation-for="Description" class="text-danger small"></span>
+            </div>
 
-        <div class="mb-3">
-            <label asp-for="ImportanceLevel" class="form-label">Рівень важливості</label>
-            <input asp-for="ImportanceLevel" type="number" class="form-control" name="ImportanceLevel" />
-            <span asp-validation-for="ImportanceLevel" class="text-danger"></span>
-            <!-- Виведення помилок під полем ImportanceLevel -->
-            @if (ViewData.ModelState["ImportanceLevel"]?.Errors.Any() == true)
-            {
-                <div class="text-danger">
-                    @foreach (var error in ViewData.ModelState["ImportanceLevel"].Errors)
+            <div class="mb-3">
+                <label asp-for="EventDate" class="form-label">Дата події</label>
+                <input asp-for="EventDate" type="date" class="form-control bg-dark text-light border-secondary" />
+                <span asp-validation-for="EventDate" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CategoryId" class="form-label">Категорія</label>
+                <select asp-for="CategoryId" class="form-select bg-dark text-light border-secondary">
+                    <option value="">Виберіть категорію</option>
+                    @if (ViewBag.Categories is List<BytPax.Models.Category> categories && categories.Any())
                     {
-                        <p>@error.ErrorMessage</p>
+                        @foreach (var category in categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
                     }
-                </div>
-            }
-        </div>
-
-        <div class="mb-3">
-            <label asp-for="ImageFile" class="form-label">Зображення</label>
-            <input asp-for="ImageFile" type="file" class="form-control" name="ImageFile" />
-            <span asp-validation-for="ImageFile" class="text-danger"></span>
-            <!-- Виведення помилок під полем ImageFile -->
-            @if (ViewData.ModelState["ImageFile"]?.Errors.Any() == true)
-            {
-                <div class="text-danger">
-                    @foreach (var error in ViewData.ModelState["ImageFile"].Errors)
+                    else
                     {
-                        <p>@error.ErrorMessage</p>
+                        <option disabled>Немає доступних категорій</option>
                     }
-                </div>
-            }
-        </div>
+                </select>
+                <span asp-validation-for="CategoryId" class="text-danger small"></span>
+            </div>
 
-        <button type="submit" class="btn btn-primary">Зберегти</button>
-    </form>
+            <div class="mb-3">
+                <label asp-for="ImportanceLevel" class="form-label">Рівень важливості</label>
+                <input asp-for="ImportanceLevel" type="number" min="1" max="10" class="form-control bg-dark text-light border-secondary" />
+                <span asp-validation-for="ImportanceLevel" class="text-danger small"></span>
+            </div>
 
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <div class="alert alert-success mt-3">
-            @TempData["SuccessMessage"]
-        </div>
-    }
+            <div class="mb-3">
+                <label asp-for="ImageFile" class="form-label">Зображення</label>
+                <input asp-for="ImageFile" type="file" class="form-control bg-dark text-light border-secondary" />
+                <span asp-validation-for="ImageFile" class="text-danger small"></span>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-success shadow-sm">
+                    <i class="fas fa-check me-1"></i>Зберегти
+                </button>
+                <a href="/Admin/HistoricalEvent" class="btn btn-secondary shadow-sm">
+                    <i class="fas fa-times me-1"></i>Скасувати
+                </a>
+            </div>
+        </form>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success mt-3">
+                <i class="fas fa-check-circle me-2"></i>@TempData["SuccessMessage"]
+            </div>
+        }
+    </div>
 </div>
-
-

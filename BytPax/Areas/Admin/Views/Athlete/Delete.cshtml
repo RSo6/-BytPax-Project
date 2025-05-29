@@ -5,31 +5,40 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container mt-4">
-    <h4>Ви впевнені, що хочете видалити цього спортсмена?</h4>
-    <hr />
+<div class="card bg-dark text-light shadow-lg animate__animated animate__fadeIn">
+    <div class="card-header border-bottom border-secondary">
+        <h4 class="mb-0"><i class="fas fa-user-times me-2"></i>@ViewData["Title"]</h4>
+    </div>
 
-    <dl class="row">
-        <dt class="col-sm-2">ПІБ</dt>
-        <dd class="col-sm-10">@Model.FullName</dd>
+    <div class="card-body">
+        <p class="mb-4 fs-5">Ви впевнені, що хочете видалити цього спортсмена?</p>
 
-        <dt class="col-sm-2">Країна</dt>
-        <dd class="col-sm-10">@Model.Country</dd>
+        <dl class="row">
+            <dt class="col-sm-3">ПІБ</dt>
+            <dd class="col-sm-9">@Model.FullName</dd>
 
-        <dt class="col-sm-2">Місто</dt>
-        <dd class="col-sm-10">@Model.City</dd>
+            <dt class="col-sm-3">Країна</dt>
+            <dd class="col-sm-9">@Model.Country</dd>
 
-        <dt class="col-sm-2">Вік</dt>
-        <dd class="col-sm-10">@Model.Age</dd>
+            <dt class="col-sm-3">Місто</dt>
+            <dd class="col-sm-9">@Model.City</dd>
 
-        <dt class="col-sm-2">Опис</dt>
-        <dd class="col-sm-10">@Model.Description</dd>
-    </dl>
+            <dt class="col-sm-3">Вік</dt>
+            <dd class="col-sm-9">@Model.Age</dd>
 
-    <form asp-action="Delete" method="post">
-        @Html.AntiForgeryToken()
-        <input type="hidden" asp-for="Id" />
-        <button type="submit" class="btn btn-danger">Так, видалити</button>
-        <a asp-action="Index" href="/Admin/Athlete" class="btn btn-secondary ms-2">Скасувати</a>
-    </form>
+            <dt class="col-sm-3">Опис</dt>
+            <dd class="col-sm-9">@Model.Description</dd>
+        </dl>
+
+        <form asp-action="Delete" method="post" class="mt-4 d-flex gap-2">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger shadow-sm">
+                <i class="fas fa-trash-alt me-1"></i>Так, видалити
+            </button>
+            <a asp-action="Index" href="/Admin/Athlete" class="btn btn-secondary shadow-sm">
+                <i class="fas fa-ban me-1"></i>Скасувати
+            </a>
+        </form>
+    </div>
 </div>

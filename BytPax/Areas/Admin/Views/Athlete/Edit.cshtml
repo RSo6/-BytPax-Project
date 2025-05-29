@@ -5,56 +5,68 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container mt-4">
-    @* <h2>@ViewData["Title"]</h2> *@
+<div class="card bg-dark text-light shadow-lg animate__animated animate__fadeIn">
+    <div class="card-header border-bottom border-secondary">
+        <h4 class="mb-0"><i class="fas fa-user-edit me-2"></i>@ViewData["Title"]</h4>
+    </div>
 
-    <form asp-action="Edit" method="post" enctype="multipart/form-data">
-        @Html.AntiForgeryToken()
-        <input type="hidden" asp-for="Id" />
+    <div class="card-body">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
 
-        <div class="mb-3">
-            <label asp-for="FullName"  class="form-label">ПІБ</label>
-            <input asp-for="FullName" name="FullName" class="form-control" value="@Model.FullName"/>
-            <span asp-validation-for="FullName" class="text-danger"></span>
-        </div>
+            <div class="mb-3">
+                <label asp-for="FullName" class="form-label">ПІБ</label>
+                <input asp-for="FullName" class="form-control bg-dark text-light border-secondary" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
 
-        <div class="mb-3">
-            <label asp-for="Country"  class="form-label">Країна</label>
-            <input asp-for="Country" name="Country" class="form-control" value="@Model.Country" />
-            <span asp-validation-for="Country" class="text-danger"></span>
-        </div>
+            <div class="mb-3">
+                <label asp-for="Country" class="form-label">Країна</label>
+                <input asp-for="Country" class="form-control bg-dark text-light border-secondary" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
 
-        <div class="mb-3">
-            <label asp-for="City" class="form-label">Місто</label>
-            <input asp-for="City" name="City" class="form-control" value="@Model.City" />
-            <span asp-validation-for="City" class="text-danger"></span>
-        </div>
+            <div class="mb-3">
+                <label asp-for="City" class="form-label">Місто</label>
+                <input asp-for="City" class="form-control bg-dark text-light border-secondary" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
 
-        <div class="mb-3">
-            <label asp-for="Age" class="form-label">Вік</label>
-            <input asp-for="Age" name="Age" type="number" class="form-control" value="@Model.Age" />
-            <span asp-validation-for="Age" class="text-danger"></span>
-        </div>
+            <div class="mb-3">
+                <label asp-for="Age" class="form-label">Вік</label>
+                <input asp-for="Age" type="number" class="form-control bg-dark text-light border-secondary" min="0" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
 
-        <div class="mb-3">
-            <label asp-for="Description" class="form-label">Опис</label>
-            <textarea asp-for="Description" name="Description" class="form-control" rows="4">@Model.Description</textarea>
-            <span asp-validation-for="Description" class="text-danger"></span>
-        </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Опис</label>
+                <textarea asp-for="Description" rows="4" class="form-control bg-dark text-light border-secondary"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
 
-        <div class="mb-3">
-            <label asp-for="CategoryId" class="form-label">Категорія</label>
-            <select asp-for="CategoryId" class="form-select">
-                <option value="">Виберіть категорію</option>
-                @foreach (var category in ViewBag.Categories)
-                {
-                    <option value="@category.Id" @(category.Id == Model.CategoryId ? "selected" : "")>@category.Name</option>
-                }
-            </select>
-            <span asp-validation-for="CategoryId" class="text-danger"></span>
-        </div>
+            <div class="mb-3">
+                <label asp-for="CategoryId" class="form-label">Категорія</label>
+                <select asp-for="CategoryId" class="form-select bg-dark text-light border-secondary">
+                    <option value="">Виберіть категорію</option>
+                    @foreach (var category in ViewBag.Categories)
+                    {
+                        <option value="@category.Id" @(category.Id == Model.CategoryId ? "selected" : "")>
+                            @category.Name
+                        </option>
+                    }
+                </select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
 
-        <button type="submit" class="btn btn-primary">Зберегти</button>
-        <a asp-action="Index" href="/Admin/Athlete" class="btn btn-secondary ms-2">Назад</a>
-    </form>
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-success shadow-sm">
+                    <i class="fas fa-save me-1"></i>Зберегти
+                </button>
+                <a asp-action="Index" href="/Admin/Athlete" class="btn btn-secondary shadow-sm">
+                    <i class="fas fa-arrow-left me-1"></i>Назад
+                </a>
+            </div>
+        </form>
+    </div>
 </div>
