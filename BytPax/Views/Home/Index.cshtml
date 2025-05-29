@@ -4,415 +4,90 @@
     var isAdmin = User.IsInRole("Admin");
 }
 
-<style>
-    body {
-        background-color: #121212;
-        color: #eee;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        height: 100vh;
-        overflow: hidden;
-    }
+<!-- Hero Section with background image -->
+<header class="masthead text-white">
+    <div class="overlay"></div>
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Пошук інформації на сайті</h1>
 
-    .container-fluid {
-        display: flex;
-        height: 100vh;
-        padding: 0;
-        overflow: hidden;
-    }
-    /* Sidebar */
-    #sidebar {
-        background-color: #1e1e1e;
-        width: 320px;
-        padding: 2rem 1.5rem;
-        box-shadow: 3px 0 10px rgba(0,0,0,0.8);
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-        #sidebar h4 {
-            color: #0af;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            letter-spacing: 1.5px;
+        @if (User.Identity.IsAuthenticated)
+        {
+            <p class="text-info fs-5 mt-3">Вітаємо, <strong>@User.Identity.Name</strong>!</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                <a class="btn btn-outline-light me-md-2" href="@Url.Action("Logout", "Auth")">
+                    <i class="fas fa-sign-out-alt"></i> Вийти
+                </a>
+                <a class="btn btn-outline-info" href="@Url.Action(User.IsInRole("Admin") ? "Index" : "Cabinet", User.IsInRole("Admin") ? "Admin" : "User")">
+                    <i class="fas fa-user"></i> Кабінет
+                </a>
+            </div>
         }
-
-        #sidebar h5 {
-            color: #59a6ff;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
+        else
+        {
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+                <a class="btn btn-primary me-md-2" asp-controller="Auth" asp-action="Login">
+                    <i class="fas fa-sign-in-alt"></i> Увійти
+                </a>
+                <a class="btn btn-outline-light" asp-controller="Auth" asp-action="Register">
+                    Зареєструватись
+                </a>
+            </div>
         }
+    </div>
+</header>
 
-        #sidebar input.form-control {
-            background-color: #2a2a2a;
-            border: 1px solid #444;
-            color: #eee;
-            transition: border-color 0.3s ease;
-        }
 
-            #sidebar input.form-control:focus {
-                border-color: #0af;
-                box-shadow: 0 0 8px #0af;
-                background-color: #222;
-                color: #fff;
-            }
-
-        #sidebar .invalid-feedback {
-            display: none;
-            color: #f66;
-            font-size: 0.9rem;
-        }
-
-        #sidebar input.is-invalid + .invalid-feedback {
-            display: block;
-        }
-
-        #sidebar button {
-            margin-top: 1rem;
-            background: linear-gradient(135deg, #0af, #06c);
-            border: none;
-            color: white;
-            font-weight: 600;
-            padding: 0.5rem 0;
-            width: 100%;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-            #sidebar button:hover {
-                background: linear-gradient(135deg, #06c, #0af);
-                box-shadow: 0 0 12px #0af;
-            }
-
-        /* Кнопки авторизації/реєстрації */
-        #sidebar .btn {
-            font-weight: 600;
-            border-radius: 6px;
-            padding: 0.5rem 0;
-            width: 100%;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            margin-bottom: 0.5rem;
-            text-align: center;
-            display: inline-block;
-            border: 1.5px solid transparent;
-            user-select: none;
-            text-decoration: none;
-            color: #eee;
-        }
-
-        #sidebar .btn-primary {
-            background-color: #0af;
-            border-color: #0af;
-            color: #fff;
-        }
-
-            #sidebar .btn-primary:hover {
-                background-color: #06c;
-                border-color: #06c;
-                color: #fff;
-                box-shadow: 0 0 8px #0af;
-            }
-
-        #sidebar .btn-outline-primary {
-            background-color: transparent;
-            border-color: #0af;
-            color: #0af;
-        }
-
-            #sidebar .btn-outline-primary:hover {
-                background-color: #0af;
-                color: #fff;
-                box-shadow: 0 0 8px #0af;
-            }
-
-        #sidebar .btn-outline-danger {
-            background-color: transparent;
-            border-color: #f55;
-            color: #f55;
-        }
-
-            #sidebar .btn-outline-danger:hover {
-                background-color: #f55;
-                color: #fff;
-                box-shadow: 0 0 8px #f55;
-            }
-
-        #sidebar .btn-outline-info {
-            background-color: transparent;
-            border-color: #59a6ff;
-            color: #59a6ff;
-        }
-
-            #sidebar .btn-outline-info:hover {
-                background-color: #59a6ff;
-                color: #fff;
-                box-shadow: 0 0 8px #59a6ff;
-            }
-
-    /* Main content */
-    #mainContent {
-        flex-grow: 1;
-        padding: 2rem 3rem;
-        overflow-y: auto;
-        background: linear-gradient(135deg, #222, #121212);
-    }
-
-        #mainContent h4 {
-            color: #0af;
-            margin-bottom: 2rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-        }
-    /* Results */
-    .results-list > div {
-        background-color: #1f1f1f;
-        border-radius: 12px;
-        padding: 1.25rem 1.5rem;
-        margin-bottom: 1.25rem;
-        box-shadow: 0 4px 10px rgba(0, 170, 255, 0.2);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        color: #cde6ff;
-    }
-
-        .results-list > div:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(0, 170, 255, 0.4);
-            color: #a6d8ff;
-        }
-
-    .results-list h5 {
-        color: #0af;
-        margin-bottom: 0.5rem;
-        font-weight: 700;
-    }
-
-    .results-list p {
-        color: #bbb;
-        line-height: 1.4;
-    }
-
-    .results-list strong {
-        color: #79c7ff;
-    }
-
-    .article-image img,
-    .event-image img {
-        border-radius: 8px;
-        max-height: 160px;
-        object-fit: cover;
-        box-shadow: 0 0 10px #0af;
-        margin-bottom: 0.75rem;
-    }
-    /* Scrollbars */
-    #sidebar::-webkit-scrollbar,
-    #mainContent::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    #sidebar::-webkit-scrollbar-thumb,
-    #mainContent::-webkit-scrollbar-thumb {
-        background: #0af;
-        border-radius: 4px;
-    }
-
-    #sidebar::-webkit-scrollbar-track,
-    #mainContent::-webkit-scrollbar-track {
-        background: #121212;
-    }
-</style>
-
-<div class="container-fluid">
-    <!-- Sidebar -->
-    <aside id="sidebar" aria-label="Панель пошуку">
-        <h4>Пошук</h4>
-
-        <div class="mb-4">
-            @if (userName != null)
-            {
-                <p class="text-primary">Вітаємо, @userName!</p>
-                <a class="btn btn-outline-danger" href="@Url.Action("Logout", "Auth")">Вийти</a>
-                <a class="btn btn-outline-info mt-2" href="@Url.Action(isAdmin ? "Index" : "Cabinet", isAdmin ? "Admin" : "User")">Кабінет</a>
-            }
-            else
-            {
-                <a class="btn btn-outline-primary mb-2" asp-controller="Auth" asp-action="Login">Увійти</a>
-                <a class="btn btn-primary" asp-controller="Auth" asp-action="Register">Зареєструватись</a>
-            }
+<!-- Search Form Section -->
+<section class="page-section bg-light" id="search-form">
+    <div class="container px-4 px-lg-5">
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5>Спортсмени</h5>
+                <input type="text" id="athleteSearch" class="form-control mb-2" placeholder="Пошук за іменем" />
+                <div class="invalid-feedback" id="athleteSearchError">Будь ласка, введіть ім'я.</div>
+                <button class="btn btn-dark w-100" id="athleteSearchBtn">
+                    <i class="fas fa-search"></i> Шукати
+                </button>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5>Історичні події</h5>
+                <input type="text" id="eventSearch" class="form-control mb-2" placeholder="Назва події" />
+                <div class="invalid-feedback" id="eventSearchError">Введіть назву події.</div>
+                <button class="btn btn-dark w-100" id="eventSearchBtn">
+                    <i class="fas fa-search"></i> Шукати
+                </button>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5>Рекорди</h5>
+                <input type="text" id="recordSearch" class="form-control mb-2" placeholder="Ім’я спортсмена" />
+                <div class="invalid-feedback" id="recordSearchError">Введіть ім’я спортсмена.</div>
+                <button class="btn btn-dark w-100" id="recordSearchBtn">
+                    <i class="fas fa-search"></i> Шукати
+                </button>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5>Статті</h5>
+                <input type="text" id="articleSearch" class="form-control mb-2" placeholder="Тема статті" />
+                <div class="invalid-feedback" id="articleSearchError">Введіть тему статті.</div>
+                <button class="btn btn-dark w-100" id="articleSearchBtn">
+                    <i class="fas fa-search"></i> Шукати
+                </button>
+            </div>
         </div>
+    </div>
+</section>
 
-        <section class="mb-4">
-            <h5>Спортсмени</h5>
-            <input type="text" id="athleteSearch" class="form-control" placeholder="Пошук за іменем" />
-            <div class="invalid-feedback" id="athleteSearchError">Будь ласка, введіть ім'я для пошуку.</div>
-            <button id="athleteSearchBtn">Почати пошук</button>
-        </section>
-
-        <section class="mb-4">
-            <h5>Історичні події</h5>
-            <input type="text" id="eventSearch" class="form-control" placeholder="Пошук за назвою події" />
-            <div class="invalid-feedback" id="eventSearchError">Будь ласка, введіть назву події для пошуку.</div>
-            <button id="eventSearchBtn">Почати пошук</button>
-        </section>
-
-        <section class="mb-4">
-            <h5>Рекорди</h5>
-            <input type="text" id="recordSearch" class="form-control" placeholder="Пошук за спортсменом рекорду" />
-            <div class="invalid-feedback" id="recordSearchError">Будь ласка, введіть спортсмена для пошуку.</div>
-            <button id="recordSearchBtn">Почати пошук</button>
-        </section>
-
-        <section>
-            <h5>Статті</h5>
-            <input type="text" id="articleSearch" class="form-control" placeholder="Пошук за темою статті" />
-            <div class="invalid-feedback" id="articleSearchError">Будь ласка, введіть тему для пошуку.</div>
-            <button id="articleSearchBtn">Почати пошук</button>
-        </section>
-    </aside>
-
-    <!-- Main Content -->
-    <main id="mainContent" role="main">
-        <h4>Результати пошуку</h4>
-
-        <div id="athletesList" class="results-list"></div>
-        <div id="eventsList" class="results-list"></div>
-        <div id="recordsList" class="results-list"></div>
-        <div id="articlesList" class="results-list"></div>
-    </main>
-</div>
+<!-- Results Section -->
+<section class="page-section" id="results">
+    <div class="container px-4 px-lg-5">
+        <h3 class="text-center text-dark mb-4">Результати пошуку</h3>
+        <div id="athletesList" class="mb-5"></div>
+        <div id="eventsList" class="mb-5"></div>
+        <div id="recordsList" class="mb-5"></div>
+        <div id="articlesList"></div>
+    </div>
+</section>
 
 @section Scripts {
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="~/js/scripts.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            function validateInput(inputId, errorId) {
-                var value = $('#' + inputId).val().trim();
-                if (!value) {
-                    $('#' + inputId).addClass('is-invalid');
-                    $('#' + errorId).show();
-                    return false;
-                } else {
-                    $('#' + inputId).removeClass('is-invalid');
-                    $('#' + errorId).hide();
-                    return true;
-                }
-            }
-
-            // Пошук статей
-            $('#articleSearchBtn').click(function () {
-                if (!validateInput('articleSearch', 'articleSearchError')) return;
-                var searchTerm = $('#articleSearch').val();
-                $.ajax({
-                    url: '@Url.Action("SearchArticles", "Home")',
-                    type: 'GET',
-                    data: { searchTerm: searchTerm },
-                    success: function (data) {
-                        var resultHtml = '';
-                        if (data.length === 0) {
-                            resultHtml = '<div class="alert alert-warning">Нічого не знайдено за вашим запитом.</div>';
-                        } else {
-                            data.forEach(function (article) {
-                                resultHtml += '<div class="article-result">';
-                                resultHtml += '<h5>' + article.topic + '</h5>';
-                                if (article.imagePath) {
-                                    resultHtml += '<div class="article-image">';
-                                    resultHtml += '<img src="/images/' + article.imagePath + '" alt="Зображення статті" class="img-fluid rounded">';
-                                    resultHtml += '</div>';
-                                }
-                                resultHtml += '<p>' + article.bodyText + '</p>';
-                                resultHtml += '</div>';
-                            });
-                        }
-                        $('#articlesList').html(resultHtml);
-                    }
-                });
-            });
-
-            // Пошук спортсменів
-            $('#athleteSearchBtn').click(function () {
-                if (!validateInput('athleteSearch', 'athleteSearchError')) return;
-                var searchTerm = $('#athleteSearch').val();
-                $.ajax({
-                    url: '@Url.Action("SearchAthletes", "Home")',
-                    type: 'GET',
-                    data: { searchTerm: searchTerm },
-                    success: function (data) {
-                        var resultHtml = '';
-                        if (data.length === 0) {
-                            resultHtml = '<div class="alert alert-warning">Нічого не знайдено за вашим запитом.</div>';
-                        } else {
-                            data.forEach(function (athlete) {
-                                resultHtml += '<div>';
-                                resultHtml += '<h5>' + athlete.name + '</h5>';
-                                resultHtml += '<p>Рік народження: ' + athlete.birthYear + '</p>';
-                                resultHtml += '</div>';
-                            });
-                        }
-                        $('#athletesList').html(resultHtml);
-                    }
-                });
-            });
-
-            // Пошук подій
-            $('#eventSearchBtn').click(function () {
-                if (!validateInput('eventSearch', 'eventSearchError')) return;
-                var searchTerm = $('#eventSearch').val();
-                $.ajax({
-                    url: '@Url.Action("SearchEvents", "Home")',
-                    type: 'GET',
-                    data: { searchTerm: searchTerm },
-                    success: function (data) {
-                        var resultHtml = '';
-                        if (data.length === 0) {
-                            resultHtml = '<div class="alert alert-warning">Нічого не знайдено за вашим запитом.</div>';
-                        } else {
-                            data.forEach(function (event) {
-                                resultHtml += '<div>';
-                                resultHtml += '<h5>' + event.title + '</h5>';
-                                if (event.imagePath) {
-                                    resultHtml += '<div class="event-image">';
-                                    resultHtml += '<img src="/images/' + event.imagePath + '" alt="Зображення події" class="img-fluid rounded">';
-                                    resultHtml += '</div>';
-                                }
-                                resultHtml += '<p>' + event.description + '</p>';
-                                resultHtml += '</div>';
-                            });
-                        }
-                        $('#eventsList').html(resultHtml);
-                    }
-                });
-            });
-
-            // Пошук рекордів
-            $('#recordSearchBtn').click(function () {
-                if (!validateInput('recordSearch', 'recordSearchError')) return;
-                var searchTerm = $('#recordSearch').val();
-                $.ajax({
-                    url: '@Url.Action("SearchRecords", "Home")',
-                    type: 'GET',
-                    data: { searchTerm: searchTerm },
-                    success: function (data) {
-                        var resultHtml = '';
-                        if (data.length === 0) {
-                            resultHtml = '<div class="alert alert-warning">Нічого не знайдено за вашим запитом.</div>';
-                        } else {
-                            data.forEach(function (record) {
-                                resultHtml += '<div>';
-                                resultHtml += '<h5>' + record.sport + '</h5>';
-                                resultHtml += '<p><strong>Спортсмен:</strong> ' + record.athleteName + '</p>';
-                                resultHtml += '<p><strong>Рекорд:</strong> ' + record.recordValue + '</p>';
-                                resultHtml += '</div>';
-                            });
-                        }
-                        $('#recordsList').html(resultHtml);
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
 }
