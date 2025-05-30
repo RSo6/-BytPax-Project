@@ -2,43 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BytPax.bundle.scp.css",
-      "PackagePath": "staticwebassets\\BytPax.bundle.scp.css"
-    },
-    {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\.DS_Store",
-      "PackagePath": "staticwebassets\\.DS_Store"
-    },
-    {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\Images\\bg-masthead.jpg",
-      "PackagePath": "staticwebassets\\Images\\bg-masthead.jpg"
-    },
-    {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\Images\\bg-signup.jpg",
-      "PackagePath": "staticwebassets\\Images\\bg-signup.jpg"
-    },
-    {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\Images\\default-avatar.png",
-      "PackagePath": "staticwebassets\\Images\\default-avatar.png"
-    },
-    {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\Images\\demo-image-01.jpg",
-      "PackagePath": "staticwebassets\\Images\\demo-image-01.jpg"
-    },
-    {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\Images\\demo-image-02.jpg",
-      "PackagePath": "staticwebassets\\Images\\demo-image-02.jpg"
-    },
-    {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\Images\\favicon.ico",
-      "PackagePath": "staticwebassets\\Images\\favicon.ico"
-    },
-    {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\Images\\ipad.png",
-      "PackagePath": "staticwebassets\\Images\\ipad.png"
-    },
-    {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\.DS_Store",
-      "PackagePath": "staticwebassets\\admin\\.DS_Store"
+      "PackagePath": "staticwebassets\\BytPax.fiw4wbba0n.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\401.html",
@@ -125,12 +89,36 @@
       "PackagePath": "staticwebassets\\happy.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\js\\scripts.js",
-      "PackagePath": "staticwebassets\\js\\scripts.js"
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\bg-masthead.jpg",
+      "PackagePath": "staticwebassets\\images\\bg-masthead.jpg"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\.DS_Store",
-      "PackagePath": "staticwebassets\\lib\\.DS_Store"
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\bg-signup.jpg",
+      "PackagePath": "staticwebassets\\images\\bg-signup.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\default-avatar.png",
+      "PackagePath": "staticwebassets\\images\\default-avatar.png"
+    },
+    {
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\demo-image-01.jpg",
+      "PackagePath": "staticwebassets\\images\\demo-image-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\demo-image-02.jpg",
+      "PackagePath": "staticwebassets\\images\\demo-image-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\images\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\ipad.png",
+      "PackagePath": "staticwebassets\\images\\ipad.png"
+    },
+    {
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
     },
     {
       "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -415,6 +403,10 @@
     {
       "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\Знімок екрана 2025-05-04 о 17.34.07.png",
       "PackagePath": "staticwebassets\\uploads\\Знімок екрана 2025-05-04 о 17.34.07.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BytPax.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BytPax.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -11,7 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <_ContentIncludedByDefault Remove="wwwroot\Images\articles\happy.png" />
+        <_ContentIncludedByDefault Remove="wwwroot\images\articles\happy.png" />
     </ItemGroup>
 
     <ItemGroup>

@@ -574,3 +574,8 @@ C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax\obj\Debug\net7.0\refint\BytPa
 C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax\obj\Debug\net7.0\BytPax.pdb
 C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax\obj\Debug\net7.0\BytPax.genruntimeconfig.cache
 C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax\obj\Debug\net7.0\ref\BytPax.dll
+C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax\bin\Debug\net7.0\BytPax.staticwebassets.endpoints.json
+C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax\obj\Debug\net7.0\BytPax.sourcelink.json
+C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax\obj\Debug\net7.0\staticwebassets\msbuild.BytPax.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\bonda\Documents\GitHub\GUI-Project\BytPax\obj\Debug\net7.0\staticwebassets.upToDateCheck.txt

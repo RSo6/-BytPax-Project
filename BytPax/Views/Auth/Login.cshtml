@@ -1,106 +1,136 @@
-@model LoginViewModel
+Ôªø@model LoginViewModel
 @{
     ViewBag.Title = "Login";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<style>
-    .login-container {
-        max-width: 400px;
-        margin: 5rem auto;
-        padding: 2.5rem 3rem;
-        background: #1e1e1e;
-        border-radius: 12px;
-        box-shadow: 0 0 20px rgba(10, 170, 255, 0.6);
-        color: #eee;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-        .login-container h2 {
-            color: #0af;
-            text-align: center;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            letter-spacing: 1.2px;
+@section Styles {
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
         }
 
-    label {
-        color: #59a6ff;
-        font-weight: 600;
-    }
+        .login-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background: url('/images/bg-signup.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    input.form-control {
-        background-color: #2a2a2a;
-        border: 1px solid #444;
-        color: #eee;
-        transition: border-color 0.3s ease;
-        border-radius: 6px;
-    }
+        .login-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            z-index: 0;
+        }
 
-        input.form-control:focus {
-            border-color: #0af;
-            box-shadow: 0 0 8px #0af;
-            background-color: #222;
+        .login-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 400px;
+            background: rgba(30, 30, 30, 0.85);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
             color: #fff;
         }
 
-    .text-danger {
-        font-size: 0.9rem;
-        margin-top: 0.25rem;
-    }
-
-    button.btn-success {
-        background: linear-gradient(135deg, #0af, #06c);
-        border: none;
-        width: 100%;
-        font-weight: 700;
-        padding: 0.6rem 0;
-        border-radius: 8px;
-        margin-top: 1.5rem;
-        cursor: pointer;
-        transition: background 0.3s ease, box-shadow 0.3s ease;
-        color: white;
-        letter-spacing: 0.8px;
-    }
-
-        button.btn-success:hover {
-            background: linear-gradient(135deg, #06c, #0af);
-            box-shadow: 0 0 15px #0af;
+        .login-container h2 {
+            color: #fff;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
         }
 
-    a.btn-link {
-        display: block;
-        text-align: center;
-        margin-top: 1rem;
-        color: #59a6ff;
-        font-weight: 600;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
+        label,
+        .form-control,
+        .btn-link {
+            color: #fff;
+        }
 
-        a.btn-link:hover {
-            color: #0af;
+        input.form-control {
+            background-color: #2a2a2a;
+            border: 1px solid #666;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        input.form-control:focus {
+            border-color: #fff;
+            box-shadow: 0 0 10px #fff;
+            background-color: #222;
+        }
+
+        .text-danger {
+            font-size: 0.9rem;
+            color: #f88;
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #fff, #aaa);
+            color: #000;
+            border: none;
+            width: 100%;
+            font-weight: 700;
+            padding: 0.6rem 0;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            letter-spacing: 0.8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-success:hover {
+            background: linear-gradient(135deg, #aaa, #fff);
+            box-shadow: 0 0 15px #fff;
+        }
+
+        .btn-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .btn-link:hover {
+            color: #ddd;
             text-decoration: underline;
         }
-</style>
+    </style>
+}
 
-<div class="login-container" role="main" aria-labelledby="loginTitle">
-    <h2 id="loginTitle">”‚≥ÈÚË ‚ ‡Í‡ÛÌÚ</h2>
-    <form asp-action="Login" method="post" novalidate>
-        <div class="mb-3">
-            <label asp-for="Email"></label>
-            <input asp-for="Email" class="form-control" autocomplete="username" />
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-        <div class="mb-3">
-            <label asp-for="Password"></label>
-            <input asp-for="Password" type="password" class="form-control" autocomplete="current-password" />
-            <span asp-validation-for="Password" class="text-danger"></span>
-        </div>
-        <button type="submit" class="btn btn-success">”‚≥ÈÚË</button>
-        <a href="@Url.Action("Register", "Auth")" class="btn-link">—Ú‚ÓËÚË ‡Í‡ÛÌÚ</a>
-    </form>
-</div>
+<section class="login-section">
+    <div class="login-container" role="main" aria-labelledby="loginTitle">
+        <h2 id="loginTitle">–£–≤—ñ–π—Ç–∏ –≤ –∞–∫–∞—É–Ω—Ç</h2>
+        <form asp-action="Login" method="post" novalidate>
+            <div class="mb-3">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" autocomplete="username" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" type="password" class="form-control" autocomplete="current-password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-success">–£–≤—ñ–π—Ç–∏</button>
+            <a href="@Url.Action("Register", "Auth")" class="btn-link">–°—Ç–≤–æ—Ä–∏—Ç–∏ –∞–∫–∞—É–Ω—Ç</a>
+        </form>
+    </div>
+</section>
 
 @section Scripts {
     @await Html.PartialAsync("_ValidationScriptsPartial")
