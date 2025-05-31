@@ -2381,6 +2381,334 @@
       ]
     },
     {
+      "Route": "images/sport-1.png",
+      "AssetFile": "images/sport-1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "758733"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iibROskLrGlhXL5RaUsNaTnIGYBwPrGXso2x8QNj7Ww=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:18:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iibROskLrGlhXL5RaUsNaTnIGYBwPrGXso2x8QNj7Ww="
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-1.uz8cqdkmxf.png",
+      "AssetFile": "images/sport-1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "758733"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iibROskLrGlhXL5RaUsNaTnIGYBwPrGXso2x8QNj7Ww=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:18:56 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uz8cqdkmxf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iibROskLrGlhXL5RaUsNaTnIGYBwPrGXso2x8QNj7Ww="
+        },
+        {
+          "Name": "label",
+          "Value": "images/sport-1.png"
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-2.jpg",
+      "AssetFile": "images/sport-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "107262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:19:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE="
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-2.vmrssauaew.jpg",
+      "AssetFile": "images/sport-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "107262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:19:51 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vmrssauaew"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE="
+        },
+        {
+          "Name": "label",
+          "Value": "images/sport-2.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-3.9filriq641.jpg",
+      "AssetFile": "images/sport-3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24771"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ewyYj2t8JVuye4w9b09OTE6JUA2blDVJ0D6GSMvzqAA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:20:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9filriq641"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ewyYj2t8JVuye4w9b09OTE6JUA2blDVJ0D6GSMvzqAA="
+        },
+        {
+          "Name": "label",
+          "Value": "images/sport-3.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-3.jpg",
+      "AssetFile": "images/sport-3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24771"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ewyYj2t8JVuye4w9b09OTE6JUA2blDVJ0D6GSMvzqAA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:20:55 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ewyYj2t8JVuye4w9b09OTE6JUA2blDVJ0D6GSMvzqAA="
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-4.35vo5wax2l.webp",
+      "AssetFile": "images/sport-4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:39:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "35vo5wax2l"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA="
+        },
+        {
+          "Name": "label",
+          "Value": "images/sport-4.webp"
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-4.webp",
+      "AssetFile": "images/sport-4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:39:37 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA="
+        }
+      ]
+    },
+    {
       "Route": "js/scripts.0rzh1bygd3.js",
       "AssetFile": "js/scripts.js",
       "Selectors": [],

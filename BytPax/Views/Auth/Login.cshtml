@@ -15,7 +15,7 @@
             position: relative;
             width: 100%;
             min-height: 100vh;
-            background: url('/images/bg-signup.jpg') no-repeat center center;
+            background: url('/images/sport-2.jpg') no-repeat center center;
             background-size: cover;
             background-attachment: fixed;
             display: flex;
@@ -23,17 +23,17 @@
             justify-content: center;
         }
 
-        .login-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(4px);
-            z-index: 0;
-        }
+            .login-section::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+                backdrop-filter: blur(4px);
+                z-index: 0;
+            }
 
         .login-container {
             position: relative;
@@ -43,17 +43,17 @@
             background: rgba(30, 30, 30, 0.85);
             padding: 2.5rem 2rem;
             border-radius: 16px;
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+            box-shadow: 0 0 25px rgba(255, 165, 0, 0.5); /* жовто-помаранчеве світло */
             color: #fff;
         }
 
-        .login-container h2 {
-            color: #fff;
-            text-align: center;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            letter-spacing: 1px;
-        }
+            .login-container h2 {
+                color: #fff;
+                text-align: center;
+                font-weight: 700;
+                margin-bottom: 2rem;
+                letter-spacing: 1px;
+            }
 
         label,
         .form-control,
@@ -68,19 +68,19 @@
             color: #fff;
         }
 
-        input.form-control:focus {
-            border-color: #fff;
-            box-shadow: 0 0 10px #fff;
-            background-color: #222;
-        }
+            input.form-control:focus {
+                border-color: #ffa500;
+                box-shadow: 0 0 10px #ffc107, 0 0 20px #ff9800;
+                background-color: #222;
+            }
 
         .text-danger {
             font-size: 0.9rem;
-            color: #f88;
+            color: #ff7b5a;
         }
 
         .btn-success {
-            background: linear-gradient(135deg, #fff, #aaa);
+            background: linear-gradient(135deg, #ffeb3b, #ff9800);
             color: #000;
             border: none;
             width: 100%;
@@ -90,12 +90,13 @@
             margin-top: 1.5rem;
             letter-spacing: 0.8px;
             transition: all 0.3s ease;
+            box-shadow: 0 0 12px rgba(255, 193, 7, 0.6);
         }
 
-        .btn-success:hover {
-            background: linear-gradient(135deg, #aaa, #fff);
-            box-shadow: 0 0 15px #fff;
-        }
+            .btn-success:hover {
+                background: linear-gradient(135deg, #ffc107, #ff5722);
+                box-shadow: 0 0 20px rgba(255, 152, 0, 0.9);
+            }
 
         .btn-link {
             display: block;
@@ -103,14 +104,16 @@
             margin-top: 1.2rem;
             font-weight: 600;
             text-decoration: none;
+            color: #ffc107;
         }
 
-        .btn-link:hover {
-            color: #ddd;
-            text-decoration: underline;
-        }
+            .btn-link:hover {
+                color: #ffca28;
+                text-decoration: underline;
+            }
     </style>
 }
+
 
 <section class="login-section">
     <div class="login-container" role="main" aria-labelledby="loginTitle">

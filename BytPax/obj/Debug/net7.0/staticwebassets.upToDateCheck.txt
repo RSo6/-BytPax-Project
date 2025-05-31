@@ -26,6 +26,10 @@ wwwroot\images\demo-image-01.jpg
 wwwroot\images\demo-image-02.jpg
 wwwroot\images\favicon.ico
 wwwroot\images\ipad.png
+wwwroot\images\sport-1.png
+wwwroot\images\sport-2.jpg
+wwwroot\images\sport-3.jpg
+wwwroot\images\sport-4.webp
 wwwroot\js\scripts.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using Microsoft.AspNetCore.Mvc.TagHelpers
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -13,6 +14,24 @@
     <link rel="icon" type="image/x-icon" href="~/happy.png" />
 
     @RenderSection("Styles", required: false)
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
 </head>
 <body id="page-top">
 
@@ -42,11 +61,11 @@
         </div>
     </nav>
 
-    <!-- Header Section (optional hero) -->
+    <!-- Header Section -->
     @RenderSection("Header", required: false)
 
     <!-- Main Content -->
-    <main class="container mt-5 pt-5">
+    <main>
         @if (TempData["SuccessMessage"] != null)
         {
             <div class="alert alert-success text-center">@TempData["SuccessMessage"]</div>

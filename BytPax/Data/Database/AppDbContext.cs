@@ -2,7 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using BytPax.Models;
 using BytPax.Models.core;
 
-namespace BytPax.Data.Database;
+namespace BytPax.Data.Database
+{
     public class AppDbContext : DbContext
     {
         public DbSet<Article> Articles { get; set; }
@@ -11,10 +12,8 @@ namespace BytPax.Data.Database;
         public DbSet<HistoricalEvent> HistoricalEvents { get; set; }
         public DbSet<RecordHistory> RecordHistories { get; set; }
         public DbSet<Sport> Sports { get; set; }
-        
-      
         public DbSet<User> Users { get; set; }
-        
+
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {
@@ -26,7 +25,7 @@ namespace BytPax.Data.Database;
                 .HasDiscriminator<string>("RoleType")
                 .HasValue<AdminUser>("Admin")
                 .HasValue<RegularUser>("Visitor");
-            
+
             modelBuilder.Entity<Article>().ToTable("Articles");
             modelBuilder.Entity<Athlete>().ToTable("Athletes");
             modelBuilder.Entity<Category>().ToTable("Categories");
@@ -34,7 +33,7 @@ namespace BytPax.Data.Database;
             modelBuilder.Entity<RecordHistory>().ToTable("RecordHistories");
             modelBuilder.Entity<Sport>().ToTable("Sports");
             modelBuilder.Entity<User>().ToTable("Users");
-    
+
             // Конфігурація зв’язків
             modelBuilder.Entity<Article>()
                 .HasOne<Category>()
@@ -62,5 +61,5 @@ namespace BytPax.Data.Database;
 
             base.OnModelCreating(modelBuilder);
         }
-        
+    }
 }

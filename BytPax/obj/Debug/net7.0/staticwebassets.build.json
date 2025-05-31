@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2Ufg0wwt5E9PYVvgpTdddqqHu63gPJqP7Sth8APbDJk=",
+  "Hash": "oJuURKVZmtNX+Sh2lAJhqnOEJM+YmLxZ979jOpGq1oQ=",
   "Source": "BytPax",
   "BasePath": "_content/BytPax",
   "Mode": "Default",
@@ -645,6 +645,90 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\ipad.png"
+    },
+    {
+      "Identity": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-1.png",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "images/sport-1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uz8cqdkmxf",
+      "Integrity": "iibROskLrGlhXL5RaUsNaTnIGYBwPrGXso2x8QNj7Ww=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sport-1.png"
+    },
+    {
+      "Identity": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-2.jpg",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "images/sport-2#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vmrssauaew",
+      "Integrity": "597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sport-2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-3.jpg",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "images/sport-3#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9filriq641",
+      "Integrity": "ewyYj2t8JVuye4w9b09OTE6JUA2blDVJ0D6GSMvzqAA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sport-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-4.webp",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "images/sport-4#[.{fingerprint}]?.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "35vo5wax2l",
+      "Integrity": "Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sport-4.webp"
     },
     {
       "Identity": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\js\\scripts.js",
@@ -4617,6 +4701,334 @@
         {
           "Name": "integrity",
           "Value": "sha256-fuJZuFroL0bOVQ8N2RB/8wsnoXOCaq44Qlf4eRcp068="
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-1.png",
+      "AssetFile": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "758733"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iibROskLrGlhXL5RaUsNaTnIGYBwPrGXso2x8QNj7Ww=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-iibROskLrGlhXL5RaUsNaTnIGYBwPrGXso2x8QNj7Ww="
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-1.uz8cqdkmxf.png",
+      "AssetFile": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "758733"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"iibROskLrGlhXL5RaUsNaTnIGYBwPrGXso2x8QNj7Ww=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:18:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uz8cqdkmxf"
+        },
+        {
+          "Name": "label",
+          "Value": "images/sport-1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-iibROskLrGlhXL5RaUsNaTnIGYBwPrGXso2x8QNj7Ww="
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-2.jpg",
+      "AssetFile": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "107262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:19:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE="
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-2.vmrssauaew.jpg",
+      "AssetFile": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "107262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:19:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vmrssauaew"
+        },
+        {
+          "Name": "label",
+          "Value": "images/sport-2.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE="
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-3.9filriq641.jpg",
+      "AssetFile": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24771"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ewyYj2t8JVuye4w9b09OTE6JUA2blDVJ0D6GSMvzqAA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:20:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9filriq641"
+        },
+        {
+          "Name": "label",
+          "Value": "images/sport-3.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ewyYj2t8JVuye4w9b09OTE6JUA2blDVJ0D6GSMvzqAA="
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-3.jpg",
+      "AssetFile": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-3.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24771"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ewyYj2t8JVuye4w9b09OTE6JUA2blDVJ0D6GSMvzqAA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:20:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ewyYj2t8JVuye4w9b09OTE6JUA2blDVJ0D6GSMvzqAA="
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-4.35vo5wax2l.webp",
+      "AssetFile": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:39:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "35vo5wax2l"
+        },
+        {
+          "Name": "label",
+          "Value": "images/sport-4.webp"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA="
+        }
+      ]
+    },
+    {
+      "Route": "images/sport-4.webp",
+      "AssetFile": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 31 May 2025 09:39:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA="
         }
       ]
     },

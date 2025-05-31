@@ -117,6 +117,22 @@
       "PackagePath": "staticwebassets\\images\\ipad.png"
     },
     {
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-1.png",
+      "PackagePath": "staticwebassets\\images\\sport-1.png"
+    },
+    {
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-2.jpg",
+      "PackagePath": "staticwebassets\\images\\sport-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-3.jpg",
+      "PackagePath": "staticwebassets\\images\\sport-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-4.webp",
+      "PackagePath": "staticwebassets\\images\\sport-4.webp"
+    },
+    {
       "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\js\\scripts.js",
       "PackagePath": "staticwebassets\\js\\scripts.js"
     },

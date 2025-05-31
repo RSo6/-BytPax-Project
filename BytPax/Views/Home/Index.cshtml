@@ -4,11 +4,101 @@
     var isAdmin = User.IsInRole("Admin");
 }
 
-<!-- Hero Section with background image -->
-<header class="masthead text-white">
-    <div class="overlay"></div>
-    <div class="container text-center">
-        <h1 class="display-4 fw-bold">Пошук інформації на сайті</h1>
+@section Styles {
+    <style>
+        .btn-warm {
+            background: linear-gradient(135deg, #ffeb3b, #ff9800);
+            color: #000;
+            border: none;
+            font-weight: 600;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(255, 193, 7, 0.6);
+            transition: all 0.3s ease;
+        }
+
+            .btn-warm:hover {
+                background: linear-gradient(135deg, #ffc107, #ff5722);
+                box-shadow: 0 0 20px rgba(255, 152, 0, 0.9);
+                color: #111;
+                text-decoration: none;
+            }
+
+        .btn-warm-outline {
+            background: transparent;
+            border: 2px solid #ff9800;
+            color: #ff9800;
+            font-weight: 600;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-warm-outline:hover {
+                background: #ff9800;
+                color: #fff;
+                box-shadow: 0 0 12px rgba(255, 152, 0, 0.6);
+            }
+
+        /* Чорний фон і стиль для секції пошуку */
+        #search-form {
+            background-color: #000;
+            color: #fff;
+            padding: 4rem 0;
+        }
+
+            #search-form h5 {
+                color: #ffc107;
+                font-weight: bold;
+            }
+
+            #search-form input.form-control {
+                background-color: #1e1e1e;
+                border: 1px solid #555;
+                color: #fff;
+                border-radius: 8px;
+            }
+
+                #search-form input.form-control:focus {
+                    border-color: #ff9800;
+                    background-color: #111;
+                    box-shadow: 0 0 8px #ff9800;
+                }
+
+        .invalid-feedback {
+            color: #f88;
+        }
+
+        /* Темна стилізація для секції результатів */
+        #results {
+            background-color: #121212;
+            color: #eee;
+            padding: 3rem 0;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 152, 0, 0.3);
+        }
+
+            #results h3 {
+                color: #ffb300;
+                font-weight: 700;
+                margin-bottom: 2rem;
+            }
+
+            #results > div {
+                background-color: #1e1e1e;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+                box-shadow: 0 0 10px rgba(255, 152, 0, 0.25);
+            }
+    </style>
+}
+
+<header class="masthead text-white" style="background: url('/images/sport-1.png') no-repeat center center; background-size: cover; background-attachment: fixed; min-height: 100vh; display: flex; align-items: center;">
+    <div class="overlay" style="background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 0;"></div>
+
+    <div class="container text-center" style="position: relative; z-index: 1;">
+        <h1 class="display-4 fw-bold">BytPax Project</h1>
 
         @if (User.Identity.IsAuthenticated)
         {
@@ -25,10 +115,10 @@
         else
         {
             <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
-                <a class="btn btn-primary me-md-2" asp-controller="Auth" asp-action="Login">
+                <a class="btn btn-warm me-md-2" asp-controller="Auth" asp-action="Login">
                     <i class="fas fa-sign-in-alt"></i> Увійти
                 </a>
-                <a class="btn btn-outline-light" asp-controller="Auth" asp-action="Register">
+                <a class="btn btn-warm-outline" asp-controller="Auth" asp-action="Register">
                     Зареєструватись
                 </a>
             </div>
@@ -36,16 +126,14 @@
     </div>
 </header>
 
-
-<!-- Search Form Section -->
-<section class="page-section bg-light" id="search-form">
+<section class="page-section" id="search-form">
     <div class="container px-4 px-lg-5">
         <div class="row">
             <div class="col-md-6 col-lg-3 mb-4">
                 <h5>Спортсмени</h5>
                 <input type="text" id="athleteSearch" class="form-control mb-2" placeholder="Пошук за іменем" />
                 <div class="invalid-feedback" id="athleteSearchError">Будь ласка, введіть ім'я.</div>
-                <button class="btn btn-dark w-100" id="athleteSearchBtn">
+                <button class="btn btn-warm w-100" id="athleteSearchBtn">
                     <i class="fas fa-search"></i> Шукати
                 </button>
             </div>
@@ -53,7 +141,7 @@
                 <h5>Історичні події</h5>
                 <input type="text" id="eventSearch" class="form-control mb-2" placeholder="Назва події" />
                 <div class="invalid-feedback" id="eventSearchError">Введіть назву події.</div>
-                <button class="btn btn-dark w-100" id="eventSearchBtn">
+                <button class="btn btn-warm w-100" id="eventSearchBtn">
                     <i class="fas fa-search"></i> Шукати
                 </button>
             </div>
@@ -61,7 +149,7 @@
                 <h5>Рекорди</h5>
                 <input type="text" id="recordSearch" class="form-control mb-2" placeholder="Ім’я спортсмена" />
                 <div class="invalid-feedback" id="recordSearchError">Введіть ім’я спортсмена.</div>
-                <button class="btn btn-dark w-100" id="recordSearchBtn">
+                <button class="btn btn-warm w-100" id="recordSearchBtn">
                     <i class="fas fa-search"></i> Шукати
                 </button>
             </div>
@@ -69,7 +157,7 @@
                 <h5>Статті</h5>
                 <input type="text" id="articleSearch" class="form-control mb-2" placeholder="Тема статті" />
                 <div class="invalid-feedback" id="articleSearchError">Введіть тему статті.</div>
-                <button class="btn btn-dark w-100" id="articleSearchBtn">
+                <button class="btn btn-warm w-100" id="articleSearchBtn">
                     <i class="fas fa-search"></i> Шукати
                 </button>
             </div>
@@ -77,10 +165,9 @@
     </div>
 </section>
 
-<!-- Results Section -->
 <section class="page-section" id="results">
     <div class="container px-4 px-lg-5">
-        <h3 class="text-center text-dark mb-4">Результати пошуку</h3>
+        <h3 class="text-center mb-4">Результати пошуку</h3>
         <div id="athletesList" class="mb-5"></div>
         <div id="eventsList" class="mb-5"></div>
         <div id="recordsList" class="mb-5"></div>
