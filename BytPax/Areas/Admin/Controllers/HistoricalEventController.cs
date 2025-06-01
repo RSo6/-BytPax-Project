@@ -45,11 +45,20 @@ public class HistoricalEventController : Controller
     }
 
     [HttpPost]
-    [HttpPost]
     public IActionResult Create(HistoricalEventCreateViewModel model)
     {
         ViewBag.Sports = _sportRepository.GetAll();
-        ViewBag.Categories = _categoryRepository.GetAll(); 
+        if (_sportRepository.GetById(model.SportId) == null)
+        {
+            ModelState.AddModelError(nameof(model.SportId), "Обраний вид спорту не існує");
+        }
+
+        ViewBag.Categories = _categoryRepository.GetAll();
+        if (_categoryRepository.GetById(model.CategoryId) == null)
+        {
+            ModelState.AddModelError(nameof(model.CategoryId), "Обрана категорія не існує");
+        }
+
 
         if (!ModelState.IsValid)
         {
@@ -79,7 +88,7 @@ public class HistoricalEventController : Controller
             Id = GetNextId(),
             Title = model.Title,
             Description = model.Description,
-            EventDate = model.EventDate,
+            EventDate = DateTime.SpecifyKind(model.EventDate, DateTimeKind.Utc),
             SportId = model.SportId,
             ImportanceLevel = model.ImportanceLevel,
             ImagePath = imagePath,

@@ -7,14 +7,12 @@ using Microsoft.Extensions.Logging;
 public class EfStorage<T> : IDataStorage<T> where T : BaseEntity
 {
     private readonly AppDbContext _context;
-    private readonly ILogger<EfStorage<T>> _logger;
     private readonly DbSet<T> _dbSet;
 
-    public EfStorage(AppDbContext context, ILogger<EfStorage<T>> logger)
+    public EfStorage(AppDbContext context)
     {
         _context = context;
-        _logger = logger;
-        _dbSet = _context.Set<T>();
+        _dbSet = context.Set<T>();
     }
 
     public List<T> GetAll()
@@ -46,6 +44,6 @@ public class EfStorage<T> : IDataStorage<T> where T : BaseEntity
 
     public void Save()
     {
-        _context.SaveChanges();
+        _context.SaveChanges(); 
     }
 }

@@ -14,7 +14,7 @@
         <form asp-action="Create" method="post" novalidate>
             <div class="mb-3">
                 <label asp-for="SportId" class="form-label">Вид спорту</label>
-                <select asp-for="SportId" class="form-select bg-dark text-light border-secondary" name="SportId">
+                <select asp-for="SportId" name="SportId" class="form-select bg-dark text-light border-secondary" required/>
                     <option value="">Виберіть спорт</option>
                     @if (ViewBag.Categories is List<BytPax.Models.Category> categories && categories.Any())
                     {
@@ -42,7 +42,7 @@
 
             <div class="mb-3">
                 <label asp-for="AthleteName" class="form-label">Ім'я спортсмена</label>
-                <input asp-for="AthleteName" class="form-control bg-dark text-light border-secondary" name="AthleteName" />
+                <input asp-for="AthleteName" name="AthleteName" class="form-control bg-dark text-light border-secondary"  required/>
                 <span asp-validation-for="AthleteName" class="text-danger"></span>
                 @if (ViewData.ModelState["AthleteName"]?.Errors.Any() == true)
                 {
@@ -57,7 +57,7 @@
 
             <div class="mb-3">
                 <label asp-for="RecordDescription" class="form-label">Опис рекорду</label>
-                <textarea asp-for="RecordDescription" class="form-control bg-dark text-light border-secondary" name="RecordDescription" rows="4"></textarea>
+                <textarea asp-for="RecordDescription" name="RecordDescription" class="form-control bg-dark text-light border-secondary"  rows="4"></textarea>
                 <span asp-validation-for="RecordDescription" class="text-danger"></span>
                 @if (ViewData.ModelState["RecordDescription"]?.Errors.Any() == true)
                 {
@@ -72,7 +72,7 @@
 
             <div class="mb-3">
                 <label asp-for="RecordValue" class="form-label">Рекорд</label>
-                <input asp-for="RecordValue" class="form-control bg-dark text-light border-secondary" name="RecordValue" />
+                <input asp-for="RecordValue" name="RecordValue" class="form-control bg-dark text-light border-secondary" required/>
                 <span asp-validation-for="RecordValue" class="text-danger"></span>
                 @if (ViewData.ModelState["RecordValue"]?.Errors.Any() == true)
                 {
@@ -87,7 +87,7 @@
 
             <div class="mb-3">
                 <label asp-for="DateAchieved" class="form-label">Дата досягнення</label>
-                <input asp-for="DateAchieved" type="date" class="form-control bg-dark text-light border-secondary" name="DateAchieved" />
+                <input asp-for="DateAchieved" name="DateAchieved" type="date" class="form-control bg-dark text-light border-secondary" name="DateAchieved" />
                 <span asp-validation-for="DateAchieved" class="text-danger"></span>
                 @if (ViewData.ModelState["DateAchieved"]?.Errors.Any() == true)
                 {

@@ -14,7 +14,7 @@
 
         <div class="mb-3">
             <label asp-for="SportId" class="form-label">Вид спорту</label>
-            <select asp-for="SportId" class="form-select" aria-describedby="SportIdHelp">
+            <select asp-for="SportId" name="SportId" class="form-select" aria-describedby="SportIdHelp">
                 <option value="">Виберіть вид спорту</option>
                 @foreach (var sport in ViewBag.Sports)
                 {
@@ -26,13 +26,13 @@
 
         <div class="mb-3">
             <label asp-for="RecordValue" class="form-label">Рекорд</label>
-            <input asp-for="RecordValue" class="form-control" />
+            <input asp-for="RecordValue" name="RecordValue" class="form-control" required/>
             <span asp-validation-for="RecordValue" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
             <label asp-for="RecordDate" class="form-label">Дата</label>
-            <input asp-for="RecordDate" type="date" class="form-control" />
+            <input asp-for="RecordDate" name="RecordDate" type="date" class="form-control" required/>
             <span asp-validation-for="RecordDate" class="text-danger"></span>
         </div>
 

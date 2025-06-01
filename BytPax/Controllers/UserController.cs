@@ -1,24 +1,58 @@
 using Microsoft.AspNetCore.Mvc;
+using BytPax.Areas.Admin.Models;
 using BytPax.Models;
-using BytPax.Models.core;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace BytPax.Controllers
 {
     public class UserController : Controller
     {
-        // GET: User/Cabinet
         public IActionResult Cabinet()
         {
-            // Створюємо фіктивні дані для профілю користувача
+
+            var savedArticles = new List<Article>
+            {
+                new Article { Topic = "Article 1", BodyText = "Content of article 1", CategoryId = 1 },
+                new Article { Topic = "Article 2", BodyText = "Content of article 2", CategoryId = 2 }
+            };
+
+
+            var savedArticleViewModels = savedArticles.Select(article => new ArticleCreateViewModel
+            {
+                Topic = article.Topic,
+                BodyText = article.BodyText,
+                CategoryId = article.CategoryId,
+                ImagePath = article.ImagePath
+            }).ToList();
+
+
             var userProfile = new UserProfileViewModel
             {
-                Username = "ExampleUser",  // Назва користувача
-                AvatarUrl = "/images/avatars/default.png",  
-                SavedArticles = new List<Article>  
+                Username = "ExampleUser",
+                AvatarUrl = "/images/avatars/default.png",
+                SavedArticles = savedArticleViewModels,
+
+                FavoriteAthletes = new List<AthleteCreateViewModel>
                 {
-                    new Article { Topic = "Article 1", BodyText = "Content of article 1" },
-                    new Article { Topic = "Article 2", BodyText = "Content of article 2" }
+                    new AthleteCreateViewModel
+                    {
+                        Id = 1,
+                        FullName = "John Doe",
+                        Age = 28,
+                        Country = "USA",
+                        City = "New York",
+                        Description = "Top sprinter"
+                    },
+                    new AthleteCreateViewModel
+                    {
+                        Id = 2,
+                        FullName = "Jane Smith",
+                        Age = 24,
+                        Country = "UK",
+                        City = "London",
+                        Description = "Marathon runner"
+                    }
                 }
             };
 

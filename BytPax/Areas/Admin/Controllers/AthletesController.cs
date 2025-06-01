@@ -1,176 +1,192 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using BytPax.Areas.Admin.Models;
 using BytPax.Models;
 using BytPax.Repositories;
+using Microsoft.AspNetCore.Hosting;
+using System.Linq;
+using System;
 
-namespace BytPax.Areas.Admin.Controllers;
-[Area("Admin")]
-public class AthleteController : Controller
+namespace BytPax.Areas.Admin.Controllers
 {
-    private readonly ILogger<AthleteController> _logger;
-    private readonly Repository<Athlete> _repository;
-    private readonly Repository<Category> _categoryRepository;
-    private readonly IWebHostEnvironment _environment;
-
-    public AthleteController(
-        ILogger<AthleteController> logger,
-        Repository<Athlete> repository,
-        Repository<Category> categoryRepository,
-        IWebHostEnvironment environment)
+    [Area("Admin")]
+    public class AthleteController : Controller
     {
-        _logger = logger;
-        _repository = repository;
-        _categoryRepository = categoryRepository;
-        _environment = environment;
-    }
+        private readonly ILogger<AthleteController> _logger;
+        private readonly Repository<Athlete> _repository;
+        private readonly Repository<Category> _categoryRepository;
+        private readonly IWebHostEnvironment _environment;
 
-    [HttpGet]
-    public IActionResult Index()
-    {
-        var athletes = _repository.GetAll();
-        return View(athletes);
-    }
-
-    [HttpGet]
-    public IActionResult Create()
-    {
-        ViewBag.Categories = _categoryRepository.GetAll();
-        return View(new AthleteCreateViewModel());
-    }
-
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public IActionResult Create(AthleteCreateViewModel model)
-    {
-        _logger.LogInformation("Create Athlete POST викликаний!");
-        ViewBag.Categories = _categoryRepository.GetAll();
-
-        // Логування отриманих даних
-        _logger.LogInformation(
-            "Form data received: FullName = {FullName}, Country = {Country}, City = {City}, Age = {Age}, Description = {Description}, CategoryId = {CategoryId}",
-            model.FullName, model.Country, model.City, model.Age, model.Description, model.CategoryId);
-
-        if (!ModelState.IsValid)
+        public AthleteController(
+            ILogger<AthleteController> logger,
+            Repository<Athlete> repository,
+            Repository<Category> categoryRepository,
+            IWebHostEnvironment environment)
         {
-            _logger.LogWarning("Create Athlete: Модель не валідна. Errors: {Errors}",
-                string.Join(", ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage)));
+            _logger = logger;
+            _repository = repository;
+            _categoryRepository = categoryRepository;
+            _environment = environment;
+        }
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            var athletes = _repository.GetAll();
+            return View(athletes);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            ViewBag.Categories = _categoryRepository.GetAll()
+                .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
+                .ToList();
+
+            return View(new AthleteCreateViewModel());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(AthleteCreateViewModel model)
+        {
+            ViewBag.Categories = _categoryRepository.GetAll()
+                .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
+                .ToList();
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var category = _categoryRepository.GetById(model.CategoryId.Value);
+            if (category == null)
+            {
+                ModelState.AddModelError("CategoryId", "Вказана категорія не існує");
+                return View(model);
+            }
+
+            var nextId = GetNextId();
+
+            var athlete = new Athlete(
+                model.Id,
+                model.FullName,
+                model.Country,
+                model.Age,
+                category,
+                model.City,
+                model.Description
+            );
+
+
+
+            _repository.Add(athlete);
+
+            TempData["SuccessMessage"] = "Атлета успішно створено!";
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            var athlete = _repository.GetById(id);
+            if (athlete == null) return NotFound();
+
+            ViewBag.Categories = _categoryRepository.GetAll()
+                .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
+                .ToList();
+
+            var model = new AthleteCreateViewModel
+            {
+                Id = athlete.Id,
+                FullName = athlete.FullName,
+                Country = athlete.Country,
+                City = athlete.City,
+                Age = athlete.Age,
+                Description = athlete.Description,
+                CategoryId = athlete.CategoryId
+            };
+
             return View(model);
         }
 
-        var athlete = new Athlete
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(AthleteCreateViewModel model)
         {
-            FullName = model.FullName,
-            Country = model.Country,
-            City = model.City,
-            Age = model.Age,
-            Description = model.Description,
-            CategoryId = model.CategoryId,
-            CreatedAt = DateTime.UtcNow
-        };
+            ViewBag.Categories = _categoryRepository.GetAll()
+                .Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name })
+                .ToList();
 
-        _logger.LogInformation("Create Athlete: Створення нового об'єкта Athlete");
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
 
-        _repository.Add(athlete);
+            var athlete = _repository.GetById(model.Id);
+            if (athlete == null) return NotFound();
 
-        TempData["SuccessMessage"] = "Атлета успішно створено!";
-        return RedirectToAction("Index");
-    }
+            var category = _categoryRepository.GetById(model.CategoryId.Value);
+            if (category == null)
+            {
+                ModelState.AddModelError("CategoryId", "Вказана категорія не існує");
+                return View(model);
+            }
 
-    [HttpGet]
-    public IActionResult Edit(int id)
-    {
-        var athlete = _repository.GetById(id);
-        if (athlete == null) return NotFound();
+            athlete.FullName = model.FullName;
+            athlete.Country = model.Country;
+            athlete.Age = model.Age;
+            athlete.Category = category;
+            athlete.City = model.City;
+            athlete.Description = model.Description;
 
-        ViewBag.Categories = _categoryRepository.GetAll();
+            _repository.Update(athlete);
 
-        var model = new AthleteCreateViewModel
+            TempData["SuccessMessage"] = "Дані спортсмена оновлено!";
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public IActionResult Delete(int id)
         {
-            Id = athlete.Id,
-            FullName = athlete.FullName,
-            Country = athlete.Country,
-            City = athlete.City,
-            Age = athlete.Age,
-            Description = athlete.Description,
-            CategoryId = athlete.CategoryId
-        };
+            var athlete = _repository.GetById(id);
+            if (athlete == null) return NotFound();
 
-        return View(model);
-    }
+            var model = new AthleteCreateViewModel
+            {
+                Id = athlete.Id,
+                FullName = athlete.FullName,
+                Country = athlete.Country,
+                City = athlete.City,
+                Age = athlete.Age,
+                Description = athlete.Description,
+                CategoryId = athlete.CategoryId
+            };
 
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-    public IActionResult Edit(AthleteCreateViewModel model)
-    {
-        ViewBag.Categories = _categoryRepository.GetAll();
-
-        // Логування отриманих даних
-        _logger.LogInformation(
-            "Form data received: FullName = {FullName}, Country = {Country}, City = {City}, Age = {Age}, Description = {Description}, CategoryId = {CategoryId}",
-            model.FullName, model.Country, model.City, model.Age, model.Description, model.CategoryId);
-
-        if (!ModelState.IsValid)
-        {
-            _logger.LogWarning("Edit Athlete: Модель не валідна. Errors: {Errors}",
-                string.Join(", ", ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage)));
             return View(model);
         }
 
-        var athlete = _repository.GetById(model.Id);
-        if (athlete == null)
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
         {
-            _logger.LogWarning("Edit Athlete: Не знайдено спортсмена з ID = {Id}", model.Id);
-            return NotFound();
+            var athlete = _repository.GetById(id);
+            if (athlete == null) return NotFound();
+
+            _repository.Delete(id);
+
+            TempData["SuccessMessage"] = "Спортсмена видалено!";
+            return RedirectToAction("Index");
         }
 
-        athlete.FullName = model.FullName;
-        athlete.Country = model.Country;
-        athlete.City = model.City;
-        athlete.Age = model.Age;
-        athlete.Description = model.Description;
-        athlete.CategoryId = model.CategoryId;
-
-        _repository.Update(athlete);
-        TempData["SuccessMessage"] = "Дані спортсмена оновлено!";
-        return RedirectToAction("Index");
-    }
-
-    [HttpGet]
-    public IActionResult Delete(int id)
-    {
-        var athlete = _repository.GetById(id);
-        if (athlete == null) return NotFound();
-
-        var model = new AthleteCreateViewModel
+        private int GetNextId()
         {
-            Id = athlete.Id,
-            FullName = athlete.FullName,
-            Country = athlete.Country,
-            City = athlete.City,
-            Age = athlete.Age,
-            Description = athlete.Description,
-            CategoryId = athlete.CategoryId
-        };
-
-        return View(model);
-    }
-
-    [HttpPost]
-    [ActionName("Delete")]
-    public IActionResult DeleteConfirmed(int id)
-    {
-        var athlete = _repository.GetById(id);
-        if (athlete == null) return NotFound();
-
-        _repository.Delete(id);
-        TempData["SuccessMessage"] = "Спортсмена видалено!";
-        return RedirectToAction("Index");
-    }
-
-    private int GetNextId()
-    {
-        var all = _repository.GetAll();
-        return all.Any() ? all.Max(a => a.Id) + 1 : 1;
+            var all = _repository.GetAll();
+            return all.Any() ? all.Max(a => a.Id) + 1 : 1;
+        }
     }
 }

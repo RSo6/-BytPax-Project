@@ -25,19 +25,19 @@
 
             <div class="mb-3">
                 <label asp-for="Topic" class="form-label">Тема</label>
-                <input asp-for="Topic" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="Topic" name="Topic" class="form-control bg-dark text-light border-secondary" required/>
                 <span asp-validation-for="Topic" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="BodyText" class="form-label">Текст</label>
-                <textarea asp-for="BodyText" class="form-control bg-dark text-light border-secondary" rows="5"></textarea>
+                <textarea asp-for="BodyText" name="BodyText" class="form-control bg-dark text-light border-secondary" rows="5"></textarea>
                 <span asp-validation-for="BodyText" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="CategoryId" class="form-label">Категорія</label>
-                <select asp-for="CategoryId" class="form-select bg-dark text-light border-secondary">
+                <select asp-for="CategoryId" name="CategoryId" class="form-select bg-dark text-light border-secondary" required/>
                     <option value="">Виберіть категорію</option>
                     @foreach (var category in ViewBag.Categories)
                     {
@@ -51,7 +51,7 @@
 
             <div class="mb-3">
                 <label asp-for="ImageFile" class="form-label">Завантажити нове зображення</label>
-                <input asp-for="ImageFile" type="file" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="ImageFile" name="ImageFile" type="file" class="form-control bg-dark text-light border-secondary" required/>
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
 
@@ -59,7 +59,7 @@
             {
                 <div class="mb-3">
                     <label class="form-label">Поточне зображення:</label><br />
-                    <img src="~/uploads/@Model.ImagePath" alt="Image" class="rounded shadow-sm" style="max-width: 200px;" />
+                    <img src="~/uploads/@Model.ImagePath" alt="Image" class="rounded shadow-sm" style="max-width: 200px;">
                 </div>
             }
 

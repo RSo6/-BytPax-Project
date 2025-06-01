@@ -13,11 +13,13 @@ namespace BytPax.Models
 
         public Category() { }
 
-        public Category(int id, string type, string description)
+        public Category(int id, string name, string type, string description)
             : base(id)
         {
+            Name = name;
             TypeOfSport = type;
             Description = description;
         }
+
     }
 }

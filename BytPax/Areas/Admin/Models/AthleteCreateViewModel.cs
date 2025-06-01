@@ -21,5 +21,8 @@ public class AthleteCreateViewModel
     public string Description { get; set; }
 
     [Required(ErrorMessage = "Оберіть категорію")]
-    public int CategoryId { get; set; }
+    [Range(1, int.MaxValue, ErrorMessage = "Оберіть категорію")]
+    public int? CategoryId { get; set; }
+
+
 }

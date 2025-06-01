@@ -192,10 +192,26 @@
                                     <button type="button" title="@article.Topic">@article.Topic</button>
                                 }
                             </div>
-                        }
+                        }       
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const favorites = JSON.parse(localStorage.getItem("favoriteAthletes")) || [];
+        const container = document.querySelector(".saved-articles[data-type='favorites']");
+        if (container && favorites.length > 0) {
+            favorites.forEach(name => {
+                const btn = document.createElement("button");
+                btn.innerText = name;
+                btn.title = name;
+                container.appendChild(btn);
+            });
+        }
+    });
+</script>
+

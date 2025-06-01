@@ -21,25 +21,25 @@
 
             <div class="mb-3">
                 <label asp-for="Title" class="form-label">Назва події</label>
-                <input asp-for="Title" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="Title" name="Title" class="form-control bg-dark text-light border-secondary" required/>
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="Description" class="form-label">Опис</label>
-                <textarea asp-for="Description" class="form-control bg-dark text-light border-secondary" rows="5"></textarea>
+                <textarea asp-for="Description" name="Description" class="form-control bg-dark text-light border-secondary" rows="5"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="EventDate" class="form-label">Дата події</label>
-                <input asp-for="EventDate" type="date" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="EventDate" name="EventDate" type="date" class="form-control bg-dark text-light border-secondary" required/>
                 <span asp-validation-for="EventDate" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="CategoryId" class="form-label">Категорія</label>
-                <select asp-for="CategoryId" class="form-select bg-dark text-light border-secondary">
+                <select asp-for="CategoryId" name="CategoryId" class="form-select bg-dark text-light border-secondary" required/>
                     <option value="">Виберіть категорію</option>
                     @if (ViewBag.Categories != null)
                     {
@@ -54,13 +54,13 @@
 
             <div class="mb-3">
                 <label asp-for="ImportanceLevel" class="form-label">Рівень важливості</label>
-                <input asp-for="ImportanceLevel" type="number" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="ImportanceLevel" name="ImportanceLevel" type="number" class="form-control bg-dark text-light border-secondary" required/>
                 <span asp-validation-for="ImportanceLevel" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="ImageFile" class="form-label">Зображення</label>
-                <input asp-for="ImageFile" type="file" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="ImageFile" name="ImageFile" type="file" class="form-control bg-dark text-light border-secondary" required/>
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
 
@@ -68,7 +68,7 @@
             {
                 <div class="mb-3">
                     <label class="form-label">Поточне зображення:</label><br />
-                    <img src="~/uploads/@Model.ImagePath" alt="Image" class="img-thumbnail bg-secondary" style="max-width: 200px;" />
+                    <img src="~/uploads/@Model.ImagePath" alt="Image" class="img-thumbnail bg-secondary" style="max-width: 200px;" required/>
                 </div>
             }
 

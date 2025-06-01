@@ -14,28 +14,28 @@
             <!-- Topic -->
             <div class="mb-3">
                 <label asp-for="Topic" class="form-label fw-semibold text-light">Тема</label>
-                <input asp-for="Topic" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="Topic" name="Topic" class="form-control bg-dark text-light border-secondary" required/>
                 <span asp-validation-for="Topic" class="text-danger small"></span>
             </div>
 
             <!-- BodyText -->
             <div class="mb-3">
                 <label asp-for="BodyText" class="form-label fw-semibold text-light">Текст</label>
-                <textarea asp-for="BodyText" rows="6" class="form-control bg-dark text-light border-secondary"></textarea>
+                <textarea asp-for="BodyText"name="BodyText" rows="6" class="form-control bg-dark text-light border-secondary"></textarea>
                 <span asp-validation-for="BodyText" class="text-danger small"></span>
             </div>
 
             <!-- Image -->
             <div class="mb-3">
                 <label asp-for="ImageFile" class="form-label fw-semibold text-light">Зображення</label>
-                <input asp-for="ImageFile" type="file" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="ImageFile" name="ImageFile" type="file" class="form-control bg-dark text-light border-secondary" required/>
                 <span asp-validation-for="ImageFile" class="text-danger small"></span>
             </div>
 
             <!-- Category -->
             <div class="mb-3">
                 <label asp-for="CategoryId" class="form-label fw-semibold text-light">Категорія</label>
-                <select asp-for="CategoryId" class="form-select bg-dark text-light border-secondary">
+                <select asp-for="CategoryId" name="CategoryId" class="form-select bg-dark text-light border-secondary" required/>
                     <option value="0">Виберіть категорію</option>
                     @if (ViewBag.Categories is List<BytPax.Models.Category> categories && categories.Any())
                     {

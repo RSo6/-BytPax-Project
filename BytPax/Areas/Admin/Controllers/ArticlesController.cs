@@ -53,7 +53,7 @@ namespace BytPax.Areas.Admin.Controllers
                 _logger.LogInformation(
                     "Form data received: Topic = {Topic}, BodyText = {BodyText}, CategoryId = {CategoryId}, ImageFile = {ImageFile}",
                     model.Topic, model.BodyText, model.CategoryId, model.ImageFile?.FileName);
-                
+
                 foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
                 {
                     _logger.LogWarning(error.ErrorMessage);

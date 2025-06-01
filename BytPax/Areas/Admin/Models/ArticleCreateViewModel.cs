@@ -18,7 +18,7 @@ namespace BytPax.Areas.Admin.Models
         public int CategoryId { get; set; }
 
         public IFormFile? ImageFile { get; set; }
-        
+
         public string? ImagePath { get; set; }
     }
 }

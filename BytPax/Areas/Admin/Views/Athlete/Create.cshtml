@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Створення спортсмена";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var categories = ViewBag.Categories as List<SelectListItem>;
 }
 
 <div class="card bg-dark text-light shadow-lg animate__animated animate__fadeIn">
@@ -13,46 +14,49 @@
     <div class="card-body">
         <form id="createAthleteForm" asp-area="Admin" asp-controller="Athlete" asp-action="Create" method="post">
             @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
             <div class="mb-3">
                 <label asp-for="FullName" class="form-label">ПІБ</label>
-                <input asp-for="FullName" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="FullName" name="FullName" class="form-control bg-dark text-light border-secondary" required />
                 <span asp-validation-for="FullName" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="Country" class="form-label">Країна</label>
-                <input asp-for="Country" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="Country" name="Country" class="form-control bg-dark text-light border-secondary" required />
                 <span asp-validation-for="Country" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="City" class="form-label">Місто</label>
-                <input asp-for="City" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="City" name="City" class="form-control bg-dark text-light border-secondary" required />
                 <span asp-validation-for="City" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="Age" class="form-label">Вік</label>
-                <input asp-for="Age" type="number" min="0" class="form-control bg-dark text-light border-secondary" />
+                <input asp-for="Age" name="Age" type="number" min="0" class="form-control bg-dark text-light border-secondary" required/>
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
                 <label asp-for="Description" class="form-label">Опис</label>
-                <textarea asp-for="Description" rows="4" class="form-control bg-dark text-light border-secondary"></textarea>
+                <textarea asp-for="Description" name="Description" rows="4" class="form-control bg-dark text-light border-secondary"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
 
             <div class="mb-3">
-                <label asp-for="CategoryId" class="form-label">Категорія</label>
-                <select asp-for="CategoryId" class="form-select bg-dark text-light border-secondary">
-                    <option value="0">Виберіть категорію</option>
-                    @if (ViewBag.Categories is List<BytPax.Models.Category> categories && categories.Any())
+                <label asp-for="CategoryId" name="CategoryId" class="form-label">Категорія</label>
+                <select asp-for="CategoryId" name="CategoryId" class="form-select bg-dark text-light border-secondary" required>
+                    <option value="">-- Виберіть категорію --</option>
+                    @if (categories != null && categories.Any())
                     {
-                        @foreach (var category in categories)
+                        foreach (var category in categories)
                         {
-                            <option value="@category.Id">@category.Name</option>
+                            <option value="@category.Value" @(category.Value == Model.CategoryId?.ToString() ? "selected" : "")>
+                                @category.Text
+                            </option>
                         }
                     }
                     else
@@ -62,6 +66,7 @@
                 </select>
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
+
 
             <div class="d-flex gap-2">
                 <button type="submit" class="btn btn-primary shadow-sm">
@@ -81,3 +86,7 @@
         }
     </div>
 </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

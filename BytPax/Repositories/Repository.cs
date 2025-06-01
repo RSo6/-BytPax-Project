@@ -5,7 +5,7 @@ namespace BytPax.Repositories;
 
 public class Repository<T> where T : BaseEntity
 {
-    private readonly IDataStorage<T> _storage;
+    public readonly IDataStorage<T> _storage;
 
     public Repository(IDataStorage<T> storage)
     {

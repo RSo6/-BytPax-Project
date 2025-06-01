@@ -24,7 +24,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
 // EF
 builder.Services.AddScoped(typeof(IDataStorage<>), typeof(EfStorage<>));
-builder.Services.AddScoped(typeof(Repository<>), typeof(Repository<>));
+builder.Services.AddScoped(typeof(Repository<>));
 builder.Services.AddScoped<SearchService>();
 
 var app = builder.Build();

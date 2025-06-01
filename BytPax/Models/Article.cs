@@ -14,7 +14,7 @@ namespace BytPax.Models
         public Article() { }
 
         public Article(string topic, string bodyText, int categoryId, string imagePath)
-            : base(0) 
+            : base(0)
         {
             Topic = topic;
             BodyText = bodyText;
