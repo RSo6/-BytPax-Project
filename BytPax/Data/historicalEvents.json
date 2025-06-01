@@ -22,5 +22,17 @@
     "Id": 2,
     "CreatedAt": "2025-04-28T22:15:51.785068Z",
     "UpdatedAt": "2025-04-28T22:15:51.785068Z"
+  },
+  {
+    "Title": "fdsafsdf",
+    "Description": "asdfsafdsaf",
+    "EventDate": "2025-06-01T00:00:00",
+    "SportId": 0,
+    "ImportanceLevel": 1,
+    "ImagePath": "Db.drawio.png",
+    "CategoryId": 2,
+    "Id": 3,
+    "CreatedAt": "2025-06-01T13:38:52.80367Z",
+    "UpdatedAt": "2025-06-01T13:38:52.80367Z"
   }
 ]

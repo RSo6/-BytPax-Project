@@ -24,7 +24,6 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LogoutPath = "/Auth/Logout";
     });
 
-/*
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
     options.JsonSerializerOptions.Converters.Add(new UserJsonConverter());
@@ -71,13 +70,12 @@ builder.Services.AddSingleton<IDataStorage<RecordHistory>>(sp =>
     var logger = sp.GetRequiredService<ILogger<JsonStorage<RecordHistory>>>();
     return new JsonStorage<RecordHistory>("Data/recordsHistory.json", logger);
 });
-*/
 
 // Json 
-// builder.Services.AddSingleton(typeof(IDataStorage<>), typeof(JsonStorage<>));
+builder.Services.AddSingleton(typeof(IDataStorage<>), typeof(JsonStorage<>));
 
 // EF
-builder.Services.AddScoped(typeof(IDataStorage<>), typeof(EfStorage<>));
+// builder.Services.AddScoped(typeof(IDataStorage<>), typeof(EfStorage<>));
     
 builder.Services.AddScoped(typeof(Repository<>), typeof(Repository<>));
 
