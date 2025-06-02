@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/wK0cxg5e4AmGDm+7+GDg+cpi8Lta9GKTzqkiS7JasE=",
+  "Hash": "soxKtamKIV/zCZfoRjO/hcbREFloADmYthzY1N57q/Y=",
   "Source": "BytPax",
   "BasePath": "_content/BytPax",
   "Mode": "Default",
@@ -2447,6 +2447,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\happy.png"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Study\\KPI\\ОП\\2\\-BytPax-Project\\BytPax\\wwwroot\\uploads\\IMG_1340.JPG",
+      "SourceId": "BytPax",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Study\\KPI\\ОП\\2\\-BytPax-Project\\BytPax\\wwwroot\\",
+      "BasePath": "_content/BytPax",
+      "RelativePath": "uploads/IMG_1340.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\IMG_1340.JPG"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Study\\KPI\\ОП\\2\\-BytPax-Project\\BytPax\\wwwroot\\uploads\\insert_time.png",

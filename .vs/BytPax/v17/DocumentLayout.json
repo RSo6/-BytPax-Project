@@ -3,6 +3,50 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\models\\athlete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\models\\athlete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\controllers\\publiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\controllers\\publiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\data\\articles.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\data\\articles.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\areas\\admin\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\areas\\admin\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\models\\core\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\models\\core\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\areas\\admin\\views\\athlete\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\areas\\admin\\views\\athlete\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -19,22 +63,6 @@
       "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\areas\\admin\\models\\historicaleventcreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\areas\\admin\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\areas\\admin\\controllers\\articlescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\data\\articles.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\data\\articles.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\data\\database\\efstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\data\\database\\efstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -43,24 +71,12 @@
       "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\data\\database\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\areas\\admin\\models\\articlecreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\areas\\admin\\models\\articlecreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\models\\article.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\user\\desktop\\study\\kpi\\\u043E\u043F\\2\\-bytpax-project\\bytpax\\models\\core\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\models\\core\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,83 +91,72 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BytPax\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BytPax\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAANECAAAAAAAAAAAowOkCAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T20:53:07.492Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PublicController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Controllers\\PublicController.cs",
+              "RelativeDocumentMoniker": "BytPax\\Controllers\\PublicController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Controllers\\PublicController.cs",
+              "RelativeToolTip": "BytPax\\Controllers\\PublicController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAowCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T08:34:10.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Athlete.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Models\\Athlete.cs",
+              "RelativeDocumentMoniker": "BytPax\\Models\\Athlete.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Models\\Athlete.cs",
+              "RelativeToolTip": "BytPax\\Models\\Athlete.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T07:39:30.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Views\\Athlete\\Create.cshtml",
               "RelativeDocumentMoniker": "BytPax\\Areas\\Admin\\Views\\Athlete\\Create.cshtml",
               "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Views\\Athlete\\Create.cshtml",
               "RelativeToolTip": "BytPax\\Areas\\Admin\\Views\\Athlete\\Create.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-01T10:01:00.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Edit.cshtml",
-              "RelativeDocumentMoniker": "BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Edit.cshtml",
-              "RelativeToolTip": "BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Edit.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-01T10:00:53.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Create.cshtml",
-              "RelativeDocumentMoniker": "BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Create.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Create.cshtml",
-              "RelativeToolTip": "BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Create.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-01T10:00:43.281Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HistoricalEventCreateViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Models\\HistoricalEventCreateViewModel.cs",
-              "RelativeDocumentMoniker": "BytPax\\Areas\\Admin\\Models\\HistoricalEventCreateViewModel.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Models\\HistoricalEventCreateViewModel.cs",
-              "RelativeToolTip": "BytPax\\Areas\\Admin\\Models\\HistoricalEventCreateViewModel.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T09:59:55.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Program.cs",
-              "RelativeDocumentMoniker": "BytPax\\Program.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Program.cs",
-              "RelativeToolTip": "BytPax\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T22:57:44.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "BytPax\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Controllers\\HomeController.cs",
               "RelativeToolTip": "BytPax\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAcwC0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T22:57:25.335Z"
+              "WhenOpened": "2025-05-31T22:57:25.335Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "EFStorage.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Data\\Database\\EFStorage.cs",
               "RelativeDocumentMoniker": "BytPax\\Data\\Database\\EFStorage.cs",
@@ -171,35 +176,126 @@
               "RelativeToolTip": "BytPax\\Data\\articles.json",
               "ViewState": "AgIAACwAAAAAAAAAAAAswEkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-31T22:53:36.943Z"
+              "WhenOpened": "2025-05-31T22:53:36.943Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "BytPax\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "BytPax\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAOkCAAAAAAAAAAAkwP8CAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-31T20:53:07.492Z"
+              "DocumentIndex": 1,
+              "Title": "Article.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Models\\Article.cs",
+              "RelativeDocumentMoniker": "BytPax\\Models\\Article.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Models\\Article.cs",
+              "RelativeToolTip": "BytPax\\Models\\Article.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T20:38:51.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Program.cs",
+              "RelativeDocumentMoniker": "BytPax\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Program.cs",
+              "RelativeToolTip": "BytPax\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T22:57:44.583Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "BytPax\\Repositories\\Repository.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Repositories\\Repository.cs",
+              "RelativeToolTip": "BytPax\\Repositories\\Repository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwCoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T08:39:09.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ArticlesController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Controllers\\ArticlesController.cs",
               "RelativeDocumentMoniker": "BytPax\\Areas\\Admin\\Controllers\\ArticlesController.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Controllers\\ArticlesController.cs",
               "RelativeToolTip": "BytPax\\Areas\\Admin\\Controllers\\ArticlesController.cs",
-              "ViewState": "AgIAALcAAAAAAAAAAAA8wNMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAALEAAAAAAAAAAAAYwNMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T20:49:40.477Z"
+              "WhenOpened": "2025-05-31T20:49:40.477Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "BytPax\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "BytPax\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-02T07:38:32.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HistoricalEventCreateViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Models\\HistoricalEventCreateViewModel.cs",
+              "RelativeDocumentMoniker": "BytPax\\Areas\\Admin\\Models\\HistoricalEventCreateViewModel.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Models\\HistoricalEventCreateViewModel.cs",
+              "RelativeToolTip": "BytPax\\Areas\\Admin\\Models\\HistoricalEventCreateViewModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T09:59:55.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Create.cshtml",
+              "RelativeDocumentMoniker": "BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Create.cshtml",
+              "RelativeToolTip": "BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Create.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T10:00:43.281Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Models\\core\\User.cs",
+              "RelativeDocumentMoniker": "BytPax\\Models\\core\\User.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Models\\core\\User.cs",
+              "RelativeToolTip": "BytPax\\Models\\core\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T20:41:43.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Edit.cshtml",
+              "RelativeDocumentMoniker": "BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Edit.cshtml",
+              "RelativeToolTip": "BytPax\\Areas\\Admin\\Views\\HistoricalEvent\\Edit.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-01T10:00:53.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ArticleCreateViewModel.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Areas\\Admin\\Models\\ArticleCreateViewModel.cs",
               "RelativeDocumentMoniker": "BytPax\\Areas\\Admin\\Models\\ArticleCreateViewModel.cs",
@@ -211,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Data\\Database\\AppDbContext.cs",
               "RelativeDocumentMoniker": "BytPax\\Data\\Database\\AppDbContext.cs",
@@ -223,31 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Models\\core\\User.cs",
-              "RelativeDocumentMoniker": "BytPax\\Models\\core\\User.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Models\\core\\User.cs",
-              "RelativeToolTip": "BytPax\\Models\\core\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T20:41:43.638Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Article.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Models\\Article.cs",
-              "RelativeDocumentMoniker": "BytPax\\Models\\Article.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Models\\Article.cs",
-              "RelativeToolTip": "BytPax\\Models\\Article.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T20:38:51.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\Study\\KPI\\\u041E\u041F\\2\\-BytPax-Project\\BytPax\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "BytPax\\Controllers\\UserController.cs",

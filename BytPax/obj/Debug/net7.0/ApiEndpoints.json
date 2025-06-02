@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "ContainingType": "PublicArticlesController",
+    "Method": "GetArticles",
+    "RelativePath": "api/PublicArticles/GetArticles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

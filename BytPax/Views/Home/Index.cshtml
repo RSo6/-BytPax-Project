@@ -1,9 +1,11 @@
-﻿@{
+﻿@model IEnumerable<dynamic>
+
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Home Page";
     var userName = User.Identity.IsAuthenticated ? User.Identity.Name : null;
     var isAdmin = User.IsInRole("Admin");
 }
-
 @section Styles {
     <style>
         .btn-warm {
@@ -545,310 +547,231 @@
     </div>
 </section>
 
-<section class="page-section" id="cardsRecords" style="background-color: #000;">
-    <h3 class="text-center text-light mb-4">Рекорди</h3>
-
-    <div class="position-relative mx-auto" style="max-width: 1000px;">
-
-        <div id="cardScroller" class="d-flex overflow-auto px-4" style="gap: 1rem; scroll-behavior: smooth;">
-            <div class="d-flex flex-nowrap gap-4 py-2">
-
-                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
-                        data-title="Футбол"
-                        data-img="/images/recordFootball.jfif"
-                        data-description="На цій картці можна побачити всі рекорди пов’язані з футболом на нашому сайті">
-                    <div class="rounded overflow-hidden shadow position-relative">
-                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="football">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
-                            <i class="fas fa-running me-2"></i>Футбол
-                        </div>
-                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/recordFootball.jfif" alt="Футбол" class="img-fluid rounded" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
-                        data-title="Баскетбол"
-                        data-img="/images/recordBasketball.jfif"
-                        data-description="На цій картці можна побачити всі рекорди пов’язані з баскетболом на нашому сайті">
-                    <div class="rounded overflow-hidden shadow position-relative">
-                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="basketball">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
-                            <i class="fas fa-history me-2"></i>Баскетбол
-                        </div>
-                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/recordBasketball.jfif" alt="Баскетбол" class="img-fluid rounded" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
-                        data-title="Теніс"
-                        data-img="/images/recordTennis.jfif"
-                        data-description="На цій картці можна побачити всі рекорди пов’язані з тенісом на нашому сайті">
-                    <div class="rounded overflow-hidden shadow position-relative">
-                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="tennis">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
-                            <i class="fas fa-trophy me-2"></i>Теніс
-                        </div>
-                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/recordTennis.jfif" alt="Теніс" class="img-fluid rounded" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
-                        data-title="Плавання"
-                        data-img="/images/recordSwim.jfif"
-                        data-description="На цій картці можна побачити всі рекорди пов’язані з плаванням на нашому сайті">
-                    <div class="rounded overflow-hidden shadow position-relative">
-                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="swim">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
-                            <i class="fas fa-newspaper me-2"></i>Плавання
-                        </div>
-                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/recordSwim.jfif" alt="Плавці" class="img-fluid rounded" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
-                        data-title="Біг"
-                        data-img="/images/recordRun.jfif"
-                        data-description="На цій картці можна побачити всі рекорди пов’язані з бігом на нашому сайті">
-                    <div class="rounded overflow-hidden shadow position-relative">
-                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="run">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
-                            <i class="fas fa-newspaper me-2"></i>Біг
-                        </div>
-                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/recordRun.jfif" alt="Бігуни" class="img-fluid rounded" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
-        <div class="modal-content bg-dark text-light">
-          <div class="modal-header">
-            <h5 class="modal-title" id="cardModalLabel">Заголовок</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрити"></button>
-          </div>
-          <div class="modal-body">
-            <img id="modalImage" src="" alt="Зображення" class="img-fluid mb-3" />
-            <p id="modalDescription"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
-
 <section class="page-section" id="cardsArctics" style="background-color: #000;">
     <h3 class="text-center text-light mb-4">Статті</h3>
-
     <div class="position-relative mx-auto" style="max-width: 1000px;">
-
         <div id="cardScroller" class="d-flex overflow-auto px-4" style="gap: 1rem; scroll-behavior: smooth;">
             <div class="d-flex flex-nowrap gap-4 py-2">
-
-                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
-                        data-title="Футбол"
-                        data-img="/images/arcticFootball.jfif"
-                        data-description="На цій картці можна побачити всі статті пов’язані з футболом на нашому сайті">
-                    <div class="rounded overflow-hidden shadow position-relative">
-                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="football">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
-                            <i class="fas fa-running me-2"></i>Футбол
+                @{
+                    var categories = new[]
+                    {
+                        new { Id = "football", Name = "Футбол", Icon = "fa-running", Img = "/images/arcticFootball.jfif" },
+                        new { Id = "basketball", Name = "Баскетбол", Icon = "fa-basketball-ball", Img = "/images/arcticBasketball.jfif" },
+                        new { Id = "tennis", Name = "Теніс", Icon = "fa-table-tennis", Img = "/images/arcticTennis.jfif" },
+                        new { Id = "swim", Name = "Плавання", Icon = "fa-swimmer", Img = "/images/arcticSwim.jfif" },
+                        new { Id = "run", Name = "Біг", Icon = "fa-running", Img = "/images/arcticRun.jfif" }
+                    };
+                    foreach (var cat in categories)
+                    {
+                        <div class="flex-shrink-0 card bg-dark text-white shadow" 
+                             style="width: 280px; position: relative; cursor:pointer;" 
+                             data-bs-toggle="modal" data-bs-target="#articlesModal"
+                             data-title="@cat.Name"
+                             data-id="@cat.Id"
+                             data-img="@cat.Img"
+                             data-icon="@cat.Icon"
+                             data-description="Усі статті про @cat.Name"
+                             data-articles='@System.Text.Json.JsonSerializer.Serialize(Model.Where(a => a.CategoryName == cat.Name).Select(a => new { a.Id, a.Topic, a.BodyText }))'>
+                            <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="@cat.Id" onclick="event.stopPropagation();">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><i class="fas @cat.Icon"></i> @cat.Name</h5>
+                                <img src="@cat.Img" class="img-fluid rounded mb-2" alt="@cat.Name" style="height: 150px; object-fit: cover;" />
+                                <p class="card-text">Клікни, щоб переглянути статті про @cat.Name</p>
+                            </div>
                         </div>
-                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/arcticFootball.jfif" alt="Футбол" class="img-fluid rounded" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
-                        data-title="Баскетбол"
-                        data-img="/images/arcticBasketball.jfif"
-                        data-description="На цій картці можна побачити всі статті пов’язані з баскетболом на нашому сайті">
-                    <div class="rounded overflow-hidden shadow position-relative">
-                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="basketball">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
-                            <i class="fas fa-history me-2"></i>Баскетбол
-                        </div>
-                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/arcticBasketball.jfif" alt="Баскетбол" class="img-fluid rounded" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
-                        data-title="Теніс"
-                        data-img="/images/arcticTennis.jfif"
-                        data-description="На цій картці можна побачити всі статті пов’язані з тенісом на нашому сайті">
-                    <div class="rounded overflow-hidden shadow position-relative">
-                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="tennis">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
-                            <i class="fas fa-trophy me-2"></i>Теніс
-                        </div>
-                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/arcticTennis.jfif" alt="Теніс" class="img-fluid rounded" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
-                        data-title="Плавання"
-                        data-img="/images/arcticSwim.jfif"
-                        data-description="На цій картці можна побачити всі статті пов’язані з плаванням на нашому сайті">
-                    <div class="rounded overflow-hidden shadow position-relative">
-                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="swim">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
-                            <i class="fas fa-newspaper me-2"></i>Плавання
-                        </div>
-                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/arcticSwim.jfif" alt="Плавці" class="img-fluid rounded" />
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
-                        data-title="Біг"
-                        data-img="/images/arcticRun.jfif"
-                        data-description="На цій картці можна побачити всі статті пов’язані з бігом на нашому сайті">
-                    <div class="rounded overflow-hidden shadow position-relative">
-                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="run">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
-                            <i class="fas fa-newspaper me-2"></i>Біг
-                        </div>
-                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/arcticRun.jfif" alt="Бігуни" class="img-fluid rounded" />
-                        </div>
-                    </div>
-                </div>
+                    }
+                }
             </div>
         </div>
     </div>
-    <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
-        <div class="modal-content bg-dark text-light">
-          <div class="modal-header">
-            <h5 class="modal-title" id="cardModalLabel">Заголовок</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрити"></button>
-          </div>
-          <div class="modal-body">
-            <img id="modalImage" src="" alt="Зображення" class="img-fluid mb-3" />
-            <p id="modalDescription"></p>
-          </div>
-        </div>
-      </div>
-    </div>
 </section>
+
+<!-- Модальне вікно для секції статтей -->
+<div class="modal fade" id="articlesModal" tabindex="-1" aria-labelledby="articlesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title" id="articlesModalLabel">Статті категорії</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="articlesList" class="list-group list-group-flush"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 @section Scripts {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const hearts = document.querySelectorAll(".heart-btn");
-    
-            // Завантажити стан з localStorage
-            hearts.forEach(btn => {
-               const id = btn.dataset.id;
-                const isActive = localStorage.getItem(`heart-${id}`);
-                if (isActive === "true") {
-                    btn.classList.add("active");
-                }
-    
-                // При натисканні – оновити localStorage
-                btn.addEventListener("click", function () {
-                    btn.classList.toggle("active");
-                        const state = btn.classList.contains("active");
-                    localStorage.setItem(`heart-${id}`, state);
-                });
-           });
-        });
-    </script>
-    <script>
-        
-        document.addEventListener("DOMContentLoaded", function () {
-            const cardContainer = document.getElementById('cardContainer');
-            const scrollLeftBtn = document.getElementById('scrollLeft');
-            const scrollRightBtn = document.getElementById('scrollRight');
-
-            const scrollAmount = 300;
-
-            scrollLeftBtn.addEventListener("click", () => {
-                cardContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-            });
-
-            scrollRightBtn.addEventListener("click", () => {
-                cardContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-            });
-
-            // Серця
+            // Обробка сердечок (лайків)
             const hearts = document.querySelectorAll(".heart-btn");
             hearts.forEach(btn => {
                 const id = btn.dataset.id;
-                const isActive = localStorage.getItem(`heart-${id}`);
-                if (isActive === "true") {
+                if (localStorage.getItem(`heart-${id}`) === "true") {
                     btn.classList.add("active");
                 }
 
-                btn.addEventListener("click", function () {
+                btn.addEventListener("click", e => {
+                    e.stopPropagation(); // Запобігаємо відкриттю модалки
                     btn.classList.toggle("active");
-                    const state = btn.classList.contains("active");
-                    localStorage.setItem(`heart-${id}`, state);
+                    localStorage.setItem(`heart-${id}`, btn.classList.contains("active"));
                 });
             });
+
+            // Модальне вікно зі списком статей
+            const articlesModal = document.getElementById('articlesModal');
+            if (articlesModal) {
+                articlesModal.addEventListener('show.bs.modal', function (event) {
+                    const card = event.relatedTarget;
+                    const categoryName = card.getAttribute('data-title');
+                    const articlesDataRaw = card.getAttribute('data-articles');
+
+                    let articlesData = [];
+                    try {
+                        articlesData = JSON.parse(articlesDataRaw);
+                    } catch (e) {
+                        console.error("Invalid JSON in data-articles:", e);
+                    }
+
+                    const modalTitle = articlesModal.querySelector('.modal-title');
+                    const articlesList = articlesModal.querySelector('#articlesList');
+
+                    modalTitle.textContent = `Статті категорії: ${categoryName}`;
+                    articlesList.innerHTML = '';
+
+                    if (!articlesData || articlesData.length === 0) {
+                        articlesList.innerHTML = '<li class="list-group-item bg-dark text-light fst-italic">Статей немає</li>';
+                    } else {
+                        articlesData.forEach(article => {
+                            const li = document.createElement('li');
+                            li.className = 'list-group-item bg-dark text-light';
+
+                            li.innerHTML = `<h6>${article.Topic}</h6>
+                                            <p>${article.BodyText.length > 200 ? article.BodyText.substring(0, 200) + '...' : article.BodyText}</p>`;
+
+                            articlesList.appendChild(li);
+                        });
+                    }
+                });
+            }
         });
-    </script>
-    <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const cards = document.querySelectorAll('.card');
-            const modal = new bootstrap.Modal(document.getElementById('cardModal'));
+            // Лайки (сердечка)
+            const hearts = document.querySelectorAll(".heart-btn");
+            hearts.forEach(btn => {
+                const id = btn.dataset.id;
+                if (localStorage.getItem(`heart-${id}`) === "true") {
+                    btn.classList.add("active");
+                }
+                btn.addEventListener("click", e => {
+                    e.stopPropagation();
+                    btn.classList.toggle("active");
+                    localStorage.setItem(`heart-${id}`, btn.classList.contains("active"));
+                });
+            });
+
+            // Модальне вікно для карток подій
+            const cardModal = new bootstrap.Modal(document.getElementById('cardModal'));
             const modalTitle = document.getElementById('cardModalLabel');
             const modalImage = document.getElementById('modalImage');
             const modalDescription = document.getElementById('modalDescription');
 
+            const cards = document.querySelectorAll("#cardsEvents .card");
             cards.forEach(card => {
-                card.addEventListener('click', function () {
-                    const title = card.getAttribute('data-title');
-                    const img = card.getAttribute('data-img');
-                    const description = card.getAttribute('data-description');
+                card.addEventListener("click", () => {
+                    const title = card.getAttribute('data-title') || "Без назви";
+                    const img = card.getAttribute('data-img') || "";
+                    const description = card.getAttribute('data-description') || "Опис відсутній";
 
                     modalTitle.textContent = title;
                     modalImage.src = img;
                     modalDescription.textContent = description;
 
-                    modal.show();
+                    cardModal.show();
                 });
             });
         });
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = new bootstrap.Modal(document.getElementById('cardModal'));
+            const modalTitle = document.getElementById('cardModalLabel');
+            const modalImage = document.getElementById('modalImage');
+            const modalDescription = document.getElementById('modalDescription');
+
+            function addCardClickListeners(scrollerId) {
+                const scroller = document.querySelector(`#${scrollerId}`);
+                if (!scroller) return;
+
+                const cards = scroller.querySelectorAll('.card');
+                cards.forEach(card => {
+                    card.addEventListener('click', function(e) {
+                        // Уникнути відкриття при кліку на кнопку "heart"
+                        if (e.target.closest('.heart-btn')) return;
+
+                        const title = card.getAttribute('data-title') || 'Без назви';
+                        const img = card.getAttribute('data-img') || '';
+                        const description = card.getAttribute('data-description') || '';
+
+                        modalTitle.textContent = title;
+                        modalImage.src = img;
+                        modalImage.alt = title;
+                        modalDescription.textContent = description;
+
+                        modal.show();
+                    });
+                });
+            }
+
+            // Додаємо обробники для всіх трьох секцій
+            addCardClickListeners('cardScroller');              // Категорії
+            addCardClickListeners('cardsAthletes');              // Спортсмени
+            addCardClickListeners('cardScrollerEvents');        // Події (якщо додана)
+
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = new bootstrap.Modal(document.getElementById('cardModal'));
+            const modalTitle = document.getElementById('cardModalLabel');
+            const modalImage = document.getElementById('modalImage');
+            const modalDescription = document.getElementById('modalDescription');
+
+           const scrollerAthletes = document.querySelector('#cardsAthletes');
+            if (scrollerAthletes) {
+                const cards = scrollerAthletes.querySelectorAll('.card');
+                cards.forEach(card => {
+                    card.addEventListener('click', function(e) {
+                        if (e.target.closest('.heart-btn')) return;
+
+                        const title = card.getAttribute('data-title') || 'Без назви';
+                        const img = card.getAttribute('data-img') || '';
+                        const description = card.getAttribute('data-description') || '';
+
+                        modalTitle.textContent = title;
+                        modalImage.src = img;
+                        modalImage.alt = title;
+                        modalDescription.textContent = description;
+
+                        modal.show();
+                    });
+                });
+            }
+        });
+
     </script>
 
+    <style>
+        .heart-btn.active i {
+            color: red;
+        }
+        .heart-btn {
+            cursor: pointer;
+        }
+    </style>
 }
