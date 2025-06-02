@@ -14,7 +14,7 @@
         <form asp-action="Create" method="post" novalidate>
             <div class="mb-3">
                 <label asp-for="SportId" class="form-label">Вид спорту</label>
-                <select asp-for="SportId" name="SportId" class="form-select bg-dark text-light border-secondary" required/>
+                <select asp-for="SportId" name="SportId" class="form-select bg-dark text-light border-secondary" required >
                     <option value="">Виберіть спорт</option>
                     @if (ViewBag.Categories is List<BytPax.Models.Category> categories && categories.Any())
                     {

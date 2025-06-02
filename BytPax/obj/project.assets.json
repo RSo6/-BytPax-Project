@@ -10844,31 +10844,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bonda\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/romanshnep/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj",
+      "projectUniqueName": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj",
       "projectName": "BytPax",
-      "projectPath": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj",
-      "packagesPath": "C:\\Users\\bonda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\obj\\",
+      "projectPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj",
+      "packagesPath": "/Users/romanshnep/.nuget/packages/",
+      "outputPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\bonda\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/romanshnep/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/library-packs": {},
+        "/usr/local/share/dotnet/sdk/7.0.317/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10881,13 +10876,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.200"
+      }
     },
     "frameworks": {
       "net7.0": {
@@ -10947,7 +10936,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
       }
     }
   }

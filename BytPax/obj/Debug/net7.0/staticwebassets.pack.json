@@ -1,579 +1,607 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BytPax.bundle.scp.css",
-      "PackagePath": "staticwebassets\\BytPax.fiw4wbba0n.bundle.scp.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/obj/Debug/net7.0/scopedcss/projectbundle/BytPax.bundle.scp.css",
+      "PackagePath": "staticwebassets/BytPax.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\401.html",
-      "PackagePath": "staticwebassets\\admin\\401.html"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\404.html",
-      "PackagePath": "staticwebassets\\admin\\404.html"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/arcticBasketball.jfif",
+      "PackagePath": "staticwebassets/Images/arcticBasketball.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\500.html",
-      "PackagePath": "staticwebassets\\admin\\500.html"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/arcticFootball.jfif",
+      "PackagePath": "staticwebassets/Images/arcticFootball.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\assets\\demo\\chart-area-demo.js",
-      "PackagePath": "staticwebassets\\admin\\assets\\demo\\chart-area-demo.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/arcticRun.jfif",
+      "PackagePath": "staticwebassets/Images/arcticRun.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\assets\\demo\\chart-bar-demo.js",
-      "PackagePath": "staticwebassets\\admin\\assets\\demo\\chart-bar-demo.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/arcticSwim.jfif",
+      "PackagePath": "staticwebassets/Images/arcticSwim.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\assets\\demo\\chart-pie-demo.js",
-      "PackagePath": "staticwebassets\\admin\\assets\\demo\\chart-pie-demo.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/arcticTennis.jfif",
+      "PackagePath": "staticwebassets/Images/arcticTennis.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\assets\\demo\\datatables-demo.js",
-      "PackagePath": "staticwebassets\\admin\\assets\\demo\\datatables-demo.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/athleteBasketball.jfif",
+      "PackagePath": "staticwebassets/Images/athleteBasketball.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\assets\\img\\error-404-monochrome.svg",
-      "PackagePath": "staticwebassets\\admin\\assets\\img\\error-404-monochrome.svg"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/athleteFootball.jfif",
+      "PackagePath": "staticwebassets/Images/athleteFootball.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\charts.html",
-      "PackagePath": "staticwebassets\\admin\\charts.html"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/athleteRun.jfif",
+      "PackagePath": "staticwebassets/Images/athleteRun.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\css\\styles.css",
-      "PackagePath": "staticwebassets\\admin\\css\\styles.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/athleteSwim.jfif",
+      "PackagePath": "staticwebassets/Images/athleteSwim.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\index.html",
-      "PackagePath": "staticwebassets\\admin\\index.html"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/athleteTennis.jfif",
+      "PackagePath": "staticwebassets/Images/athleteTennis.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\js\\datatables-simple-demo.js",
-      "PackagePath": "staticwebassets\\admin\\js\\datatables-simple-demo.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/athletes.jfif",
+      "PackagePath": "staticwebassets/Images/athletes.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\js\\scripts.js",
-      "PackagePath": "staticwebassets\\admin\\js\\scripts.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/basketball-players.jfif",
+      "PackagePath": "staticwebassets/Images/basketball-players.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\layout-sidenav-light.html",
-      "PackagePath": "staticwebassets\\admin\\layout-sidenav-light.html"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/bg-masthead.jpg",
+      "PackagePath": "staticwebassets/Images/bg-masthead.jpg"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\layout-static.html",
-      "PackagePath": "staticwebassets\\admin\\layout-static.html"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/bg-signup.jpg",
+      "PackagePath": "staticwebassets/Images/bg-signup.jpg"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\login.html",
-      "PackagePath": "staticwebassets\\admin\\login.html"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/default-avatar.png",
+      "PackagePath": "staticwebassets/Images/default-avatar.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\password.html",
-      "PackagePath": "staticwebassets\\admin\\password.html"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/demo-image-01.jpg",
+      "PackagePath": "staticwebassets/Images/demo-image-01.jpg"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\register.html",
-      "PackagePath": "staticwebassets\\admin\\register.html"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/demo-image-02.jpg",
+      "PackagePath": "staticwebassets/Images/demo-image-02.jpg"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\admin\\tables.html",
-      "PackagePath": "staticwebassets\\admin\\tables.html"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/eventBasketball.jfif",
+      "PackagePath": "staticwebassets/Images/eventBasketball.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\css\\styles.css",
-      "PackagePath": "staticwebassets\\css\\styles.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/eventFootball.jfif",
+      "PackagePath": "staticwebassets/Images/eventFootball.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\happy.png",
-      "PackagePath": "staticwebassets\\happy.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/eventRun.jfif",
+      "PackagePath": "staticwebassets/Images/eventRun.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\arcticBasketball.jfif",
-      "PackagePath": "staticwebassets\\images\\arcticBasketball.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/eventSwim.jfif",
+      "PackagePath": "staticwebassets/Images/eventSwim.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\arcticFootball.jfif",
-      "PackagePath": "staticwebassets\\images\\arcticFootball.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/eventTennis.jfif",
+      "PackagePath": "staticwebassets/Images/eventTennis.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\arcticRun.jfif",
-      "PackagePath": "staticwebassets\\images\\arcticRun.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/events.jfif",
+      "PackagePath": "staticwebassets/Images/events.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\arcticSwim.jfif",
-      "PackagePath": "staticwebassets\\images\\arcticSwim.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/favicon.ico",
+      "PackagePath": "staticwebassets/Images/favicon.ico"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\arcticTennis.jfif",
-      "PackagePath": "staticwebassets\\images\\arcticTennis.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/football-players.jfif",
+      "PackagePath": "staticwebassets/Images/football-players.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\athleteBasketball.jfif",
-      "PackagePath": "staticwebassets\\images\\athleteBasketball.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/ipad.png",
+      "PackagePath": "staticwebassets/Images/ipad.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\athleteFootball.jfif",
-      "PackagePath": "staticwebassets\\images\\athleteFootball.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/recordBasketball.jfif",
+      "PackagePath": "staticwebassets/Images/recordBasketball.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\athleteRun.jfif",
-      "PackagePath": "staticwebassets\\images\\athleteRun.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/recordFootball.jfif",
+      "PackagePath": "staticwebassets/Images/recordFootball.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\athleteSwim.jfif",
-      "PackagePath": "staticwebassets\\images\\athleteSwim.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/recordRun.jfif",
+      "PackagePath": "staticwebassets/Images/recordRun.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\athleteTennis.jfif",
-      "PackagePath": "staticwebassets\\images\\athleteTennis.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/recordSwim.jfif",
+      "PackagePath": "staticwebassets/Images/recordSwim.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\athletes.jfif",
-      "PackagePath": "staticwebassets\\images\\athletes.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/recordTennis.jfif",
+      "PackagePath": "staticwebassets/Images/recordTennis.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\basketball-players.jfif",
-      "PackagePath": "staticwebassets\\images\\basketball-players.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/records.jfif",
+      "PackagePath": "staticwebassets/Images/records.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\bg-masthead.jpg",
-      "PackagePath": "staticwebassets\\images\\bg-masthead.jpg"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/runners-players.jfif",
+      "PackagePath": "staticwebassets/Images/runners-players.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\bg-signup.jpg",
-      "PackagePath": "staticwebassets\\images\\bg-signup.jpg"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/sport-1.png",
+      "PackagePath": "staticwebassets/Images/sport-1.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\default-avatar.png",
-      "PackagePath": "staticwebassets\\images\\default-avatar.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/sport-2.jpg",
+      "PackagePath": "staticwebassets/Images/sport-2.jpg"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\demo-image-01.jpg",
-      "PackagePath": "staticwebassets\\images\\demo-image-01.jpg"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/sport-3.jpg",
+      "PackagePath": "staticwebassets/Images/sport-3.jpg"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\demo-image-02.jpg",
-      "PackagePath": "staticwebassets\\images\\demo-image-02.jpg"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/sport-4.webp",
+      "PackagePath": "staticwebassets/Images/sport-4.webp"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\eventBasketball.jfif",
-      "PackagePath": "staticwebassets\\images\\eventBasketball.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/swimmers-players.jfif",
+      "PackagePath": "staticwebassets/Images/swimmers-players.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\eventFootball.jfif",
-      "PackagePath": "staticwebassets\\images\\eventFootball.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/tennis-players.jfif",
+      "PackagePath": "staticwebassets/Images/tennis-players.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\eventRun.jfif",
-      "PackagePath": "staticwebassets\\images\\eventRun.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/thketeSwim.jfif",
+      "PackagePath": "staticwebassets/Images/thketeSwim.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\eventSwim.jfif",
-      "PackagePath": "staticwebassets\\images\\eventSwim.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/Images/topics.jfif",
+      "PackagePath": "staticwebassets/Images/topics.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\eventTennis.jfif",
-      "PackagePath": "staticwebassets\\images\\eventTennis.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/.DS_Store",
+      "PackagePath": "staticwebassets/admin/.DS_Store"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\events.jfif",
-      "PackagePath": "staticwebassets\\images\\events.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/401.html",
+      "PackagePath": "staticwebassets/admin/401.html"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\favicon.ico",
-      "PackagePath": "staticwebassets\\images\\favicon.ico"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/404.html",
+      "PackagePath": "staticwebassets/admin/404.html"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\football-players.jfif",
-      "PackagePath": "staticwebassets\\images\\football-players.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/500.html",
+      "PackagePath": "staticwebassets/admin/500.html"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\ipad.png",
-      "PackagePath": "staticwebassets\\images\\ipad.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/assets/demo/chart-area-demo.js",
+      "PackagePath": "staticwebassets/admin/assets/demo/chart-area-demo.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\recordBasketball.jfif",
-      "PackagePath": "staticwebassets\\images\\recordBasketball.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/assets/demo/chart-bar-demo.js",
+      "PackagePath": "staticwebassets/admin/assets/demo/chart-bar-demo.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\recordFootball.jfif",
-      "PackagePath": "staticwebassets\\images\\recordFootball.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/assets/demo/chart-pie-demo.js",
+      "PackagePath": "staticwebassets/admin/assets/demo/chart-pie-demo.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\recordRun.jfif",
-      "PackagePath": "staticwebassets\\images\\recordRun.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/assets/demo/datatables-demo.js",
+      "PackagePath": "staticwebassets/admin/assets/demo/datatables-demo.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\recordSwim.jfif",
-      "PackagePath": "staticwebassets\\images\\recordSwim.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/assets/img/error-404-monochrome.svg",
+      "PackagePath": "staticwebassets/admin/assets/img/error-404-monochrome.svg"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\recordTennis.jfif",
-      "PackagePath": "staticwebassets\\images\\recordTennis.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/charts.html",
+      "PackagePath": "staticwebassets/admin/charts.html"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\records.jfif",
-      "PackagePath": "staticwebassets\\images\\records.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/css/styles.css",
+      "PackagePath": "staticwebassets/admin/css/styles.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\runners-players.jfif",
-      "PackagePath": "staticwebassets\\images\\runners-players.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/index.html",
+      "PackagePath": "staticwebassets/admin/index.html"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-1.png",
-      "PackagePath": "staticwebassets\\images\\sport-1.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/js/datatables-simple-demo.js",
+      "PackagePath": "staticwebassets/admin/js/datatables-simple-demo.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-2.jpg",
-      "PackagePath": "staticwebassets\\images\\sport-2.jpg"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/js/scripts.js",
+      "PackagePath": "staticwebassets/admin/js/scripts.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-3.jpg",
-      "PackagePath": "staticwebassets\\images\\sport-3.jpg"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/layout-sidenav-light.html",
+      "PackagePath": "staticwebassets/admin/layout-sidenav-light.html"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\sport-4.webp",
-      "PackagePath": "staticwebassets\\images\\sport-4.webp"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/layout-static.html",
+      "PackagePath": "staticwebassets/admin/layout-static.html"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\swimmers-players.jfif",
-      "PackagePath": "staticwebassets\\images\\swimmers-players.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/login.html",
+      "PackagePath": "staticwebassets/admin/login.html"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\tennis-players.jfif",
-      "PackagePath": "staticwebassets\\images\\tennis-players.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/password.html",
+      "PackagePath": "staticwebassets/admin/password.html"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\thketeSwim.jfif",
-      "PackagePath": "staticwebassets\\images\\thketeSwim.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/register.html",
+      "PackagePath": "staticwebassets/admin/register.html"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\images\\topics.jfif",
-      "PackagePath": "staticwebassets\\images\\topics.jfif"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/admin/tables.html",
+      "PackagePath": "staticwebassets/admin/tables.html"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\js\\scripts.js",
-      "PackagePath": "staticwebassets\\js\\scripts.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/css/styles.css",
+      "PackagePath": "staticwebassets/css/styles.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "PackagePath": "staticwebassets\\lib\\bootstrap"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/js/scripts.js",
+      "PackagePath": "staticwebassets/js/scripts.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/.DS_Store",
+      "PackagePath": "staticwebassets/lib/.DS_Store"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\14 мая 2025 г., 19_16_34.png",
-      "PackagePath": "staticwebassets\\uploads\\14 мая 2025 г., 19_16_34.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\IMG_1340.JPG",
-      "PackagePath": "staticwebassets\\uploads\\IMG_1340.JPG"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\Sport Archive.png",
-      "PackagePath": "staticwebassets\\uploads\\Sport Archive.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/14 мая 2025 г., 19_16_34.png",
+      "PackagePath": "staticwebassets/uploads/14 мая 2025 г., 19_16_34.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\The last day news.png",
-      "PackagePath": "staticwebassets\\uploads\\The last day news.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/IMG_1340.JPG",
+      "PackagePath": "staticwebassets/uploads/IMG_1340.JPG"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\Tournaments resultt#2.png",
-      "PackagePath": "staticwebassets\\uploads\\Tournaments resultt#2.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Sport Archive.png",
+      "PackagePath": "staticwebassets/uploads/Sport Archive.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\dequeue_array.png",
-      "PackagePath": "staticwebassets\\uploads\\dequeue_array.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/The last day news.png",
+      "PackagePath": "staticwebassets/uploads/The last day news.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\dequeue_linked.png",
-      "PackagePath": "staticwebassets\\uploads\\dequeue_linked.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Tournaments resultt#2.png",
+      "PackagePath": "staticwebassets/uploads/Tournaments resultt#2.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\enqueue_array.png",
-      "PackagePath": "staticwebassets\\uploads\\enqueue_array.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/dequeue_array.png",
+      "PackagePath": "staticwebassets/uploads/dequeue_array.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\enqueue_linked.png",
-      "PackagePath": "staticwebassets\\uploads\\enqueue_linked.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/dequeue_linked.png",
+      "PackagePath": "staticwebassets/uploads/dequeue_linked.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\happy.png",
-      "PackagePath": "staticwebassets\\uploads\\happy.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/enqueue_array.png",
+      "PackagePath": "staticwebassets/uploads/enqueue_array.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\insert_time.png",
-      "PackagePath": "staticwebassets\\uploads\\insert_time.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/enqueue_linked.png",
+      "PackagePath": "staticwebassets/uploads/enqueue_linked.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\sport-2.jpg",
-      "PackagePath": "staticwebassets\\uploads\\sport-2.jpg"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/eventBasketball.jfif",
+      "PackagePath": "staticwebassets/uploads/eventBasketball.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\sport-4.webp",
-      "PackagePath": "staticwebassets\\uploads\\sport-4.webp"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/eventFootball.jfif",
+      "PackagePath": "staticwebassets/uploads/eventFootball.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\Знімок екрана 2025-04-19 о 01.25.53.png",
-      "PackagePath": "staticwebassets\\uploads\\Знімок екрана 2025-04-19 о 01.25.53.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/football-players.jfif",
+      "PackagePath": "staticwebassets/uploads/football-players.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\Знімок екрана 2025-04-19 о 18.20.01.png",
-      "PackagePath": "staticwebassets\\uploads\\Знімок екрана 2025-04-19 о 18.20.01.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/happy.png",
+      "PackagePath": "staticwebassets/uploads/happy.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\Знімок екрана 2025-04-19 о 18.51.10.png",
-      "PackagePath": "staticwebassets\\uploads\\Знімок екрана 2025-04-19 о 18.51.10.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/insert_time.png",
+      "PackagePath": "staticwebassets/uploads/insert_time.png"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\Знімок екрана 2025-05-02 о 15.14.52.png",
-      "PackagePath": "staticwebassets\\uploads\\Знімок екрана 2025-05-02 о 15.14.52.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/recordBasketball.jfif",
+      "PackagePath": "staticwebassets/uploads/recordBasketball.jfif"
     },
     {
-      "Id": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\wwwroot\\uploads\\Знімок екрана 2025-05-04 о 17.34.07.png",
-      "PackagePath": "staticwebassets\\uploads\\Знімок екрана 2025-05-04 о 17.34.07.png"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/recordFootball.jfif",
+      "PackagePath": "staticwebassets/uploads/recordFootball.jfif"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BytPax.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/recordRun.jfif",
+      "PackagePath": "staticwebassets/uploads/recordRun.jfif"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BytPax.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/sport-2.jpg",
+      "PackagePath": "staticwebassets/uploads/sport-2.jpg"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/sport-4.webp",
+      "PackagePath": "staticwebassets/uploads/sport-4.webp"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-04-19 о 01.25.53.png",
+      "PackagePath": "staticwebassets/uploads/Знімок екрана 2025-04-19 о 01.25.53.png"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-04-19 о 18.20.01.png",
+      "PackagePath": "staticwebassets/uploads/Знімок екрана 2025-04-19 о 18.20.01.png"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-04-19 о 18.51.10.png",
+      "PackagePath": "staticwebassets/uploads/Знімок екрана 2025-04-19 о 18.51.10.png"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-05-02 о 15.14.52.png",
+      "PackagePath": "staticwebassets/uploads/Знімок екрана 2025-05-02 о 15.14.52.png"
+    },
+    {
+      "Id": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/wwwroot/uploads/Знімок екрана 2025-05-04 о 17.34.07.png",
+      "PackagePath": "staticwebassets/uploads/Знімок екрана 2025-05-04 о 17.34.07.png"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.BytPax.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BytPax.props",
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.BytPax.props",
       "PackagePath": "build\\BytPax.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BytPax.props",
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.BytPax.props",
       "PackagePath": "buildMultiTargeting\\BytPax.props"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BytPax.props",
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.BytPax.props",
       "PackagePath": "buildTransitive\\BytPax.props"
     }
   ],

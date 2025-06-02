@@ -8,7 +8,6 @@
 
     <ItemGroup>
         <Folder Include="wwwroot\Images\NewFolder\" />
-        <Folder Include="wwwroot\uploads\" />
     </ItemGroup>
 
     <ItemGroup>

@@ -24,6 +24,7 @@ namespace BytPax.Controllers
 
         public IActionResult Index()
         {
+            
             var articles = _articleRepository.GetAll()
                 .Select(a => new
                 {

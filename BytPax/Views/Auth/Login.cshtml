@@ -60,19 +60,30 @@
         .btn-link {
             color: #fff;
         }
-
         input.form-control {
             background-color: #2a2a2a;
-            border: 1px solid #666;
+            border: 1px solid #888;
             border-radius: 8px;
             color: #fff;
+            padding: 0.5rem 0.75rem;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
         }
 
-            input.form-control:focus {
-                border-color: #ffa500;
-                box-shadow: 0 0 10px #ffc107, 0 0 20px #ff9800;
-                background-color: #222;
-            }
+        input.form-control::placeholder {
+            color: #bbb;
+            opacity: 1;
+        }
+
+        input.form-control:focus {
+            border-color: #ffa500;
+            box-shadow: 0 0 10px #ffc107, 0 0 20px #ff9800;
+            background-color: #1c1c1c;
+            outline: none;
+            color: #fff;
+            caret-color: #ffc107;
+        }
+
 
         .text-danger {
             font-size: 0.9rem;
@@ -117,7 +128,7 @@
 
 <section class="login-section">
     <div class="login-container" role="main" aria-labelledby="loginTitle">
-        <h2 id="loginTitle">Увійти в акаунт</h2>
+        <h2 id="loginTitle">Entrance form</h2>
         <form asp-action="Login" method="post" novalidate>
             <div class="mb-3">
                 <label asp-for="Email"></label>
@@ -129,8 +140,8 @@
                 <input asp-for="Password" type="password" class="form-control" autocomplete="current-password" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-success">Увійти</button>
-            <a href="@Url.Action("Register", "Auth")" class="btn-link">Створити акаунт</a>
+            <button type="submit" class="btn btn-success">Log In</button>
+            <a href="@Url.Action("Register", "Auth")" class="btn-link">Create an account</a>
         </form>
     </div>
 </section>

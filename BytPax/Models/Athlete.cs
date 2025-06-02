@@ -19,7 +19,7 @@ namespace BytPax.Models
         
         public string Description { get; set; }
 
-        // ������������
+ 
         public Athlete() { }
 
         public Athlete(int age, string fullName, string country, int categoryId, Category category, string city, string description)

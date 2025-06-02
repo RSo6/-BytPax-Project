@@ -8,9 +8,8 @@ namespace BytPax.Controllers
 {
     public class UserController : Controller
     {
-        // Тимчасово хардкодимо користувача
         private static RegularUser _currentUser = new RegularUser(
-            "Тестове Ім’я",
+            "User",
             "user@example.com",
             "/images/default-avatar.png",
             "dummyHash"
@@ -24,8 +23,8 @@ namespace BytPax.Controllers
                 AvatarUrl = _currentUser.ImagePath,
                 SavedArticles = new List<ArticleCreateViewModel>
                 {
-                    new ArticleCreateViewModel { Topic = "Як бігати швидше" },
-                    new ArticleCreateViewModel { Topic = "Техніка кидка в баскетболі: ключ до результативної гри" }
+                    new ArticleCreateViewModel { Topic = "Р‘Р°СЃРєРµС‚Р±РѕР»" },
+                    new ArticleCreateViewModel { Topic = "Р¤СѓС‚Р±РѕР»" }
                 },
                 FavoriteAthletes = new List<AthleteCreateViewModel>()
             };
@@ -47,8 +46,8 @@ namespace BytPax.Controllers
                 AvatarUrl = _currentUser.ImagePath,
                 SavedArticles = new List<ArticleCreateViewModel>
                 {
-                    new ArticleCreateViewModel { Topic = "Як бігати швидше" },
-                    new ArticleCreateViewModel { Topic = "Харчування для спортсменів" }
+                    new ArticleCreateViewModel { Topic = "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ" },
+                    new ArticleCreateViewModel { Topic = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" }
                 },
                 FavoriteAthletes = new List<AthleteCreateViewModel>()
             };

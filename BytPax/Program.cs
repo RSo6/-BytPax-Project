@@ -33,17 +33,16 @@ using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
     db.Database.Migrate();
-
-    // Ініціалізація базових категорій, якщо їх нема
+    
     if (!db.Categories.Any())
     {
         var categories = new List<Category>
         {
-            new Category { Name = "Футбол", TypeOfSport = "Командний", Description = "Командний вид спорту з м’ячем" },
-            new Category { Name = "Біг", TypeOfSport = "Індивідуальний", Description = "Індивідуальний вид спорту на швидкість" },
-            new Category { Name = "Плавання", TypeOfSport = "Індивідуальний", Description = "Водний вид спорту" },
-            new Category { Name = "Теніс", TypeOfSport = "Ракетковий", Description = "Спорт з ракеткою і м’ячем" },
-            new Category { Name = "Баскетбол", TypeOfSport = "Командний", Description = "Командний вид спорту з м’ячем" }
+            new Category { Name = "пїЅпїЅпїЅпїЅпїЅпїЅ", TypeOfSport = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", Description = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ" },
+            new Category { Name = "пїЅпїЅпїЅ", TypeOfSport = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", Description = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ" },
+            new Category { Name = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", TypeOfSport = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", Description = "пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ" },
+            new Category { Name = "пїЅпїЅпїЅпїЅ", TypeOfSport = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", Description = "пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ" },
+            new Category { Name = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", TypeOfSport = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ", Description = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ" }
         };
 
         db.Categories.AddRange(categories);

@@ -39,7 +39,7 @@
 
             <div class="mb-3">
                 <label asp-for="CategoryId" class="form-label">Категорія</label>
-                <select asp-for="CategoryId" name="CategoryId" class="form-select bg-dark text-light border-secondary" required/>
+                <select asp-for="CategoryId" name="CategoryId" class="form-select bg-dark text-light border-secondary" required>
                     <option value="">Виберіть категорію</option>
                     @if (ViewBag.Categories != null)
                     {

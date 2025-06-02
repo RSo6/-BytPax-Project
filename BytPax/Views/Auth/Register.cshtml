@@ -46,7 +46,7 @@
             background: rgba(30, 30, 30, 0.85);
             padding: 2.5rem 2.5rem;
             border-radius: 16px;
-            box-shadow: 0 0 25px rgba(255, 165, 0, 0.5); /* тепле світло */
+            box-shadow: 0 0 25px rgba(255, 165, 0, 0.5); /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
             color: #fff;
         }
 
@@ -69,15 +69,27 @@
             border: 1px solid #666;
             color: #fff;
             border-radius: 8px;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            padding: 0.5rem 0.75rem;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
         }
 
-            input.form-control:focus,
-            select.form-select:focus {
-                border-color: #ffa500;
-                box-shadow: 0 0 10px #ffc107, 0 0 20px #ff9800;
-                background-color: #222;
-            }
+        input.form-control::placeholder,
+        select.form-select::placeholder {
+            color: #bbb;
+            opacity: 1;
+        }
+
+        input.form-control:focus,
+        select.form-select:focus {
+            border-color: #ffa500;
+            box-shadow: 0 0 10px #ffc107, 0 0 20px #ff9800;
+            background-color: #1c1c1c;
+            outline: none;
+            color: #fff;
+            caret-color: #ffc107;
+        }
+
 
         .text-danger {
             font-size: 0.9rem;
@@ -124,7 +136,7 @@
 
 <section class="register-section">
     <div class="register-container" role="main" aria-labelledby="registerTitle">
-        <h2 id="registerTitle">Реєстрація</h2>
+        <h2 id="registerTitle">Registration</h2>
         <form asp-action="Register" method="post" novalidate>
             <div class="mb-3">
                 <label asp-for="FullName"></label>
@@ -154,12 +166,12 @@
             <div class="mb-3">
                 <label asp-for="Role"></label>
                 <select asp-for="Role" class="form-select" asp-items="Html.GetEnumSelectList<User.UserRole>()">
-                    <option disabled selected>-- Виберіть роль --</option>
+                    <option disabled selected>-- Choose your role --</option>
                 </select>
                 <span asp-validation-for="Role" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Зареєструватись</button>
-            <a href="@Url.Action("Login", "Auth")" class="btn-link">Вже є акаунт? Увійти</a>
+            <button type="submit" class="btn btn-primary">Complete process</button>
+            <a href="@Url.Action("Login", "Auth")" class="btn-link">Already have account?пїЅ</a>
         </form>
     </div>
 </section>

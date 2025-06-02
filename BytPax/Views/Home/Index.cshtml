@@ -224,7 +224,7 @@
 
                 <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
                         data-title="Футбол"
-                        data-img="/images/football-players.jfif"
+                     data-img="/images/basketball-players.jfif"
                         data-description="Футболісти — це команда гравців, що грають у футбол. Вони тренуються щоденно, мають фізичну витривалість і технічну майстерність. У цій категорії будуть персональні рекорди гравців, різні статті про футбольні команди та на такі ж теми, важливі футбольні події, а так важливі моменти, які відбулись в історії футболу">
                     <div class="rounded overflow-hidden shadow position-relative">
                         <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="football">
@@ -234,7 +234,7 @@
                             <i class="fas fa-running me-2"></i>Футбол
                         </div>
                         <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/football-players.jfif" alt="Футбол" class="img-fluid rounded" />
+                            <img src="/images/basketball-players.jfif" alt="Футбол" class="img-fluid rounded" />
                         </div>
                     </div>
                 </div>
@@ -268,7 +268,7 @@
                             <i class="fas fa-trophy me-2"></i>Теніс
                         </div>
                         <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
-                            <img src="/images/tennis-players.jfif" alt="Теніс" class="img-fluid rounded" />
+                            <img src="/../images/tennis-players.jfif" alt="Теніс" class="img-fluid rounded" />
                         </div>
                     </div>
                 </div>
@@ -571,8 +571,15 @@
                              data-img="@cat.Img"
                              data-icon="@cat.Icon"
                              data-description="Усі статті про @cat.Name"
-                             data-articles='@System.Text.Json.JsonSerializer.Serialize(Model.Where(a => a.CategoryName == cat.Name).Select(a => new { a.Id, a.Topic, a.BodyText }))'>
-                            <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="@cat.Id" onclick="event.stopPropagation();">
+                             data-articles='@System.Text.Json.JsonSerializer.Serialize(
+                                                Model.Where(a => a.CategoryName == cat.Name).Select(a => new {
+                                                    a.Id,
+                                                    a.Topic,
+                                                    a.BodyText,
+                                                    a.ImagePath
+                                                }))'>
+
+                <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="@cat.Id" onclick="event.stopPropagation();">
                                 <i class="fas fa-heart"></i>
                             </button>
                             <div class="card-body text-center">
@@ -590,14 +597,14 @@
 
 <!-- Модальне вікно для секції статтей -->
 <div class="modal fade" id="articlesModal" tabindex="-1" aria-labelledby="articlesModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
         <div class="modal-content bg-dark text-light">
             <div class="modal-header">
-                <h5 class="modal-title" id="articlesModalLabel">Статті категорії</h5>
+                <h5 class="modal-title" id="articlesModalLabel">Статті</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрити"></button>
             </div>
-            <div class="modal-body">
-                <ul id="articlesList" class="list-group list-group-flush"></ul>
+            <div class="modal-body" id="modalArticlesContent">
+                <!-- Сюди будуть вставлятись статті -->
             </div>
         </div>
     </div>
@@ -612,65 +619,12 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Обробка сердечок (лайків)
-            const hearts = document.querySelectorAll(".heart-btn");
-            hearts.forEach(btn => {
+            document.querySelectorAll(".heart-btn").forEach(btn => {
                 const id = btn.dataset.id;
                 if (localStorage.getItem(`heart-${id}`) === "true") {
                     btn.classList.add("active");
                 }
 
-                btn.addEventListener("click", e => {
-                    e.stopPropagation(); // Запобігаємо відкриттю модалки
-                    btn.classList.toggle("active");
-                    localStorage.setItem(`heart-${id}`, btn.classList.contains("active"));
-                });
-            });
-
-            // Модальне вікно зі списком статей
-            const articlesModal = document.getElementById('articlesModal');
-            if (articlesModal) {
-                articlesModal.addEventListener('show.bs.modal', function (event) {
-                    const card = event.relatedTarget;
-                    const categoryName = card.getAttribute('data-title');
-                    const articlesDataRaw = card.getAttribute('data-articles');
-
-                    let articlesData = [];
-                    try {
-                        articlesData = JSON.parse(articlesDataRaw);
-                    } catch (e) {
-                        console.error("Invalid JSON in data-articles:", e);
-                    }
-
-                    const modalTitle = articlesModal.querySelector('.modal-title');
-                    const articlesList = articlesModal.querySelector('#articlesList');
-
-                    modalTitle.textContent = `Статті категорії: ${categoryName}`;
-                    articlesList.innerHTML = '';
-
-                    if (!articlesData || articlesData.length === 0) {
-                        articlesList.innerHTML = '<li class="list-group-item bg-dark text-light fst-italic">Статей немає</li>';
-                    } else {
-                        articlesData.forEach(article => {
-                            const li = document.createElement('li');
-                            li.className = 'list-group-item bg-dark text-light';
-
-                            li.innerHTML = `<h6>${article.Topic}</h6>
-                                            <p>${article.BodyText.length > 200 ? article.BodyText.substring(0, 200) + '...' : article.BodyText}</p>`;
-
-                            articlesList.appendChild(li);
-                        });
-                    }
-                });
-            }
-        });
-        document.addEventListener("DOMContentLoaded", function () {
-            // Лайки (сердечка)
-            const hearts = document.querySelectorAll(".heart-btn");
-            hearts.forEach(btn => {
-                const id = btn.dataset.id;
-                if (localStorage.getItem(`heart-${id}`) === "true") {
-                    btn.classList.add("active");
-                }
                 btn.addEventListener("click", e => {
                     e.stopPropagation();
                     btn.classList.toggle("active");
@@ -678,45 +632,63 @@
                 });
             });
 
-            // Модальне вікно для карток подій
-            const cardModal = new bootstrap.Modal(document.getElementById('cardModal'));
-            const modalTitle = document.getElementById('cardModalLabel');
-            const modalImage = document.getElementById('modalImage');
-            const modalDescription = document.getElementById('modalDescription');
-
-            const cards = document.querySelectorAll("#cardsEvents .card");
-            cards.forEach(card => {
-                card.addEventListener("click", () => {
-                    const title = card.getAttribute('data-title') || "Без назви";
-                    const img = card.getAttribute('data-img') || "";
-                    const description = card.getAttribute('data-description') || "Опис відсутній";
+            // Модальне вікно зі списком статей по категорії
+            const articlesModal = document.getElementById('articlesModal');
+            if (articlesModal) {
+                articlesModal.addEventListener('show.bs.modal', function (event) {
+                    const button = event.relatedTarget;
+                    const title = button.getAttribute('data-title');
+                    const articles = JSON.parse(button.getAttribute('data-articles'));
+                    const container = document.getElementById('modalArticlesContent');
+                    const modalTitle = articlesModal.querySelector('.modal-title');
 
                     modalTitle.textContent = title;
-                    modalImage.src = img;
-                    modalDescription.textContent = description;
+                    container.innerHTML = '';
 
-                    cardModal.show();
+                    if (!articles.length) {
+                        container.innerHTML = `<p class="text-warning">Статей не знайдено.</p>`;
+                        return;
+                    }
+
+                    articles.forEach(article => {
+                        // Перевірка шляху зображення, додавання /uploads/ якщо немає
+                        let imagePath = article.ImagePath || '';
+                        if (imagePath && !imagePath.startsWith('/uploads/')) {
+                            imagePath = '/uploads/' + imagePath;
+                        }
+
+                        const articleHtml = `
+                            <div class="p-3 mb-4 border border-warning rounded" style="background-color: #1c1c1c;">
+                                <h4>${article.Topic}</h4>
+                                ${imagePath ? `<img src="${imagePath}" class="img-fluid rounded my-3" alt="article image" style="max-height: 600px; width: auto; object-fit: contain;">` : ''}
+                                <p style="white-space: pre-wrap;">${article.BodyText}</p>
+                            </div>
+                        `;
+                        container.insertAdjacentHTML('beforeend', articleHtml);
+                    });
                 });
-            });
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-            const modal = new bootstrap.Modal(document.getElementById('cardModal'));
+            }
+
+            // Універсальний обробник для карток (спортсмени, події, категорії тощо)
+            const universalModal = new bootstrap.Modal(document.getElementById('cardModal'));
             const modalTitle = document.getElementById('cardModalLabel');
             const modalImage = document.getElementById('modalImage');
             const modalDescription = document.getElementById('modalDescription');
 
             function addCardClickListeners(scrollerId) {
-                const scroller = document.querySelector(`#${scrollerId}`);
+                const scroller = document.getElementById(scrollerId);
                 if (!scroller) return;
 
                 const cards = scroller.querySelectorAll('.card');
                 cards.forEach(card => {
-                    card.addEventListener('click', function(e) {
-                        // Уникнути відкриття при кліку на кнопку "heart"
+                    card.addEventListener('click', function (e) {
                         if (e.target.closest('.heart-btn')) return;
 
                         const title = card.getAttribute('data-title') || 'Без назви';
-                        const img = card.getAttribute('data-img') || '';
+                        let img = card.getAttribute('data-img') || '';
+                        if (img && !img.startsWith('/uploads/')) {
+                            img = '/uploads/' + img;
+                        }
                         const description = card.getAttribute('data-description') || '';
 
                         modalTitle.textContent = title;
@@ -724,54 +696,114 @@
                         modalImage.alt = title;
                         modalDescription.textContent = description;
 
-                        modal.show();
+                        universalModal.show();
                     });
                 });
             }
-
-            // Додаємо обробники для всіх трьох секцій
-            addCardClickListeners('cardScroller');              // Категорії
-            addCardClickListeners('cardsAthletes');              // Спортсмени
-            addCardClickListeners('cardScrollerEvents');        // Події (якщо додана)
-
+            
+            addCardClickListeners('cardScroller');         // Категорії
+            addCardClickListeners('cardsAthletes');        // Спортсмени
+            addCardClickListeners('cardScrollerEvents');   // Події (за потреби)
         });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const modal = new bootstrap.Modal(document.getElementById('cardModal'));
-            const modalTitle = document.getElementById('cardModalLabel');
-            const modalImage = document.getElementById('modalImage');
-            const modalDescription = document.getElementById('modalDescription');
-
-           const scrollerAthletes = document.querySelector('#cardsAthletes');
-            if (scrollerAthletes) {
-                const cards = scrollerAthletes.querySelectorAll('.card');
-                cards.forEach(card => {
-                    card.addEventListener('click', function(e) {
-                        if (e.target.closest('.heart-btn')) return;
-
-                        const title = card.getAttribute('data-title') || 'Без назви';
-                        const img = card.getAttribute('data-img') || '';
-                        const description = card.getAttribute('data-description') || '';
-
-                        modalTitle.textContent = title;
-                        modalImage.src = img;
-                        modalImage.alt = title;
-                        modalDescription.textContent = description;
-
-                        modal.show();
-                    });
-                });
-            }
-        });
-
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Дані для прикладу
+            const athletes = [
+                { id: 1, FullName: "Іван Петренко", Description: "Чемпіон з бігу", Age: 25, Country: "Україна", City: "Львів" },
+                { id: 2, FullName: "Олена Коваль", Description: "Плавчиня", Age: 22, Country: "Україна", City: "Київ" },
+            ];
+
+            const articles = [
+                { id: 1, Topic: "Історія спорту", BodyText: "Текст статті..." },
+                { id: 2, Topic: "Тренування для бігу", BodyText: "Інформація..." },
+            ];
+
+            const events = [
+                { id: 1, Topic: "Олімпійські ігри 2020", Description: "Видатна подія" },
+                { id: 2, Topic: "Чемпіонат світу з футболу", Description: "Світова подія" },
+            ];
+
+            const records = [
+                { id: 1, Topic: "Світовий рекорд з бігу", Description: "9.58 сек" },
+                { id: 2, Topic: "Олімпійський рекорд", Description: "Довжина стрибка 8.95 м" },
+            ];
+
+            // Рендери
+            function renderList(containerId, list, titleField, bodyField) {
+                const container = document.getElementById(containerId);
+                if (!list.length) {
+                    container.innerHTML = '<p>Нічого не знайдено.</p>';
+                    return;
+                }
+                container.innerHTML = list.map(item =>
+                    `<div><h5>${item[titleField]}</h5><p>${item[bodyField]}</p></div>`
+                ).join('');
+            }
+
+            // Спортсмени – за FullName
+            document.getElementById('athleteSearchBtn').addEventListener('click', function () {
+                const query = document.getElementById('athleteSearch').value.trim().toLowerCase();
+                const errorEl = document.getElementById('athleteSearchError');
+                if (!query) {
+                    errorEl.style.display = 'block';
+                    return;
+                }
+                errorEl.style.display = 'none';
+                const filtered = athletes.filter(a => a.FullName.toLowerCase().includes(query));
+                renderList('athletesList', filtered, 'FullName', 'Description');
+            });
+
+            // Статті – за Topic
+            document.getElementById('articleSearchBtn').addEventListener('click', function () {
+                const query = document.getElementById('articleSearch').value.trim().toLowerCase();
+                const errorEl = document.getElementById('articleSearchError');
+                if (!query) {
+                    errorEl.style.display = 'block';
+                    return;
+                }
+                errorEl.style.display = 'none';
+                const filtered = articles.filter(a => a.Topic.toLowerCase().includes(query));
+                renderList('articlesList', filtered, 'Topic', 'BodyText');
+            });
+
+            // Події – за Topic
+            document.getElementById('eventSearchBtn').addEventListener('click', function () {
+                const query = document.getElementById('eventSearch').value.trim().toLowerCase();
+                const errorEl = document.getElementById('eventSearchError');
+                if (!query) {
+                    errorEl.style.display = 'block';
+                    return;
+                }
+                errorEl.style.display = 'none';
+                const filtered = events.filter(e => e.Topic.toLowerCase().includes(query));
+                renderList('eventsList', filtered, 'Topic', 'Description');
+            });
+
+            // Рекорди – за Topic
+            document.getElementById('recordSearchBtn').addEventListener('click', function () {
+                const query = document.getElementById('recordSearch').value.trim().toLowerCase();
+                const errorEl = document.getElementById('recordSearchError');
+                if (!query) {
+                    errorEl.style.display = 'block';
+                    return;
+                }
+                errorEl.style.display = 'none';
+                const filtered = records.filter(r => r.Topic.toLowerCase().includes(query));
+                renderList('recordsList', filtered, 'Topic', 'Description');
+            });
+        });
+    </script>
+
 
     <style>
         .heart-btn.active i {
             color: red;
         }
+
         .heart-btn {
             cursor: pointer;
         }
     </style>
 }
+
