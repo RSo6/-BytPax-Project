@@ -1,0 +1,236 @@
+﻿@model BytPax.Models.UserProfileViewModel
+
+@{
+    ViewData["Title"] = "Кабінет користувача";
+}
+
+@section Styles {
+    <style>
+        .user-cabinet-section {
+            position: relative;
+            background: url('/images/sport-4.webp') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            overflow: hidden;
+            min-height: 100vh;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+            .user-cabinet-section::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                z-index: 0;
+            }
+
+        .user-cabinet-container {
+            position: relative;
+            z-index: 1;
+            max-width: 960px;
+            margin: 0 auto;
+            color: transparent;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff, #bbbbbb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .card {
+            background: rgba(0, 71, 171, 0.15);
+            border: 2px solid #ffd600;
+            border-radius: 1rem;
+            box-shadow: 0 0 20px rgba(255, 214, 0, 0.5);
+            color: transparent;
+        }
+
+        .card-title {
+            background: linear-gradient(135deg, #ffffff, #bbbbbb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        label {
+            background: linear-gradient(135deg, #ffffff, #bbbbbb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-weight: 600;
+        }
+
+        .form-control {
+            background-color: rgba(255, 214, 0, 0.15);
+            border: 1px solid #ffd600;
+            color: #fff;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+            .form-control::placeholder {
+                color: #f5f5f5;
+                opacity: 0.7;
+            }
+
+            .form-control:focus {
+                border-color: #0057b8;
+                box-shadow: 0 0 8px #0057b8;
+                background-color: rgba(0, 87, 184, 0.3);
+                color: #fff;
+            }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ffd600, #0057b8);
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            color: #fff;
+            box-shadow: 0 0 12px #ffd600;
+            transition: all 0.3s ease;
+        }
+
+            .btn-primary:hover {
+                background: linear-gradient(135deg, #0057b8, #ffd600);
+                box-shadow: 0 0 20px #0057b8;
+                color: #fff;
+            }
+
+        .saved-articles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+            .saved-articles button {
+                background: transparent;
+                border: 1.8px solid #ffd600;
+                color: #ffd600;
+                border-radius: 0.5rem;
+                padding: 0.5rem 1rem;
+                font-weight: 600;
+                transition: all 0.3s ease;
+            }
+
+                .saved-articles button:hover {
+                    background: #ffd600;
+                    color: #003d82;
+                    box-shadow: 0 0 12px #ffd600;
+                }
+
+        .img-thumbnail {
+            border-radius: 50%;
+            border: 3px solid #ffd600;
+            max-width: 150px;
+            height: auto;
+            box-shadow: 0 0 15px #ffd600;
+        }
+
+        .avatar-card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+}
+
+<section class="page-section user-cabinet-section">
+    <div class="container user-cabinet-container">
+        <h2 class="text-center mb-5 gradient-text">👤 Кабінет користувача</h2>
+
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="card h-100">
+                    <div class="card-body avatar-card-body">
+                        <h5 class="card-title">Аватар</h5>
+                        <img src="@Model.AvatarUrl" alt="User Avatar" class="img-thumbnail mb-3" />
+                        <p class="gradient-text mb-0">Ваш профільний аватар</p>
+                        <p class="gradient-text mt-2">Поточне ім’я: <strong>@Model.Username</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Інформація користувача</h5>
+
+                        <form method="post" action="/User/UpdateUsername" novalidate>
+                            <div class="mb-3">
+                                <label for="newUsername">Ім’я користувача</label>
+                                <input type="text" class="form-control" id="newUsername" name="newUsername" value="@Model.Username" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Оновити ім’я</button>
+                        </form>
+
+                        @if (Model.SavedArticles?.Any() == true)
+                        {
+                            <hr class="border-secondary mt-4" />
+                            <h5 class="card-title mt-4 gradient-text">Збережені статті</h5>
+                            <div class="saved-articles">
+                                @foreach (var article in Model.SavedArticles)
+                                {
+                                    <button type="button" title="@article.Topic">@article.Topic</button>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Модальне вікно -->
+<div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="background-color: #001f3f; color: #ffd600; border-radius: 1rem;">
+            <div class="modal-header border-bottom-0">
+                <h5 class="modal-title gradient-text" id="articleModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body">
+                <p id="articleModalBody" class="gradient-text"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const articleButtons = document.querySelectorAll(".saved-articles button");
+            const articleModalLabel = document.getElementById("articleModalLabel");
+            const articleModalBody = document.getElementById("articleModalBody");
+
+            const articles = {
+                "Як бігати швидше": "Щоб бігати швидше, тренуйтесь на інтервалах, зміцнюйте м'язи ніг, дотримуйтеся правильної техніки бігу та слідкуйте за харчуванням і сном.",
+                "Техніка кидка в баскетболі: ключ до результативної гри": "Правильна техніка кидка — це основа успішної гри в баскетбол. Гравець повинен тримати м’яч пальцями, а не долонею, з легким відривом м’яча від руки. При кидку ноги повинні бути зігнуті, а корпус трохи нахилений уперед для балансу.Під час викиду руки рухаються вгору по прямій лінії, а кисть виконує так званий «щелчок» — обертання, що додає м’ячу оберт і стабільність у польоті. Очі гравця повинні бути спрямовані на дальній край кільця — це підвищує точність.Порада тренера: Щодня виконуйте хоча б 100 правильних кидків без опору, щоб сформувати автоматизм."
+            };
+
+            articleButtons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const topic = btn.innerText;
+                    articleModalLabel.textContent = topic;
+                    articleModalBody.textContent = articles[topic] || "Стаття не знайдена.";
+                    const modal = new bootstrap.Modal(document.getElementById("articleModal"));
+                    modal.show();
+                });
+            });
+        });
+    </script>
+}

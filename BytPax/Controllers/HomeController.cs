@@ -1,60 +1,82 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using BytPax.Services;
 using BytPax.Models;
 using BytPax.Repositories;
-namespace BytPax.Controllers;
+using System.Linq;
 
-public class HomeController : Controller
+namespace BytPax.Controllers
 {
-    private readonly ILogger<HomeController> _logger;
-    private readonly AthleteRepo<Athlete> _athleteRepo;
-    private readonly ArticleRepo<Article> _articleRepo;
-
-    public HomeController(ILogger<HomeController> logger)
+    public class HomeController : Controller
     {
-        _logger = logger;
-        _athleteRepo = new AthleteRepo<Athlete>();
-        _articleRepo = new ArticleRepo<Article>();
-    }
+        private readonly SearchService _searchService;
+        private readonly Repository<Article> _articleRepository;
+        private readonly Repository<Category> _categoryRepository;
 
-    public IActionResult Index()
-    {
-        if (_athleteRepo.GetAll().Count() == 0)
+        public HomeController(
+            SearchService searchService,
+            Repository<Article> articleRepo,
+            Repository<Category> categoryRepo)
         {
-            _athleteRepo.Add(new Athlete(25, "John Doe", "USA", 1, new Category(1, "Football", "TODO"), "New York", "A great athlete"));
-            _athleteRepo.Add(new Athlete(30, "Jane Smith", "Canada", 1, new Category(1, "Football", "TODO"), "Toronto", "World record holder"));
-            _athleteRepo.Add(new Athlete(22, "Samuel Green", "Australia", 2, new Category(2, "Basketball", "TODO"), "Sydney", "Young promising talent"));
-            _athleteRepo.Add(new Athlete(28, "Laura Blue", "UK", 1, new Category(1, "Football", "TODO" ), "London", "Olympic gold medalist"));
+            _searchService = searchService;
+            _articleRepository = articleRepo;
+            _categoryRepository = categoryRepo;
         }
-        
-        if (_articleRepo.GetAll().Count() == 0)
+
+        public IActionResult Index()
         {
-            _articleRepo.Add(new Article("Sports and Health", "This article discusses the importance of sports for health.", 1, "path/to/image1.jpg", new Category(1, "Health", "TODO")));
-            _articleRepo.Add(new Article("Tech Innovations", "Innovations in technology that shape the future.", 2, "path/to/image2.jpg", new Category(2, "Tech", "TODO")));
-            _articleRepo.Add(new Article("The Best Athletes", "Exploring the top athletes of 2023.", 3, "path/to/image3.jpg", new Category(3, "Society", "TODO")));
-            _articleRepo.Add(new Article("Fitness Tips", "How to stay fit and healthy throughout the year.", 1, "path/to/image4.jpg", new Category(1, "Health", "TODO")));
+            var articles = _articleRepository.GetAll()
+                .Select(a => new
+                {
+                    a.Id,
+                    a.Topic,
+                    a.BodyText,
+                    a.ImagePath,
+                    CategoryName = _categoryRepository.GetById(a.CategoryId)?.Name
+                }).ToList();
+
+            return View(articles);
         }
-        
-        var athletes = _athleteRepo.GetAll();
-        var articles = _articleRepo.GetAll();
-        
-        var sortedAthletesByAge = _athleteRepo.GetAthletesSortedByAge();
-     
-        var sortedArticlesById = _articleRepo.GetArticlesSortedByIdDescending();
-        
-        ViewData["SortedAthletesByAge"] = sortedAthletesByAge;
-        ViewData["SortedArticlesById"] = sortedArticlesById;
-        return View();
-    }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        public IActionResult SearchAthletes(string searchTerm)
+        {
+            var athletes = _searchService.SearchAthletes(searchTerm);
+            return Json(athletes);
+        }
+
+        public IActionResult SearchEvents(string searchTerm)
+        {
+            var events = _searchService.SearchEvents(searchTerm);
+            return Json(events);
+        }
+
+        public IActionResult SearchRecords(string searchTerm)
+        {
+            var records = _searchService.SearchRecords(searchTerm);
+            return Json(records);
+        }
+
+        public IActionResult SearchArticles(string searchTerm)
+        {
+            var articles = _searchService.SearchArticles(searchTerm);
+            return Json(articles);
+        }
+
+        [HttpGet]
+        public IActionResult GetArticles()
+        {
+            var articles = _articleRepository.GetAll()
+                .Select(a => new
+                {
+                    a.Id,
+                    a.Topic,
+                    a.BodyText,
+                    a.ImagePath,
+                    a.CategoryId,
+                    CategoryName = _categoryRepository.GetById(a.CategoryId)?.Name
+                });
+
+            return Json(articles);
+        }
     }
 }

@@ -1,0 +1,46 @@
+@model BytPax.Areas.Admin.Models.RecordHistoryCreateViewModel
+
+@{
+    ViewData["Title"] = "Редагування рекорду";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+
+    <form asp-action="Edit" method="post" novalidate>
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="SportId" class="form-label">Вид спорту</label>
+            <select asp-for="SportId" name="SportId" class="form-select" aria-describedby="SportIdHelp">
+                <option value="">Виберіть вид спорту</option>
+                @foreach (var sport in ViewBag.Sports)
+                {
+                    <option value="@sport.Id" @(sport.Id == Model.SportId ? "selected" : "")>@sport.Name</option>
+                }
+            </select>
+            <span asp-validation-for="SportId" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="RecordValue" class="form-label">Рекорд</label>
+            <input asp-for="RecordValue" name="RecordValue" class="form-control" required/>
+            <span asp-validation-for="RecordValue" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="RecordDate" class="form-label">Дата</label>
+            <input asp-for="RecordDate" name="RecordDate" type="date" class="form-control" required/>
+            <span asp-validation-for="RecordDate" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Зберегти</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Назад</a>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

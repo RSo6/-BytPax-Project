@@ -1,0 +1,140 @@
+﻿@model LoginViewModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .login-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background: url('/images/sport-2.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .login-section::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+                backdrop-filter: blur(4px);
+                z-index: 0;
+            }
+
+        .login-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 400px;
+            background: rgba(30, 30, 30, 0.85);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 0 25px rgba(255, 165, 0, 0.5); /* жовто-помаранчеве світло */
+            color: #fff;
+        }
+
+            .login-container h2 {
+                color: #fff;
+                text-align: center;
+                font-weight: 700;
+                margin-bottom: 2rem;
+                letter-spacing: 1px;
+            }
+
+        label,
+        .form-control,
+        .btn-link {
+            color: #fff;
+        }
+
+        input.form-control {
+            background-color: #2a2a2a;
+            border: 1px solid #666;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+            input.form-control:focus {
+                border-color: #ffa500;
+                box-shadow: 0 0 10px #ffc107, 0 0 20px #ff9800;
+                background-color: #222;
+            }
+
+        .text-danger {
+            font-size: 0.9rem;
+            color: #ff7b5a;
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #ffeb3b, #ff9800);
+            color: #000;
+            border: none;
+            width: 100%;
+            font-weight: 700;
+            padding: 0.6rem 0;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            letter-spacing: 0.8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 12px rgba(255, 193, 7, 0.6);
+        }
+
+            .btn-success:hover {
+                background: linear-gradient(135deg, #ffc107, #ff5722);
+                box-shadow: 0 0 20px rgba(255, 152, 0, 0.9);
+            }
+
+        .btn-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #ffc107;
+        }
+
+            .btn-link:hover {
+                color: #ffca28;
+                text-decoration: underline;
+            }
+    </style>
+}
+
+
+<section class="login-section">
+    <div class="login-container" role="main" aria-labelledby="loginTitle">
+        <h2 id="loginTitle">Увійти в акаунт</h2>
+        <form asp-action="Login" method="post" novalidate>
+            <div class="mb-3">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" autocomplete="username" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" type="password" class="form-control" autocomplete="current-password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-success">Увійти</button>
+            <a href="@Url.Action("Register", "Auth")" class="btn-link">Створити акаунт</a>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

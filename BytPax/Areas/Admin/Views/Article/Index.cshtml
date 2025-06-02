@@ -1,0 +1,62 @@
+@model IEnumerable<BytPax.Models.Article>
+
+@{
+    ViewData["Title"] = "Статті";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0"><i class="fas fa-newspaper"></i> Статті</h2>
+    <a class="btn btn-success shadow-sm" href="@Url.Action("Create", "Article", new { area = "Admin" })">
+        <i class="fas fa-plus-circle"></i> Додати статтю
+    </a>
+</div>
+
+<div class="card shadow animate__animated animate__fadeIn">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th style="width: 20%">Тема</th>
+                        <th style="width: 40%">Опис</th>
+                        <th style="width: 20%">Зображення</th>
+                        <th style="width: 20%">Дії</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var article in Model)
+                    {
+                        <tr>
+                            <td>@article.Topic</td>
+                            <td class="text-truncate" style="max-width: 350px;">@article.BodyText</td>
+                            <td>
+                                @if (!string.IsNullOrEmpty(article.ImagePath))
+                                {
+                                    <img src="@Url.Content(article.ImagePath)" alt="Зображення" class="img-fluid rounded" style="max-height: 60px;" />
+                                }
+                                else
+                                {
+                                    <span class="text-muted">Немає</span>
+                                }
+                            </td>
+                            <td class="text-center">
+                                <div class="btn-group" role="group">
+                                    <a class="btn btn-sm btn-outline-primary"
+                                       href="@Url.Action("Edit", "Article", new { id = article.Id, area = "Admin" })">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a class="btn btn-sm btn-outline-danger"
+                                       href="@Url.Action("Delete", "Article", new { id = article.Id, area = "Admin" })"
+                                       onclick="return confirm('Ви впевнені, що хочете видалити цю статтю?');">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

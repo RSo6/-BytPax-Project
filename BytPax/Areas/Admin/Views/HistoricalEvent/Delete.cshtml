@@ -1,0 +1,38 @@
+@model BytPax.Areas.Admin.Models.HistoricalEventCreateViewModel
+
+@{
+    ViewData["Title"] = "Видалити історичну подію";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card bg-dark text-light shadow-lg animate__animated animate__fadeIn">
+    <div class="card-header border-bottom border-secondary">
+        <h4 class="mb-0"><i class="fas fa-trash-alt me-2"></i>@ViewData["Title"]</h4>
+    </div>
+
+    <div class="card-body">
+        <p class="lead mb-4">Ви впевнені, що хочете видалити цю історичну подію?</p>
+
+        <dl class="row">
+            <dt class="col-sm-3 text-light">Назва події</dt>
+            <dd class="col-sm-9">@Model.Title</dd>
+
+            <dt class="col-sm-3 text-light">Опис</dt>
+            <dd class="col-sm-9">@Model.Description</dd>
+        </dl>
+
+        <form asp-action="Delete" method="post" class="mt-4">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-danger shadow-sm">
+                    <i class="fas fa-check-circle me-1"></i>Так, видалити
+                </button>
+                <a asp-action="Index" href="/Admin/HistoricalEvent" class="btn btn-secondary shadow-sm">
+                    <i class="fas fa-times me-1"></i>Скасувати
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

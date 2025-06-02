@@ -1,0 +1,59 @@
+@model IEnumerable<BytPax.Models.Athlete>
+
+@{
+    ViewData["Title"] = "Атлети";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0"><i class="fas fa-running"></i> Атлети</h2>
+    <a class="btn btn-success shadow-sm" href="@Url.Action("Create", "Athlete", new { area = "Admin" })">
+        <i class="fas fa-plus-circle"></i> Додати атлета
+    </a>
+</div>
+
+<div class="card shadow animate__animated animate__fadeIn">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-dark text-center">
+                    <tr>
+                        <th>Ім'я</th>
+                        <th>Вік</th>
+                        <th>Країна</th>
+                        <th>Місто</th>
+                        <th>Опис</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var athlete in Model)
+                    {
+                        <tr>
+                            <td>@athlete.FullName</td>
+                            <td>@athlete.Age</td>
+                            <td>@athlete.Country</td>
+                            <td>@athlete.City</td>
+                            <td class="text-truncate" style="max-width: 300px;">@athlete.Description</td>
+                            <td class="text-center">
+                                <div class="btn-group" role="group">
+                                    <a class="btn btn-sm btn-outline-primary"
+                                       href="@Url.Action("Edit", "Athlete", new { id = athlete.Id, area = "Admin" })"
+                                       title="Редагувати">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <a class="btn btn-sm btn-outline-danger"
+                                       href="@Url.Action("Delete", "Athlete", new { id = athlete.Id, area = "Admin" })"
+                                       onclick="return confirm('Ви впевнені, що хочете видалити спортсмена?');"
+                                       title="Видалити">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

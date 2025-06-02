@@ -1,31 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj": {}
+    "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj": {}
   },
   "projects": {
-    "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj": {
+    "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj",
+        "projectUniqueName": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj",
         "projectName": "BytPax",
-        "projectPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/BytPax.csproj",
-        "packagesPath": "/Users/romanshnep/.nuget/packages/",
-        "outputPath": "/Users/romanshnep/RiderProjects/-BytPax-GUI-Project/BytPax/obj/",
+        "projectPath": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj",
+        "packagesPath": "C:\\Users\\bonda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/romanshnep/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\bonda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
-          "/Users/romanshnep/.dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -38,11 +43,48 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Azure.Core": {
+              "target": "Package",
+              "version": "[1.37.0, )"
+            },
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.15, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.17, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.18.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -62,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/romanshnep/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

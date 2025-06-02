@@ -1,0 +1,76 @@
+﻿@model BytPax.Areas.Admin.Models.ArticleCreateViewModel
+
+@{
+    ViewData["Title"] = "Створення статті";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card bg-dark text-light shadow-lg animate__animated animate__fadeIn">
+    <div class="card-header border-bottom border-secondary">
+        <h4 class="mb-0"><i class="fas fa-pen me-2"></i>Створення нової статті</h4>
+    </div>
+    <div class="card-body">
+        <form id="createArticleForm" asp-action="Create" method="post" enctype="multipart/form-data">
+            <!-- Topic -->
+            <div class="mb-3">
+                <label asp-for="Topic" class="form-label fw-semibold text-light">Тема</label>
+                <input asp-for="Topic" name="Topic" class="form-control bg-dark text-light border-secondary" required/>
+                <span asp-validation-for="Topic" class="text-danger small"></span>
+            </div>
+
+            <!-- BodyText -->
+            <div class="mb-3">
+                <label asp-for="BodyText" class="form-label fw-semibold text-light">Текст</label>
+                <textarea asp-for="BodyText"name="BodyText" rows="6" class="form-control bg-dark text-light border-secondary"></textarea>
+                <span asp-validation-for="BodyText" class="text-danger small"></span>
+            </div>
+
+            <!-- Image -->
+            <div class="mb-3">
+                <label asp-for="ImageFile" class="form-label fw-semibold text-light">Зображення</label>
+                <input asp-for="ImageFile" name="ImageFile" type="file" class="form-control bg-dark text-light border-secondary" required/>
+                <span asp-validation-for="ImageFile" class="text-danger small"></span>
+            </div>
+
+            <!-- Category -->
+            <div class="mb-3">
+                <label asp-for="CategoryId" class="form-label fw-semibold text-light">Категорія</label>
+                <select asp-for="CategoryId" name="CategoryId" class="form-select bg-dark text-light border-secondary" required/>
+                    <option value="0">Виберіть категорію</option>
+                    @if (ViewBag.Categories is List<BytPax.Models.Category> categories && categories.Any())
+                    {
+                        @foreach (var category in categories)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    }
+                    else
+                    {
+                        <option value="">Немає доступних категорій</option>
+                    }
+                </select>
+                <span asp-validation-for="CategoryId" class="text-danger small"></span>
+            </div>
+
+            <!-- Submit -->
+            <div class="d-flex justify-content-end mt-4">
+                <button type="submit" class="btn btn-primary px-4 shadow-sm">
+                    <i class="fas fa-save me-2"></i>Зберегти
+                </button>
+            </div>
+        </form>
+
+        <!-- Success Message -->
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show mt-3 animate__animated animate__fadeInDown" role="alert">
+                @TempData["SuccessMessage"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрити"></button>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

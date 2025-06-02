@@ -1,0 +1,85 @@
+@model BytPax.Areas.Admin.Models.HistoricalEventCreateViewModel
+
+@{
+    ViewData["Title"] = "Редагування історичної події";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<div class="card bg-dark text-light shadow-lg animate__animated animate__fadeIn mt-4">
+    <div class="card-header border-bottom border-secondary">
+        <h4 class="mb-0"><i class="fas fa-edit me-2"></i>@ViewData["Title"]</h4>
+    </div>
+
+    <div class="card-body">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label">Назва події</label>
+                <input asp-for="Title" name="Title" class="form-control bg-dark text-light border-secondary" required/>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Опис</label>
+                <textarea asp-for="Description" name="Description" class="form-control bg-dark text-light border-secondary" rows="5"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="EventDate" class="form-label">Дата події</label>
+                <input asp-for="EventDate" name="EventDate" type="date" class="form-control bg-dark text-light border-secondary" required/>
+                <span asp-validation-for="EventDate" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="CategoryId" class="form-label">Категорія</label>
+                <select asp-for="CategoryId" name="CategoryId" class="form-select bg-dark text-light border-secondary" required/>
+                    <option value="">Виберіть категорію</option>
+                    @if (ViewBag.Categories != null)
+                    {
+                        foreach (var category in ViewBag.Categories)
+                        {
+                            <option value="@category.Id" @(category.Id == Model.CategoryId ? "selected" : "")>@category.Name</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ImportanceLevel" class="form-label">Рівень важливості</label>
+                <input asp-for="ImportanceLevel" name="ImportanceLevel" type="number" class="form-control bg-dark text-light border-secondary" required/>
+                <span asp-validation-for="ImportanceLevel" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="ImageFile" class="form-label">Зображення</label>
+                <input asp-for="ImageFile" name="ImageFile" type="file" class="form-control bg-dark text-light border-secondary" required/>
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+
+            @if (!string.IsNullOrEmpty(Model.ImagePath))
+            {
+                <div class="mb-3">
+                    <label class="form-label">Поточне зображення:</label><br />
+                    <img src="~/uploads/@Model.ImagePath" alt="Image" class="img-thumbnail bg-secondary" style="max-width: 200px;" required/>
+                </div>
+            }
+
+            <div class="d-flex gap-2 mt-4">
+                <button type="submit" class="btn btn-success shadow-sm">
+                    <i class="fas fa-save me-1"></i>Зберегти
+                </button>
+                <a asp-action="Index" class="btn btn-secondary shadow-sm">
+                    <i class="fas fa-arrow-left me-1"></i>Назад
+                </a>
+            </div>
+        </form>
+    </div>
+</div>

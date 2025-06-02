@@ -1,21 +1,25 @@
+using System.Text.Json.Serialization;
 using BytPax.Models.core;
+using Microsoft.AspNetCore.Http;
 
-namespace BytPax.Models;
-
-public class Article : BaseEntity {
-    public string Topic { get; }
-    public string BodyText { get; }
-    public int CategoryId { get;  }
-    public Category Category { get; }
-    public string  ImagePath {get; }
-    
-    public Article(string topic, string text, int id, string image, Category category)
-        : base(id) 
+namespace BytPax.Models
+{
+    public class Article : BaseEntity
     {
-        Topic = topic;
-        BodyText = text;
-        CategoryId = id;
-        ImagePath = image;
-        Category = category;
+        public string Topic { get; set; }
+        public string BodyText { get; set; }
+        public int CategoryId { get; set; }
+        public string? ImagePath { get; set; }
+
+        public Article() { }
+
+        public Article(string topic, string bodyText, int categoryId, string imagePath)
+            : base(0)
+        {
+            Topic = topic;
+            BodyText = bodyText;
+            CategoryId = categoryId;
+            ImagePath = imagePath;
+        }
     }
 }

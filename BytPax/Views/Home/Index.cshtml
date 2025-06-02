@@ -1,33 +1,777 @@
-﻿@{
+﻿@model IEnumerable<dynamic>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "Home Page";
+    var userName = User.Identity.IsAuthenticated ? User.Identity.Name : null;
+    var isAdmin = User.IsInRole("Admin");
+}
+@section Styles {
+    <style>
+        .btn-warm {
+            background: linear-gradient(135deg, #ffeb3b, #ff9800);
+            color: #000;
+            border: none;
+            font-weight: 600;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(255, 193, 7, 0.6);
+            transition: all 0.3s ease;
+        }
+
+            .btn-warm:hover {
+                background: linear-gradient(135deg, #ffc107, #ff5722);
+                box-shadow: 0 0 20px rgba(255, 152, 0, 0.9);
+                color: #111;
+                text-decoration: none;
+            }
+
+        .btn-warm-outline {
+            background: transparent;
+            border: 2px solid #ff9800;
+            color: #ff9800;
+            font-weight: 600;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+            .btn-warm-outline:hover {
+                background: #ff9800;
+                color: #fff;
+                box-shadow: 0 0 12px rgba(255, 152, 0, 0.6);
+            }
+
+        /* Чорний фон і стиль для секції пошуку */
+        #search-form {
+            background-color: #000;
+            color: #fff;
+            padding: 4rem 0;
+        }
+
+            #search-form h5 {
+                color: #ffc107;
+                font-weight: bold;
+            }
+
+            #search-form input.form-control {
+                background-color: #1e1e1e;
+                border: 1px solid #555;
+                color: #fff;
+                border-radius: 8px;
+            }
+
+                #search-form input.form-control:focus {
+                    border-color: #ff9800;
+                    background-color: #111;
+                    box-shadow: 0 0 8px #ff9800;
+                }
+
+        .invalid-feedback {
+            color: #f88;
+        }
+
+        /* Темна стилізація для секції результатів */
+        #results {
+            background-color: #121212;
+            color: #eee;
+            padding: 3rem 0;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 152, 0, 0.3);
+        }
+
+            #results h3 {
+                color: #ffb300;
+                font-weight: 700;
+                margin-bottom: 2rem;
+            }
+
+            #results > div {
+                background-color: #1e1e1e;
+                border-radius: 10px;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+                box-shadow: 0 0 10px rgba(255, 152, 0, 0.25);
+            }
+        .heart-btn {
+            background-color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 8px 10px;
+            font-size: 1.1rem;
+            color: gray;
+            transition: color 0.3s ease;
+        }
+
+        .heart-btn.active,
+        .heart-btn:hover {
+            color: red;
+        }
+        .scroll-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #ffc107;
+        border: none;
+        padding: 0.75rem 1rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        }
+
+        .scroll-arrow:hover {
+            background-color: rgba(255, 152, 0, 0.8);
+        }
+
+        .card {
+            cursor: pointer;
+        }
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    </style>
 }
 
-<div class="text-center">
-    <h1 class="display-4">BytPax Project</h1>
-    <h3>Version of program is 0.3</h3>
-   
+<header class="masthead text-white" style="background: url('/images/sport-1.png') no-repeat center center; background-size: cover; background-attachment: fixed; min-height: 100vh; display: flex; align-items: center;">
+    <div class="overlay" style="background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 0;"></div>
+
+    <div class="container text-center" style="position: relative; z-index: 1;">
+        <h1 class="display-4 fw-bold">BytPax Project</h1>
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            <p class="text-info fs-5 mt-3">Вітаємо, <strong>@User.Identity.Name</strong>!</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                <a class="btn btn-outline-light me-md-2" href="@Url.Action("Logout", "Auth")">
+                    <i class="fas fa-sign-out-alt"></i> Вийти
+                </a>
+                <a class="btn btn-outline-info" href="@Url.Action(User.IsInRole("Admin") ? "Index" : "Cabinet", User.IsInRole("Admin") ? "Admin" : "User")">
+                    <i class="fas fa-user"></i> Кабінет
+                </a>
+            </div>
+        }
+        else
+        {
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+                <a class="btn btn-warm me-md-2" asp-controller="Auth" asp-action="Login">
+                    <i class="fas fa-sign-in-alt"></i> Увійти
+                </a>
+                <a class="btn btn-warm-outline" asp-controller="Auth" asp-action="Register">
+                    Зареєструватись
+                </a>
+            </div>
+        }
+    </div>
+</header>
+
+<section class="page-section" id="search-form">
+    <div class="container px-4 px-lg-5">
+        <div class="row">
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5>Спортсмени</h5>
+                <input type="text" id="athleteSearch" class="form-control mb-2" placeholder="Пошук за іменем" />
+                <div class="invalid-feedback" id="athleteSearchError">Будь ласка, введіть ім'я.</div>
+                <button class="btn btn-warm w-100" id="athleteSearchBtn">
+                    <i class="fas fa-search"></i> Шукати
+                </button>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5>Історичні події</h5>
+                <input type="text" id="eventSearch" class="form-control mb-2" placeholder="Назва події" />
+                <div class="invalid-feedback" id="eventSearchError">Введіть назву події.</div>
+                <button class="btn btn-warm w-100" id="eventSearchBtn">
+                    <i class="fas fa-search"></i> Шукати
+                </button>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5>Рекорди</h5>
+                <input type="text" id="recordSearch" class="form-control mb-2" placeholder="Ім’я спортсмена" />
+                <div class="invalid-feedback" id="recordSearchError">Введіть ім’я спортсмена.</div>
+                <button class="btn btn-warm w-100" id="recordSearchBtn">
+                    <i class="fas fa-search"></i> Шукати
+                </button>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-4">
+                <h5>Статті</h5>
+                <input type="text" id="articleSearch" class="form-control mb-2" placeholder="Тема статті" />
+                <div class="invalid-feedback" id="articleSearchError">Введіть тему статті.</div>
+                <button class="btn btn-warm w-100" id="articleSearchBtn">
+                    <i class="fas fa-search"></i> Шукати
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section" id="results">
+    <div class="container px-4 px-lg-5">
+        <h3 class="text-center mb-4">Результати пошуку</h3>
+        <div id="athletesList" class="mb-5"></div>
+        <div id="eventsList" class="mb-5"></div>
+        <div id="recordsList" class="mb-5"></div>
+        <div id="articlesList"></div>
+    </div>
+</section>
+
+<section class="page-section" id="cards" style="background-color: #000;">
+    <h3 class="text-center text-light mb-4">Наші категорії</h3>
+
+    <div class="position-relative mx-auto" style="max-width: 1000px;">
+
+        <div id="cardScroller" class="d-flex overflow-auto px-4" style="gap: 1rem; scroll-behavior: smooth;">
+            <div class="d-flex flex-nowrap gap-4 py-2">
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Футбол"
+                        data-img="/images/football-players.jfif"
+                        data-description="Футболісти — це команда гравців, що грають у футбол. Вони тренуються щоденно, мають фізичну витривалість і технічну майстерність. У цій категорії будуть персональні рекорди гравців, різні статті про футбольні команди та на такі ж теми, важливі футбольні події, а так важливі моменти, які відбулись в історії футболу">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="football">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-running me-2"></i>Футбол
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/football-players.jfif" alt="Футбол" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Баскетбол"
+                        data-img="/images/basketball-players.jfif"
+                        data-description="Баскетбол — це команда гравців, що грають у баскетбол. Вони тренуються щоденно, мають фізичну витривалість і технічну майстерність. У цій категорії будуть персональні рекорди гравців, різні статті про баскетбольні команди та на такі ж теми, важливі баскетбольні події, а так важливі моменти, які відбулись в історії баскетболу">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="basketball">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-history me-2"></i>Баскетбол
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/basketball-players.jfif" alt="Баскетбол" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Теніс"
+                        data-img="/images/tennis-players.jfif"
+                        data-description="Тенісисти — це спортсмени, що грають у теніс. Вони володіють швидкою реакцією, точністю та витривалістю, тренуються для досягнення високої майстерності у грі один на один чи в парах.">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="tennis">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-trophy me-2"></i>Теніс
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/tennis-players.jfif" alt="Теніс" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Плавання"
+                        data-img="/images/swimmers-players.jfif"
+                        data-description="Плавці — це спортсмени, що змагаються у воді. Вони тренуються щодня, розвиваючи силу, витривалість і досконалу техніку рухів у різних стилях плавання.">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="swim">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-newspaper me-2"></i>Плавання
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/swimmers-players.jfif" alt="Плавання" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Біг"
+                        data-img="/images/runners-players.jfif"
+                        data-description="Бігуни — це атлети, які спеціалізуються на бігу на різні дистанції. Вони мають високу витривалість, силу та техніку, регулярно тренуються для покращення швидкості та результатів.">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="run">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-newspaper me-2"></i>Біг
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/runners-players.jfif" alt="Біг" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+        <div class="modal-content bg-dark text-light text-center d-flex align-items-center justify-content-center">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cardModalLabel">Заголовок</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрити"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImage" src="" alt="Зображення" class="img-fluid mb-3" />
+            <p id="modalDescription"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="page-section" id="cardsAthletes" style="background-color: #000;">
+    <h3 class="text-center text-light mb-4">Наші Спортсмени</h3>
+
+    <div class="position-relative mx-auto" style="max-width: 1000px;">
+
+        <div id="cardScroller" class="d-flex overflow-auto px-4" style="gap: 1rem; scroll-behavior: smooth;">
+            <div class="d-flex flex-nowrap gap-4 py-2">
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Футбол"
+                        data-img="/images/athleteFootball.jfif"
+                        data-description="На цій картці можна побачити всі команди та всіх футбольних гравців на нашому сайті">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="football">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-running me-2"></i>Футбол
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/athleteFootball.jfif" alt="Футбол" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Баскетбол"
+                        data-img="/images/athleteBasketball.jfif"
+                        data-description="На цій картці можна побачити всі команди та всіх баскетбольних гравців на нашому сайті">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="basketball">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-history me-2"></i>Баскетбол
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/athleteBasketball.jfif" alt="Баскетбол" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Теніс"
+                        data-img="/images/athleteTennis.jfif"
+                        data-description="На цій картці можна побачити всіх тенісистів та тенісисток на нашому сайті">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="tennis">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-trophy me-2"></i>Теніс
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/athleteTennis.jfif" alt="Теніс" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Плавання"
+                        data-img="/images/athleteSwim.jfif"
+                        data-description="На цій картці можна побачити всі команди та всіх плавців на нашому сайті">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="swim">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-newspaper me-2"></i>Плавання
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/athleteSwim.jfif" alt="Плавці" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Біг"
+                        data-img="/images/athleteRun.jfif"
+                        data-description="На цій картці можна побачити всі команди та всіх бігунів на нашому сайті">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="run">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-newspaper me-2"></i>Біг
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/athleteRun.jfif" alt="Бігуни" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cardModalLabel">Заголовок</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрити"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImage" src="" alt="Зображення" class="img-fluid mb-3" />
+            <p id="modalDescription"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="page-section" id="cardsEvents" style="background-color: #000;">
+    <h3 class="text-center text-light mb-4">Історичні події</h3>
+
+    <div class="position-relative mx-auto" style="max-width: 1000px;">
+
+        <div id="cardScroller" class="d-flex overflow-auto px-4" style="gap: 1rem; scroll-behavior: smooth;">
+            <div class="d-flex flex-nowrap gap-4 py-2">
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Футбол"
+                        data-img="/images/eventFootball.jfif"
+                        data-description="На цій картці можна побачити всі історичні події пов’язані з футболом на нашому сайті">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="football">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-running me-2"></i>Футбол
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/eventFootball.jfif" alt="Футбол" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Баскетбол"
+                        data-img="/images/eventBasketball.jfif"
+                        data-description="На цій картці можна побачити всі історичні події пов’язані з баскетболом на нашому сайті">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="basketball">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-history me-2"></i>Баскетбол
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/eventBasketball.jfif" alt="Баскетбол" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Теніс"
+                        data-img="/images/eventTennis.jfif"
+                        data-description="На цій картці можна побачити всі історичні події пов’язані з тенісом на нашому сайті">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="tennis">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-trophy me-2"></i>Теніс
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/eventTennis.jfif" alt="Теніс" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Плавання"
+                        data-img="/images/eventSwim.jfif"
+                        data-description="На цій картці можна побачити всі історичні події пов’язані з плаванням на нашому сайті">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="swim">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-newspaper me-2"></i>Плавання
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/eventSwim.jfif" alt="Плавці" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 card" style="width: 280px; position: relative;"
+                        data-title="Біг"
+                        data-img="/images/eventRun.jfif"
+                        data-description="На цій картці можна побачити всі історичні події пов’язані з бігом на нашому сайті">
+                    <div class="rounded overflow-hidden shadow position-relative">
+                        <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="run">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <div class="text-center py-3 fw-bold" style="background: linear-gradient(135deg, #ffeb3b, #ff9800); color: #000; font-size: 1.25rem;">
+                            <i class="fas fa-newspaper me-2"></i>Біг
+                        </div>
+                        <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 200px;">
+                            <img src="/images/eventRun.jfif" alt="Бігуни" class="img-fluid rounded" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cardModalLabel">Заголовок</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрити"></button>
+          </div>
+          <div class="modal-body">
+            <img id="modalImage" src="" alt="Зображення" class="img-fluid mb-3" />
+            <p id="modalDescription"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="page-section" id="cardsArctics" style="background-color: #000;">
+    <h3 class="text-center text-light mb-4">Статті</h3>
+    <div class="position-relative mx-auto" style="max-width: 1000px;">
+        <div id="cardScroller" class="d-flex overflow-auto px-4" style="gap: 1rem; scroll-behavior: smooth;">
+            <div class="d-flex flex-nowrap gap-4 py-2">
+                @{
+                    var categories = new[]
+                    {
+                        new { Id = "football", Name = "Футбол", Icon = "fa-running", Img = "/images/arcticFootball.jfif" },
+                        new { Id = "basketball", Name = "Баскетбол", Icon = "fa-basketball-ball", Img = "/images/arcticBasketball.jfif" },
+                        new { Id = "tennis", Name = "Теніс", Icon = "fa-table-tennis", Img = "/images/arcticTennis.jfif" },
+                        new { Id = "swim", Name = "Плавання", Icon = "fa-swimmer", Img = "/images/arcticSwim.jfif" },
+                        new { Id = "run", Name = "Біг", Icon = "fa-running", Img = "/images/arcticRun.jfif" }
+                    };
+                    foreach (var cat in categories)
+                    {
+                        <div class="flex-shrink-0 card bg-dark text-white shadow" 
+                             style="width: 280px; position: relative; cursor:pointer;" 
+                             data-bs-toggle="modal" data-bs-target="#articlesModal"
+                             data-title="@cat.Name"
+                             data-id="@cat.Id"
+                             data-img="@cat.Img"
+                             data-icon="@cat.Icon"
+                             data-description="Усі статті про @cat.Name"
+                             data-articles='@System.Text.Json.JsonSerializer.Serialize(Model.Where(a => a.CategoryName == cat.Name).Select(a => new { a.Id, a.Topic, a.BodyText }))'>
+                            <button class="heart-btn position-absolute top-0 end-0 m-2" data-id="@cat.Id" onclick="event.stopPropagation();">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <div class="card-body text-center">
+                                <h5 class="card-title"><i class="fas @cat.Icon"></i> @cat.Name</h5>
+                                <img src="@cat.Img" class="img-fluid rounded mb-2" alt="@cat.Name" style="height: 150px; object-fit: cover;" />
+                                <p class="card-text">Клікни, щоб переглянути статті про @cat.Name</p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Модальне вікно для секції статтей -->
+<div class="modal fade" id="articlesModal" tabindex="-1" aria-labelledby="articlesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title" id="articlesModalLabel">Статті категорії</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="articlesList" class="list-group list-group-flush"></ul>
+            </div>
+        </div>
+    </div>
 </div>
 
-<h2>Sorted Athletes by Age</h2>
-<ul>
-    @foreach (var athlete in ViewData["SortedAthletesByAge"] as IEnumerable<BytPax.Models.Athlete>)
-    {
-        <li>
-            <strong>@athlete.FullName</strong><br />
-            Age: @athlete.Age<br />
-            <em>@athlete.Description</em>
-        </li>
-    }
-</ul>
 
-<h2>Sorted Articles by ID</h2>
-<ul>
-    @foreach (var article in ViewData["SortedArticlesById"] as IEnumerable<BytPax.Models.Article>)
-    {
-        <li>
-            <strong>@article.Topic</strong><br />
-            <em>@article.BodyText</em><br />
-            <span>ID: @article.Id</span>
-        </li>
-    }
-</ul>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Обробка сердечок (лайків)
+            const hearts = document.querySelectorAll(".heart-btn");
+            hearts.forEach(btn => {
+                const id = btn.dataset.id;
+                if (localStorage.getItem(`heart-${id}`) === "true") {
+                    btn.classList.add("active");
+                }
+
+                btn.addEventListener("click", e => {
+                    e.stopPropagation(); // Запобігаємо відкриттю модалки
+                    btn.classList.toggle("active");
+                    localStorage.setItem(`heart-${id}`, btn.classList.contains("active"));
+                });
+            });
+
+            // Модальне вікно зі списком статей
+            const articlesModal = document.getElementById('articlesModal');
+            if (articlesModal) {
+                articlesModal.addEventListener('show.bs.modal', function (event) {
+                    const card = event.relatedTarget;
+                    const categoryName = card.getAttribute('data-title');
+                    const articlesDataRaw = card.getAttribute('data-articles');
+
+                    let articlesData = [];
+                    try {
+                        articlesData = JSON.parse(articlesDataRaw);
+                    } catch (e) {
+                        console.error("Invalid JSON in data-articles:", e);
+                    }
+
+                    const modalTitle = articlesModal.querySelector('.modal-title');
+                    const articlesList = articlesModal.querySelector('#articlesList');
+
+                    modalTitle.textContent = `Статті категорії: ${categoryName}`;
+                    articlesList.innerHTML = '';
+
+                    if (!articlesData || articlesData.length === 0) {
+                        articlesList.innerHTML = '<li class="list-group-item bg-dark text-light fst-italic">Статей немає</li>';
+                    } else {
+                        articlesData.forEach(article => {
+                            const li = document.createElement('li');
+                            li.className = 'list-group-item bg-dark text-light';
+
+                            li.innerHTML = `<h6>${article.Topic}</h6>
+                                            <p>${article.BodyText.length > 200 ? article.BodyText.substring(0, 200) + '...' : article.BodyText}</p>`;
+
+                            articlesList.appendChild(li);
+                        });
+                    }
+                });
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            // Лайки (сердечка)
+            const hearts = document.querySelectorAll(".heart-btn");
+            hearts.forEach(btn => {
+                const id = btn.dataset.id;
+                if (localStorage.getItem(`heart-${id}`) === "true") {
+                    btn.classList.add("active");
+                }
+                btn.addEventListener("click", e => {
+                    e.stopPropagation();
+                    btn.classList.toggle("active");
+                    localStorage.setItem(`heart-${id}`, btn.classList.contains("active"));
+                });
+            });
+
+            // Модальне вікно для карток подій
+            const cardModal = new bootstrap.Modal(document.getElementById('cardModal'));
+            const modalTitle = document.getElementById('cardModalLabel');
+            const modalImage = document.getElementById('modalImage');
+            const modalDescription = document.getElementById('modalDescription');
+
+            const cards = document.querySelectorAll("#cardsEvents .card");
+            cards.forEach(card => {
+                card.addEventListener("click", () => {
+                    const title = card.getAttribute('data-title') || "Без назви";
+                    const img = card.getAttribute('data-img') || "";
+                    const description = card.getAttribute('data-description') || "Опис відсутній";
+
+                    modalTitle.textContent = title;
+                    modalImage.src = img;
+                    modalDescription.textContent = description;
+
+                    cardModal.show();
+                });
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = new bootstrap.Modal(document.getElementById('cardModal'));
+            const modalTitle = document.getElementById('cardModalLabel');
+            const modalImage = document.getElementById('modalImage');
+            const modalDescription = document.getElementById('modalDescription');
+
+            function addCardClickListeners(scrollerId) {
+                const scroller = document.querySelector(`#${scrollerId}`);
+                if (!scroller) return;
+
+                const cards = scroller.querySelectorAll('.card');
+                cards.forEach(card => {
+                    card.addEventListener('click', function(e) {
+                        // Уникнути відкриття при кліку на кнопку "heart"
+                        if (e.target.closest('.heart-btn')) return;
+
+                        const title = card.getAttribute('data-title') || 'Без назви';
+                        const img = card.getAttribute('data-img') || '';
+                        const description = card.getAttribute('data-description') || '';
+
+                        modalTitle.textContent = title;
+                        modalImage.src = img;
+                        modalImage.alt = title;
+                        modalDescription.textContent = description;
+
+                        modal.show();
+                    });
+                });
+            }
+
+            // Додаємо обробники для всіх трьох секцій
+            addCardClickListeners('cardScroller');              // Категорії
+            addCardClickListeners('cardsAthletes');              // Спортсмени
+            addCardClickListeners('cardScrollerEvents');        // Події (якщо додана)
+
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = new bootstrap.Modal(document.getElementById('cardModal'));
+            const modalTitle = document.getElementById('cardModalLabel');
+            const modalImage = document.getElementById('modalImage');
+            const modalDescription = document.getElementById('modalDescription');
+
+           const scrollerAthletes = document.querySelector('#cardsAthletes');
+            if (scrollerAthletes) {
+                const cards = scrollerAthletes.querySelectorAll('.card');
+                cards.forEach(card => {
+                    card.addEventListener('click', function(e) {
+                        if (e.target.closest('.heart-btn')) return;
+
+                        const title = card.getAttribute('data-title') || 'Без назви';
+                        const img = card.getAttribute('data-img') || '';
+                        const description = card.getAttribute('data-description') || '';
+
+                        modalTitle.textContent = title;
+                        modalImage.src = img;
+                        modalImage.alt = title;
+                        modalDescription.textContent = description;
+
+                        modal.show();
+                    });
+                });
+            }
+        });
+
+    </script>
+
+    <style>
+        .heart-btn.active i {
+            color: red;
+        }
+        .heart-btn {
+            cursor: pointer;
+        }
+    </style>
+}

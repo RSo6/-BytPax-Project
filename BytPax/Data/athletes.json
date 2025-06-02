@@ -1,0 +1,14 @@
+[
+  {
+    "Age": 22,
+    "CategoryId": 0,
+    "Category": null,
+    "FullName": "Roman",
+    "Country": "\u0423\u043A\u0440\u0430\u0457\u043D\u0430",
+    "City": "\u041B\u044C\u0432\u0456\u0432",
+    "Description": "\u0427\u0435\u043C\u043F\u0456\u043E\u043D\u043A\u0430 \u0423\u043A\u0440\u0430\u0457\u043D\u0438 \u0437 \u043A\u0430\u0440\u0430\u0442\u0435",
+    "CreatedAt": "2025-04-18T19:05:00Z",
+    "UpdatedAt": "2025-04-18T19:05:00Z",
+    "Id": 2
+  }
+]

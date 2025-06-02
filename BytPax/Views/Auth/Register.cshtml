@@ -1,0 +1,169 @@
+@using BytPax.Models.core
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles {
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .register-section {
+            position: relative;
+            min-height: 100vh;
+            background: url('/images/sport-3.jpg') no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 1rem;
+        }
+
+            .register-section::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.6);
+                backdrop-filter: blur(4px);
+                z-index: 0;
+            }
+
+        .register-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 450px;
+            background: rgba(30, 30, 30, 0.85);
+            padding: 2.5rem 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 0 25px rgba(255, 165, 0, 0.5); /* тепле світло */
+            color: #fff;
+        }
+
+            .register-container h2 {
+                color: #fff;
+                text-align: center;
+                font-weight: 700;
+                margin-bottom: 2rem;
+                letter-spacing: 1.2px;
+            }
+
+        label {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        input.form-control,
+        select.form-select {
+            background-color: #2a2a2a;
+            border: 1px solid #666;
+            color: #fff;
+            border-radius: 8px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            input.form-control:focus,
+            select.form-select:focus {
+                border-color: #ffa500;
+                box-shadow: 0 0 10px #ffc107, 0 0 20px #ff9800;
+                background-color: #222;
+            }
+
+        .text-danger {
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+            color: #ff7b5a;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ffeb3b, #ff9800);
+            color: #000;
+            border: none;
+            width: 100%;
+            font-weight: 700;
+            padding: 0.6rem 0;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            letter-spacing: 0.8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 12px rgba(255, 193, 7, 0.6);
+        }
+
+            .btn-primary:hover {
+                background: linear-gradient(135deg, #ffc107, #ff5722);
+                box-shadow: 0 0 20px rgba(255, 152, 0, 0.9);
+            }
+
+        .btn-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.2rem;
+            color: #ffc107;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+            .btn-link:hover {
+                color: #ffca28;
+                text-decoration: underline;
+            }
+    </style>
+}
+
+
+<section class="register-section">
+    <div class="register-container" role="main" aria-labelledby="registerTitle">
+        <h2 id="registerTitle">Реєстрація</h2>
+        <form asp-action="Register" method="post" novalidate>
+            <div class="mb-3">
+                <label asp-for="FullName"></label>
+                <input asp-for="FullName" class="form-control" autocomplete="name" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" autocomplete="email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="ImagePath"></label>
+                <input asp-for="ImagePath" class="form-control" />
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" type="password" autocomplete="new-password" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" class="form-control" type="password" autocomplete="new-password" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Role"></label>
+                <select asp-for="Role" class="form-select" asp-items="Html.GetEnumSelectList<User.UserRole>()">
+                    <option disabled selected>-- Виберіть роль --</option>
+                </select>
+                <span asp-validation-for="Role" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Зареєструватись</button>
+            <a href="@Url.Action("Login", "Auth")" class="btn-link">Вже є акаунт? Увійти</a>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

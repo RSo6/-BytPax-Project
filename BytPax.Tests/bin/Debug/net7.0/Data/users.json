@@ -1,0 +1,42 @@
+[
+  {
+    "FullName": "Roman Shnep",
+    "Email": "roman@gmail.com",
+    "ImagePath": "dfsfasdfasfadsf",
+    "Role": 1,
+    "PasswordHash": "$2a$11$xuU.Z1ixIIpselyhcG0P/eo3LTtoMgxaGBWoiTD5KtoHIuYsAMene",
+    "Id": 0,
+    "CreatedAt": "2025-04-21T15:43:35.717747Z",
+    "UpdatedAt": "2025-04-21T15:43:35.717796Z"
+  },
+  {
+    "FullName": "Roman Antonovich",
+    "Email": "user@gmail.com",
+    "ImagePath": "fdsfdsaf",
+    "Role": 0,
+    "PasswordHash": "$2a$11$L6fx1cDxrH4vmIlDUOZbKOSL2Ifwt16/mD2UpM.uV7Otg6Vx2v/TG",
+    "Id": 0,
+    "CreatedAt": "2025-04-21T16:31:29.957251Z",
+    "UpdatedAt": "2025-04-21T16:31:29.957251Z"
+  },
+  {
+    "FullName": "Roman",
+    "Email": "example@gmail.com",
+    "ImagePath": "fasdfsafdsadfasd",
+    "Role": 0,
+    "PasswordHash": "$2a$11$yBsnX7Bbhcg8kjDSANzXsOoYj8U4VogCd9.ELXp0kvSS8VKfNt/AG",
+    "Id": 0,
+    "CreatedAt": "2025-04-21T18:57:04.453866Z",
+    "UpdatedAt": "2025-04-21T18:57:04.453866Z"
+  },
+  {
+    "FullName": "Example",
+    "Email": "SimpleUser@gmail.com",
+    "ImagePath": "1231234213123",
+    "Role": 0,
+    "PasswordHash": "$2a$11$trNfNVa34qml8h.PRAS.0uIV8J5WpDr6cceZN0ZSl3K2t.gHA35Yy",
+    "Id": 0,
+    "CreatedAt": "2025-04-22T05:51:26.296338Z",
+    "UpdatedAt": "2025-04-22T05:51:26.296338Z"
+  }
+]
