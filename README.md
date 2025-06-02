@@ -28,3 +28,90 @@
     - Roman Shnep 👨‍✈️
     
 Thank you for attention... ☺️
+
+
+#  ASP.NET Core + PostgreSQL Проєкт
+
+Цей проєкт реалізує веб-додаток на основі ASP.NET Core з використанням Entity Framework Core та бази даних PostgreSQL.
+
+---
+
+##  Вимоги до запуску
+
+###  Необхідне ПЗ:
+
+- [.NET SDK](https://dotnet.microsoft.com/en-us/download) ≥ **7.0**
+- [PostgreSQL](https://www.postgresql.org/download/) ≥ **13**
+- [Entity Framework Core CLI](https://learn.microsoft.com/en-us/ef/core/cli/dotnet) ≥ **7.0**
+- [Visual Studio](https://visualstudio.microsoft.com/) або [Visual Studio Code](https://code.visualstudio.com/)
+- `dotnet-ef` інструмент
+
+---
+
+##  Перевірка середовища
+### Можна здійснити в терміналі за такими командами:
+
+```bash
+# Перевірка версії .NET SDK
+dotnet --version
+
+# Повна інформація про середовище
+dotnet --info
+
+# Перевірка Entity Framework CLI
+dotnet ef --version
+
+# Перевірка версії PostgreSQL
+psql --version
+
+
+Запуск проекту:
+1.  Клонування репозиторію:
+git clone https://github.com/your-username/BytPax-Project.git
+cd BytPax-Project
+
+2. Налаштування підключення до БД у файлі appsettings.json:
+"ConnectionStrings": {
+  "DefaultConnection": "Host=localhost;Port=5432;Database=mydb;Username=postgres;Password=yourpassword"
+}
+
+3. Застосування міграцій (EF Core) за допомогою вбудованого термінала:
+# Якщо міграції вже є:
+dotnet ef database update
+# Якщо міграції немає:
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+4.Запуск додатку:
+dotnet run або якщо використовується Visual Studio то Ctrl + F5
+
+5. Підключення PostgreSQL
+Для роботи з PostgreSQL потрібен NuGet пакет:
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+
+6. Структура проекту:
+|--BytPax
+    ├── Properties/
+    ├── wwwroot/
+    ├── Areas/
+        ├── Admin/
+            ├── Controllers/
+            ├── Models/
+            ├── Views/
+    ├── Controllers/ 
+    ├── Data/
+        ├── Database/         #data storage using data base & EF
+        ├── JsonStorage.cs/   #alternative data base storage  
+    ├── Instructions/
+        ├── IDataStorage.cs/  #data storage interface
+    ├── Migrations/
+    ├── Models/
+    ├── Repositories/
+        ├── Repository.cs/
+    ├── Services/
+    ├── Views/
+    ├── appsettings.json
+    ├── Program.cs
+    ├── Program.cs
+├── BytPax.Tests/
+    ├── Services/
