@@ -10844,23 +10844,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Users\\bonda\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\Study\\KPI\\ОП\\2\\-BytPax-Project\\BytPax\\BytPax.csproj",
+      "projectUniqueName": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj",
       "projectName": "BytPax",
-      "projectPath": "C:\\Users\\User\\Desktop\\Study\\KPI\\ОП\\2\\-BytPax-Project\\BytPax\\BytPax.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\Study\\KPI\\ОП\\2\\-BytPax-Project\\BytPax\\obj\\",
+      "projectPath": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\BytPax.csproj",
+      "packagesPath": "C:\\Users\\bonda\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bonda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10886,7 +10886,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net7.0": {
@@ -10946,7 +10947,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

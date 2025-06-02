@@ -15,6 +15,12 @@ public abstract class User : BaseEntity
     public UserRole Role { get; protected set; }
     public string PasswordHash { get; protected set; }
 
+    public void SetFullName(string fullName)
+    {
+        FullName = fullName;
+    }
+
+
     protected User(string fullName, string email, string imagePath, UserRole role, string passwordHash)
     {
         FullName = fullName;

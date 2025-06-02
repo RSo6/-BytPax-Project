@@ -1,12 +1,11 @@
-using BytPax.Data;
 using BytPax.Data.Database;
 using BytPax.Instructions;
 using BytPax.Models;
-using BytPax.Models.core;
 using BytPax.Repositories;
 using BytPax.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +25,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddScoped(typeof(IDataStorage<>), typeof(EfStorage<>));
 builder.Services.AddScoped(typeof(Repository<>));
 builder.Services.AddScoped<SearchService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 

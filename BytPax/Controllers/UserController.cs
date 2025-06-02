@@ -8,55 +8,54 @@ namespace BytPax.Controllers
 {
     public class UserController : Controller
     {
+        // “имчасово хардкодимо користувача
+        private static RegularUser _currentUser = new RegularUser(
+            "“естове ≤мТ€",
+            "user@example.com",
+            "/images/default-avatar.png",
+            "dummyHash"
+        );
+
         public IActionResult Cabinet()
         {
-
-            var savedArticles = new List<Article>
+            var viewModel = new UserProfileViewModel
             {
-                new Article { Topic = "Article 1", BodyText = "Content of article 1", CategoryId = 1 },
-                new Article { Topic = "Article 2", BodyText = "Content of article 2", CategoryId = 2 }
-            };
-
-
-            var savedArticleViewModels = savedArticles.Select(article => new ArticleCreateViewModel
-            {
-                Topic = article.Topic,
-                BodyText = article.BodyText,
-                CategoryId = article.CategoryId,
-                ImagePath = article.ImagePath
-            }).ToList();
-
-
-            var userProfile = new UserProfileViewModel
-            {
-                Username = "ExampleUser",
-                AvatarUrl = "/images/avatars/default.png",
-                SavedArticles = savedArticleViewModels,
-
-                FavoriteAthletes = new List<AthleteCreateViewModel>
+                Username = _currentUser.FullName,
+                AvatarUrl = _currentUser.ImagePath,
+                SavedArticles = new List<ArticleCreateViewModel>
                 {
-                    new AthleteCreateViewModel
-                    {
-                        Id = 1,
-                        FullName = "John Doe",
-                        Age = 28,
-                        Country = "USA",
-                        City = "New York",
-                        Description = "Top sprinter"
-                    },
-                    new AthleteCreateViewModel
-                    {
-                        Id = 2,
-                        FullName = "Jane Smith",
-                        Age = 24,
-                        Country = "UK",
-                        City = "London",
-                        Description = "Marathon runner"
-                    }
-                }
+                    new ArticleCreateViewModel { Topic = "як б≥гати швидше" },
+                    new ArticleCreateViewModel { Topic = "’арчуванн€ дл€ спортсмен≥в" }
+                },
+                FavoriteAthletes = new List<AthleteCreateViewModel>()
             };
 
-            return View(userProfile);
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateUsername(string newUsername)
+        {
+            if (!string.IsNullOrWhiteSpace(newUsername))
+            {
+                _currentUser.SetFullName(newUsername);
+            }
+
+            var viewModel = new UserProfileViewModel
+            {
+                Username = _currentUser.FullName,
+                AvatarUrl = _currentUser.ImagePath,
+                SavedArticles = new List<ArticleCreateViewModel>
+                {
+                    new ArticleCreateViewModel { Topic = "як б≥гати швидше" },
+                    new ArticleCreateViewModel { Topic = "’арчуванн€ дл€ спортсмен≥в" }
+                },
+                FavoriteAthletes = new List<AthleteCreateViewModel>()
+            };
+
+            return View("Cabinet", viewModel);
         }
     }
 }
+
+
