@@ -127,6 +127,8 @@ wwwroot\uploads\happy.png
 wwwroot\uploads\IMG_1340.JPG
 wwwroot\uploads\insert_time.png
 wwwroot\uploads\Sport Archive.png
+wwwroot\uploads\sport-2.jpg
+wwwroot\uploads\sport-4.webp
 wwwroot\uploads\The last day news.png
 wwwroot\uploads\Tournaments resultt#2.png
 wwwroot\uploads\Знімок екрана 2025-04-19 о 01.25.53.png

@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\views\\user\\cabinet.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\bonda\\documents\\github\\gui-project\\bytpax\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\bonda\\documents\\github\\gui-project\\bytpax\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\bonda\\documents\\github\\gui-project\\bytpax\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\bonda\\documents\\github\\gui-project\\bytpax\\instructions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\instructions\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\bonda\\documents\\github\\gui-project\\bytpax\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\bonda\\documents\\github\\gui-project\\bytpax\\models\\core\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\bonda\\documents\\github\\gui-project\\bytpax\\models\\athlete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\models\\athlete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\bonda\\documents\\github\\gui-project\\bytpax\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|solutionrelative:bytpax\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{26821888-4D1C-4B44-A5F8-68E442EED948}|BytPax\\BytPax.csproj|c:\\users\\bonda\\documents\\github\\gui-project\\bytpax\\controllers\\publiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,7 +102,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "BytPax\\Views\\Home\\Index.cshtml",
@@ -111,12 +111,11 @@
               "ViewState": "AgIAANECAAAAAAAAAAAowOkCAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-31T20:53:07.492Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "BytPax\\Services\\UserService.cs",
@@ -124,12 +123,11 @@
               "RelativeToolTip": "BytPax\\Services\\UserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T11:27:36.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T11:27:36.793Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "IUserService.cs",
               "DocumentMoniker": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Instructions\\IUserService.cs",
               "RelativeDocumentMoniker": "BytPax\\Instructions\\IUserService.cs",
@@ -137,8 +135,7 @@
               "RelativeToolTip": "BytPax\\Instructions\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T11:24:08.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T11:24:08.427Z"
             },
             {
               "$type": "Document",
@@ -148,7 +145,7 @@
               "RelativeDocumentMoniker": "BytPax\\Views\\User\\Cabinet.cshtml",
               "ToolTip": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Views\\User\\Cabinet.cshtml",
               "RelativeToolTip": "BytPax\\Views\\User\\Cabinet.cshtml",
-              "ViewState": "AgIAAJcAAAAAAAAAAAAswNQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAowN0AAAB5AgAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-02T11:23:01.576Z",
               "EditorCaption": ""
@@ -167,15 +164,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "BytPax\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Controllers\\HomeController.cs",
               "RelativeToolTip": "BytPax\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAuwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T22:57:25.335Z"
+              "WhenOpened": "2025-05-31T22:57:25.335Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -203,7 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Article.cs",
               "DocumentMoniker": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Models\\Article.cs",
               "RelativeDocumentMoniker": "BytPax\\Models\\Article.cs",
@@ -215,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Program.cs",
               "RelativeDocumentMoniker": "BytPax\\Program.cs",
@@ -223,8 +221,7 @@
               "RelativeToolTip": "BytPax\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T22:57:44.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-31T22:57:44.583Z"
             },
             {
               "$type": "Document",
@@ -288,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Models\\core\\User.cs",
               "RelativeDocumentMoniker": "BytPax\\Models\\core\\User.cs",
@@ -296,8 +293,7 @@
               "RelativeToolTip": "BytPax\\Models\\core\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T20:41:43.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-31T20:41:43.638Z"
             },
             {
               "$type": "Document",
@@ -325,20 +321,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "BytPax\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Controllers\\UserController.cs",
               "RelativeToolTip": "BytPax\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBsAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T19:17:41.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Athlete.cs",
               "DocumentMoniker": "C:\\Users\\bonda\\Documents\\GitHub\\GUI-Project\\BytPax\\Models\\Athlete.cs",
               "RelativeDocumentMoniker": "BytPax\\Models\\Athlete.cs",

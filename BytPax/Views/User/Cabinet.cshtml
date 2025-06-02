@@ -6,7 +6,6 @@
 
 @section Styles {
     <style>
-        /* Фоновий блок з блюром */
         .user-cabinet-section {
             position: relative;
             background: url('/images/sport-4.webp') no-repeat center center;
@@ -182,7 +181,7 @@
                         {
                             <hr class="border-secondary mt-4" />
                             <h5 class="card-title mt-4 gradient-text">Збережені статті</h5>
-                            <div class="saved-articles" aria-label="Saved articles list">
+                            <div class="saved-articles">
                                 @foreach (var article in Model.SavedArticles)
                                 {
                                     <button type="button" title="@article.Topic">@article.Topic</button>
@@ -196,17 +195,42 @@
     </div>
 </section>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const favorites = JSON.parse(localStorage.getItem("favoriteAthletes")) || [];
-        const container = document.querySelector(".saved-articles[data-type='favorites']");
-        if (container && favorites.length > 0) {
-            favorites.forEach(name => {
-                const btn = document.createElement("button");
-                btn.innerText = name;
-                btn.title = name;
-                container.appendChild(btn);
+<!-- Модальне вікно -->
+<div class="modal fade" id="articleModal" tabindex="-1" aria-labelledby="articleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="background-color: #001f3f; color: #ffd600; border-radius: 1rem;">
+            <div class="modal-header border-bottom-0">
+                <h5 class="modal-title gradient-text" id="articleModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрити"></button>
+            </div>
+            <div class="modal-body">
+                <p id="articleModalBody" class="gradient-text"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const articleButtons = document.querySelectorAll(".saved-articles button");
+            const articleModalLabel = document.getElementById("articleModalLabel");
+            const articleModalBody = document.getElementById("articleModalBody");
+
+            const articles = {
+                "Як бігати швидше": "Щоб бігати швидше, тренуйтесь на інтервалах, зміцнюйте м'язи ніг, дотримуйтеся правильної техніки бігу та слідкуйте за харчуванням і сном.",
+                "Техніка кидка в баскетболі: ключ до результативної гри": "Правильна техніка кидка — це основа успішної гри в баскетбол. Гравець повинен тримати м’яч пальцями, а не долонею, з легким відривом м’яча від руки. При кидку ноги повинні бути зігнуті, а корпус трохи нахилений уперед для балансу.Під час викиду руки рухаються вгору по прямій лінії, а кисть виконує так званий «щелчок» — обертання, що додає м’ячу оберт і стабільність у польоті. Очі гравця повинні бути спрямовані на дальній край кільця — це підвищує точність.Порада тренера: Щодня виконуйте хоча б 100 правильних кидків без опору, щоб сформувати автоматизм."
+            };
+
+            articleButtons.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    const topic = btn.innerText;
+                    articleModalLabel.textContent = topic;
+                    articleModalBody.textContent = articles[topic] || "Стаття не знайдена.";
+                    const modal = new bootstrap.Modal(document.getElementById("articleModal"));
+                    modal.show();
+                });
             });
-        }
-    });
-</script>
+        });
+    </script>
+}

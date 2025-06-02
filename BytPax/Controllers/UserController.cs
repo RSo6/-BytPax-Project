@@ -25,7 +25,7 @@ namespace BytPax.Controllers
                 SavedArticles = new List<ArticleCreateViewModel>
                 {
                     new ArticleCreateViewModel { Topic = "Як бігати швидше" },
-                    new ArticleCreateViewModel { Topic = "Харчування для спортсменів" }
+                    new ArticleCreateViewModel { Topic = "Техніка кидка в баскетболі: ключ до результативної гри" }
                 },
                 FavoriteAthletes = new List<AthleteCreateViewModel>()
             };

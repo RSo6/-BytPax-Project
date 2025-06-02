@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BytPax")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b2d9a6b520ba4e16d3f9719be89d1ed12911ad1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a43743de1372673db5167f8514c1ffdd05feb65f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BytPax")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BytPax")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

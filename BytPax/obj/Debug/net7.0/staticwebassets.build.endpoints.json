@@ -10827,6 +10827,170 @@
       ]
     },
     {
+      "Route": "uploads/sport-2.jpg",
+      "AssetFile": "uploads/sport-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "107262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 11:52:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/sport-2.vmrssauaew.jpg",
+      "AssetFile": "uploads/sport-2.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "107262"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 11:52:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vmrssauaew"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-597MyGO+hF1Pk8eTrY+eqYv6JwzDBzjzEQqxpYtWgpE="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/sport-2.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/sport-4.35vo5wax2l.webp",
+      "AssetFile": "uploads/sport-4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 11:37:46 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "35vo5wax2l"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/sport-4.webp"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/sport-4.webp",
+      "AssetFile": "uploads/sport-4.webp",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "17514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/webp"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 11:37:46 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Wcembzgb7FC3sgQDQK8tnQWsyHb+nktAENp9IFHreQA="
+        }
+      ]
+    },
+    {
       "Route": "uploads/Знімок екрана 2025-04-19 о 01.25.53.dhlt3bc0is.png",
       "AssetFile": "uploads/Знімок екрана 2025-04-19 о 01.25.53.png",
       "Selectors": [],
